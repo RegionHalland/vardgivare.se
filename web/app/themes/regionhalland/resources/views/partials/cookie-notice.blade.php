@@ -1,25 +1,19 @@
-@if(function_exists('check_region_halland_cookie_notice'))
-	@php($checkCookieNotice = check_region_halland_cookie_notice())
-	@if ($checkCookieNotice == false)
-		@php($myCookieNotice = get_region_halland_cookie_notice())	
-		<div id="cookie-notice" class="relative background-light-blue p3 z4">
-			<div class="container mx-auto">
-				<div class="clearfix mxn3">
-					<div class="cookie-notice__container">
-						<div class="cookie-notice__text-container px3">
-							<svg class="icon mr1" viewBox="0 0 8 8">
-								{!! get_region_halland_icon('info') !!}
-							</svg>
-							<span class="h5">{!! $myCookieNotice['message'] !!}</span>
-						</div>
-						<div class="cookie-notice__btn-container px3">
-							<button id="cookie-consent" class="btn btn-primary">
-								{!! $myCookieNotice['button'] !!}
-							</button>
-						</div>
-					</div>
+@if (isset($cookie_notice))
+<div id="cookie-notice" class="relative bg-blue-light py-4 z-4">
+	<div class="container mx-auto">
+		<div class="-mx-4">
+			<div class="cookie-notice__container px-4">
+				<div class="cookie-notice__text-container block md:inline-flex px-4">
+					<svg class="block h-4 w-4 mr-2 align-middle mb-4 md:mb-0">
+						<use xlink:href="#info"/>
+					</svg>
+					<span class="h5">{!! $cookie_notice['message'] !!}</span>
+				</div>
+				<div class="cookie-notice__btn-container px-4 mt-4 md:mt-0">
+					<button id="cookie-consent" class="px-4 py-2 bg-yellow rounded">{!! $cookie_notice['button'] !!}</button>
 				</div>
 			</div>
 		</div>
-	@endif
+	</div>
+</div>
 @endif

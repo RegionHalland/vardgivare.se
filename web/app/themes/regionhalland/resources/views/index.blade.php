@@ -1,11 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
-        <nav aria-label="Huvudnavigation" class="container background-dark-blue-frida mx-auto mobile-friendly-padding" style="background-image: url(../include/img/front.jpg); background-size: cover;">
-            <ul class="flex flex-wrap p3 background-white" aria-label="Huvudnavigation">
-                @include('partials.nav-front')
-            </ul>
-        </nav>
-    </div>
+<div class="py4 px3">
+	<div class="container mx-auto">
+		<div class="clearfix mxn3">
+		@if (!have_posts())
+			<div class="alert alert-warning">
+				{{ __('Oj, här var det tomt!', 'sage') }}
+			</div>
+			{!! get_search_form(false) !!}
+		@endif
+
+		@if( is_archive() )
+			@include('partials.content-archive')
+		@else
+			@while (have_posts()) @php(the_post())
+			@include('partials.content-'.get_post_type())
+			@endwhile
+		@endif
+		</div>
+	</div>
+</div>
 @endsection

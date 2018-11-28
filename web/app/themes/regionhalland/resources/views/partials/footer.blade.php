@@ -1,57 +1,33 @@
-<footer style="background-color: #FAFAFA;">
-    <div class="container mx-auto pl5 pr5 pt4 pb2 new_footer">
-        <div class="m2 flex flex-wrap">
-            <div class="col-12 md-col-6 lg-col-3 pb2">
-                <div class="mb3">
-                    <div class="mb2">
-                        <strong class="h3" id="111222">Vårdgivare i Halland</strong>
-                    </div>
-                    <ul class="small" aria-labelledby="111222">
-        	            @if(function_exists('get_region_halland_tree_first_level'))
-                            @php($myFooterNavs = get_region_halland_tree_first_level())    
-                            @if(isset($myFooterNavs))
-                                @foreach ($myFooterNavs as $myFooterNav)
-                  				    <li class="mb1">
-                                        <a href="{{ get_page_link($myFooterNav->ID) }}">{{ $myFooterNav->post_title }}</a>
-                                    </li>
-                                @endforeach
-                            @endif
-                        @endif
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 md-col-6 lg-col-3 pb2">
-                <div class="mb3">
-                    <div class="mb2">
-                        <h1 class="h3" id="121212">Kontakt</h1>
-                    </div>
-                    <ul class="small" aria-labelledby="121212">
-                        <li class="mb1"><a href="https://www.regionhalland.se/kontakta-oss">Kontakta Region Halland</a></li>
-                    </ul>
-                 </div>
-            </div>
-            <div class="col-12 md-col-6 lg-col-3 pb2">
-                <div class="mb3">
-                    <div class="mb2">
-                        <h1 class="h3" id="212121">Övriga webbplatser</h1>
-                    </div>
-                    <ul class="small" aria-labelledby="212121">
-                        <li class="mb1"><a href="http://www.regionhalland.se">www.regionhalland.se</a></li>
-                        <li class="mb1"><a href="https://intra.regionhalland.se/Sidor/default.aspx">Regionens intranät</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-12 md-col-6 lg-col-3 pb2">
-                <div class="mb3">
-                    <div class="mb2">
-                        <h1 class="h3" id="443322">Webbplatsen</h1>
-                    </div>
-                    <ul class="small" aria-labelledby="443322">
-                        <li><a href="http://vardgivare.regionhalland.se/valkommen-till-vardgivarwebben/om-webbplatsen/">Om webbplatsen</a></li>
-                        <li><a href="https://www.regionhalland.se/om-region-halland/organisation/dataskydd/">Dataskydd</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>     
-    </div>
+@php($footerContent = get_field('footer_content', 'options'))
+@if(isset($footerContent) && !empty($footerContent))
+<footer class="bg-grey-lightest pt-16 border-t border-grey-lighter pb-8 mt-8">
+	<div class="container mx-auto px-4 mt-8">
+		<div class="w-full mx-auto">
+			<div class="w-full flex flex-wrap items-stretch -mx-4">
+				@foreach($footerContent as $column)
+				@if(isset($column) && !empty($column))
+				<div class="w-full md:w-6/12 lg:w-4/12 px-4 mb-12">
+					<div class="relative pb-4 block mb-4">
+						<span class="border-b-2 border-blue-dark text-xl md:text-2xl font-bold text-black pb-2 z-20 relative leading-none">{{ $column['title'] }}</span>
+						<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
+					</div>
+					<ul class="list-reset">
+						@if(isset($column['list']) && !empty($column['list'])) 
+							@foreach($column['list'] as $item)
+								<li class="mb-2">
+									<a class="text-black text-lg hover:bg-yellow-light focus:bg-yellow-light" href="{{ $item['link']['url'] }}">{{ $item['link']['title'] }}</a>
+								</li>
+							@endforeach
+						@endif
+					</ul>
+				</div>
+				@endif
+				@endforeach
+			</div>
+		</div>
+	</div>
 </footer>
+@endif
+<script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery.min.js?ver=3.1.1'></script>
+<script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/main.js'></script>
+<script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/std-java.js'></script>

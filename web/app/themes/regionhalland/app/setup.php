@@ -88,20 +88,32 @@ add_action('after_setup_theme', function () {
  * Register sidebars
  */
 add_action('widgets_init', function () {
+    
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
-    ];
-    register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
+            'before_widget' => '<section class="widget %1$s %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>'
+        ];
+
+        // Left sidebar
+        register_sidebar([
+            'name'          => __('Left', 'sage'),
+            'id'            => 'sidebar-left'
+        ] + $config);
+
+        // Right sidebar
+        register_sidebar([
+            'name'          => __('Right', 'sage'),
+            'id'            => 'sidebar-right'
+        ] + $config);
+
+        // Article Bottom sidebar
+        register_sidebar([
+            'name'          => __('Article Bottom', 'sage'),
+            'id'            => 'sidebar-article-bottom'
+        ] + $config);
+
 });
 
 /**

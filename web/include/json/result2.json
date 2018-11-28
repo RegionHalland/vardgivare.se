@@ -1,0 +1,221 @@
+{
+  "stats" : {
+    "totalHits" : 865,
+    "searchEngineTimeInMillis" : 6,
+    "searchEngineRoundTripTimeInMillis" : 18,
+    "searchProcessingTimeInMillis" : 22
+  },
+  "query" : null,
+  "documentList" : {
+    "id" : "documents",
+    "displayName" : "Documents",
+    "numberOfHits" : 865,
+    "documents" : [ {
+      "_id" : "works_2508",
+      "_type" : "default",
+      "content" : "Lagar, regler och definitioner i Avgiftshandboken\r\n\r\n&nbsp;",
+      "created" : "2018-06-25 10:00:08",
+      "modified" : "2018-06-28 10:11:32",
+      "title" : "Lagar regler och definitioner",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=2508"
+    }, {
+      "_id" : "works_2521",
+      "_type" : "default",
+      "content" : "Rehabilitering vid externa anläggningar i Sverige och utomlands.\r\n\r\nKonduktiv pedagogik, se nedan\r\n\r\nAnsökan om externt rehabiliteringsprogram kan göras om behov av intensiv rehabilitering finns och motsvarande resurser saknas inom regionens egen verksamhet. Region Hallands ordinarie rehabiliteringsutbud ska prövas i första hand.\r\n\r\nDe externa rehabiliteringsprogrammen i Sverige eller utomlands är främst avsedda för personer som har en långvarig nedsättning i funktionstillståndet på grund av:\r\n\r\n \tmedfödda eller förvärvade hjärn- och ryggmärgsskador\r\n \tkroniska progressiva neurologiska sjukdomar\r\n \tannan neurologisk sjukdom/skada\r\n \tlättare till medelsvår psykisk ohälsa/sjukdom\r\n \tmalign sjukdom\r\n \thudsjukdom\r\n \tinflammatorisk led- eller systemsjukdom med funktionsinskränkning i rörelseapparaten\r\n \tbarn med sällsynta kroniska diagnoser\r\n \tandra grupper kan komma ifråga utifrån medicinska behov som inte ryms inom ovanstående patientgrupper\r\n\r\nExterna rehabiliteringsprogram utomlands ska endast beviljas om det finns ett medicinskt behandlingsmervärde av sol och/eller värme för personen.\r\n\r\nAnsökningarna prioriteras efter behov, tidigare vistelser samt bedömd förmåga att tillgodogöra sig intensiv träning. Ny rehabiliteringsvistelse beviljas tidigast efter två år om inte särskilda skäl föreligger.\r\nAnsökan\r\nRegion Hallands remiss \"Rehabilitering extern remiss\" (alternativt cancer-remiss eller psykisk ohälsa-remiss) ska användas förutom vid hudsjukdomar då Psoriasisförbundets remiss används. Remiss från behandlande läkare och egen ansökan från den sökande skickas till rehabiliteringshandläggaren. Medicinsk bedömning och prioritering görs av uttagningsläkare tillsammans med rehabiliteringshandläggaren. Beslut tas av uttagningsläkaren och kan inte överklagas. Besked om beslut lämnas per brev till sökande och remitterande läkare.\r\nAnsökningstider\r\nFör rehabilitering i Sverige kan ansökan göras kontinuerligt under året.\r\n\r\nFör rehabilitering utomlands gäller följande:\r\nNeurologiska sjukdomar och vuxna med reumatiska sjukdomar: 1 maj och 1 november\r\nBarn med reumatisk sjukdom: 28 februari\r\nHudsjukdomar: Kontinuerligt under året\r\nPraktisk information\r\nRehabiliteringen sker vid någon av de anläggningar som Region Halland har avtal med – se länkar. Anläggningarna har olika inriktningar och i möjligaste mån tas hänsyn till den sökandes önskemål.\r\n\r\nRegion Halland betalar förutom rehabiliteringsprogrammet även för boende och kost samt vid utlandsvård flygresan till anläggningen. Vid rehabiliteringsvistelse betalar vuxna (från 20 år) en avgift på 100 kr/dygn direkt till anläggningen. Barn och ungdomar betalar inget, däremot betalar vårdare som medföljer barnet ovanstående avgift.\r\n\r\nReseersättning till anläggningen (eller Landvetters flygplats vid utlandsvård) utgår för billigaste färdmedel med hänsyn till funktionsnivå. Egenavgift enligt reglerna för sjukresor.\r\n\r\nRegion Halland betalar inte för personlig assistans om sådan behövs.\r\n\r\nFörvärvsarbetande som beviljas rehabiliteringsvistelse kan ansöka om förebyggande sjukpenning hos Försäkringskassan.\r\nKonduktiv pedagogik\r\nBarn och ungdomar med diagnosen Cerebral Pares kan fram till 18-års ålder ansöka om träning med metoden konduktiv pedagogik.\r\n\r\nRegion Halland har avtal med Konduktivt center Bräcke i Göteborg. Träningen sker i 20 dagar under en fyraveckorsperiod och inkluderar kost och logi på träningscentret.\r\n\r\nBarn/ungdomar betalar inget för träningsperioden. Medföljande förälder/vårdare betalar 100:-/dygn för kost och logi.\r\n\r\nVarje år kan 6-8 barn/ungdomar beviljas en träningsperiod. Vid uttagning prioriteras i första hand de som inte tidigare deltagit i någon träningsperiod. Mer än en period per år beviljas inte.\r\n\r\nAnsökan och läkarintyg skickas senast den 31/3 eller 31/10 varje år till Rehabilitering och klimatvård, Kommunikationscentrum, 301 85 Halmstad.\r\n\r\nBeslut av ansökan 31/3 gäller under innevarande kalenderår och beslut av ansökan 31/10 gäller kommande kalenderår.\r\nKontaktinformation\r\nVill du veta mer - kontakta Caroline Hällefors, rehabiliteringshandläggare\r\nTfn 035 - 14 61 12\r\ne-post: Caroline.Hallefors@regionhalland.se\r\nRutiner och blanketter\r\nDessa ligger tills vidare kvar på regionens extranät där det krävs att du loggar in.",
+      "created" : "2018-06-25 09:25:42",
+      "modified" : "2018-06-25 09:45:53",
+      "title" : "Extern rehabilitering",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=2521"
+    }, {
+      "_id" : "works_2620",
+      "_type" : "default",
+      "content" : "Denna information ligger tills vidare kvar på regionens extranät, där det krävs att du loggar in.",
+      "created" : "2018-06-25 12:54:42",
+      "modified" : "2018-06-25 12:54:42",
+      "title" : "Regionala vårdriktlinjer inom vårdhygien",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=2620"
+    }, {
+      "_id" : "works_1625",
+      "_type" : "default",
+      "content" : "Filöverföringsportalen innebär en säker uppkoppling över internet mot Region Halland. Förbindelsen och överföring av data över filöverföringsportalen sker krypterat. Detta innebär en säker väg att utbyta vårddata och filer.\r\n\r\nPrivata vårdgivare och andra vårdleverantörer kan ladda upp sin redovisning/vårddata med ersättningsanspråk för överföring till Region Halland.\r\n\r\nRegionen å sin sida kan tillhandahålla uppgifter som externa parter kan hämta upp på portalen. För åtkomst till portalen krävs tjänstelegitimation, i form av SITHS-kort för att öka säkerheten för patienter samt för att leva upp till lagstadgade krav. SITHS är en nationell standard och en förutsättning för att kunna använda tjänsten.\r\n\r\nFörutom tjänstelegitimation krävs en kortläsare, regionen rekommenderar följande: Omnikey HID.\r\n\r\nUtöver detta krävs även att programmet Net id är installerat på er dator. Installationen är avsedd för Windows Vista, Windows 7 och Windows 8. Programmet är licensierat till Region Halland men är fritt att installera och använda för alla med SITHS-kort.\r\n\r\nHär kan du ladda ner programmet, NET-ID\r\n\r\nI dokumenten nedan finns utförlig information om hur uppladdning/skapande av filer till regionen går till.\r\nKontaktinformation\r\nGemensam administrativ service\r\n\r\nBesöksadress:\r\nSkånegatan 59\r\n\r\nTelefon: 010-455 39 50\r\n\r\nTelefontider:\r\nMån-fre 8-16",
+      "created" : "2018-06-05 08:22:54",
+      "modified" : "2018-10-19 13:08:28",
+      "title" : "Filöverföringsportalen",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1625"
+    }, {
+      "_id" : "works_1642",
+      "_type" : "default",
+      "content" : "Basutbud i 1177 Vårdguidens e-tjänster för alla vård- och tandvårdsmottagningar inom eller med avtal med Region Halland\r\n\r\nI Halland har alla mottagningar och liknande verksamheter inom hälsa, vård och tandvård och kringliggande verksamheter så som Patientnämnden och Vårdgarantiservice i uppdrag att erbjuda invånaren kontakt via digitala tjänster i 1177 Vårdguiden.\r\n\r\nDen digitala ingången för invånaren och patienten till flera av våra tjänster sker idag via den nationella tjänsten 1177 Vårdguiden som nås via www.1177.se.\r\nMottagningen ska minst erbjuda det basutbud av tjänster inom 1177 Vårdguidens e-tjänster som specificeras nedan. Utöver det kan mottagningen själv välja att komplettera sitt tjänsteutbud med ytterligare tjänster inom 1177 Vårdguidens e-tjänster eller vid speciella behov via andra tjänster. Varje mottagning bör själva aktivt utveckla sitt tjänsteutbud utifrån invånarens/patientens behov och Hälso- och sjukvårdsstrategin.\r\nMål och Uppföljning\r\nNytt från 2018 är basutbudet numera är kopplat till hälso- och sjukvårdsstrategin och målen sätts i denna. I basutbudet anges effektmål och några utvalda indikatorer som ska visa användningen och rörelsen sig mot effektmålet.\r\n\r\nBasutbudet uppdateras årligen i samband med mål och budget dokument. Uppföljning sker tre gånger årligen med de vanliga uppföljningarna UR1, UR2 och UR3.\r\nFortsatt utveckling i den ”digitala resan”\r\nArbetet med de digitala tjänsterna ska integreras som en naturlig del av det dagliga arbetet. 1177 Vårdguiden är en av de komponenter som behövs för att erbjuda invånaren ytterligare alternativ för kontakt med vården. Dialogen om behov inom 1177 Vårdguidens e-tjänster förs med primärt med systemförvaltningen, objektet eHälsa som ger stöd i förädling av befintliga tjänster. Systemförvaltningens uppdrag är också att kanalisera vidare till andra stödfunktioner vid behov.\r\n\r\nFör nya tjänster där behovet är inte är tydligt definierat eller ligger utanför vad 1177 Vårdguiden kan leverera kanaliseras frågan genom systemförvaltningen till andra stödfunktioner. Som ytterligare stöd till verksamheten finns resurser för strategisk funktion på Hälso- och sjukvårdsavdelningen och kommunikatörer på kommunikationsavdelningen och design labbet för att hjälpa till att tydliggöra behov och lösning. Arbetet med vårdens ”digitala resa” hålls samman av hälso- och sjukvårdsavdelningen.",
+      "created" : "2018-06-05 08:01:55",
+      "modified" : "2018-09-18 15:31:39",
+      "title" : "Basutbud och uppföljning 1177",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1642"
+    }, {
+      "_id" : "works_1671",
+      "_type" : "default",
+      "content" : "Via 1177 Vårdguidens e-tjänster kan du och din mottagning kommunicera med invånarna via internet. De kan till exempel boka tid eller förnya recept hos er.\r\n\r\nVarje mottagning anpassar 1177 Vårdguidens e-tjänster efter sin verksamhet. Ni avgör vilka typer av ärenden som invånaren ska kunna skicka. För varje typ av ärende finns ett frågeformulär som invånaren fyller i. En ärendemottagare tar emot ärendet och fördelar det till en vårdgivare som i sin tur skickar ett svar.\r\n1177 Vårdguidens e-tjänster ska ses som ett komplement till andra sätt att komma i kontakt med vården och uppfyller de krav på säkerhet och sekretess som ställs inom vården.\r\nVem kan använda tjänsten?\r\nFör att kunna ta emot ärenden från invånare behöver mottagningen vara ansluten till 1177 Vårdguidens e-tjänster och personalen behöver finnas med Hallandskatalogen, HAK.  Alla användare måste ha ett SITHS kort för att kunna logga in i 1177 Vårdguidens e-tjänster.\r\nÄr ni intresserade av att ansluta er till e-tjänsterna?\r\nOm er verksamhet är intresserad av att ansluta sig till 1177 Vårdguidens e-tjänster kontaktar ni systemförvaltningen via ett ärende i Servicedesk, använd mallen eHälsa – 1177 Beställning. Ange i ärendet vem som ska kontaktas för information och vidare planering.",
+      "created" : "2018-06-05 08:54:06",
+      "modified" : "2018-09-18 15:52:09",
+      "title" : "Införande och start 1177",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1671"
+    }, {
+      "_id" : "works_1696",
+      "_type" : "default",
+      "content" : "Vårdval via e-tjänsterna på 1177 Vårdguiden ger bättre service och smidigare hantering\r\n\r\nMöjligheten att välja vårdenhet via 1177 Vårdguidens e-tjänster gör det mycket smidigare för invånaren som först kan jämföra sedan direkt välja oavsett tid på dygnet. För verksamheten minskar den manuella hanteringen för både vårdvalsenheter och Vårdvalsservice ju fler som väljer att välja om via 1177 Vårdguidens e-tjänster.\r\n\r\nSom vårdenhet bör ni gärna marknadsföra tjänsten. För att förstå hur invånaren väljer vårdenhet är det bästa man kan göra att logga in på 1177 Vårdguiden (http://www.1177.se/) och gå in och titta hur det ser ut.\r\nDetta innebär vårdval via webben för invånaren/patienten\r\nInvånaren går in på Mitt vårdval i e-tjänsterna på 1177 Vårdguiden. Där ser man vilken enhet man har valt just nu och man kan jämföra alla vårdvalsenheterna via en länk till jämförelsetjänsten.\r\n\r\n(Om uppgifterna i jämförelsetjänsten inte stämmer meddela Vårdvalsservice vardvalsservice@regionhalland.se om det är något som inte stämmer när det gäller er vårdenhet.)\r\n\r\n \tVia knappen Välj/byt vårdcentral kommer man sedan vidare och kan se en lista över alla de vårdenheter man kan välja mellan.\r\n \tInvånaren måste godkänna reglerna för Vårdval Halland för att kunna fullfölja sitt val.\r\n \tInvånaren får en bekräftelse om att man valt om och kan direkt kontakta vårdenheten.\r\n \tSom folkbokförd i Halland kan man bara välja Hallands vårdcentraler i sitt vårdval.\r\n\r\nInloggning till 1177 Vårdguidens e-tjänster behövs\r\nFör att invånare ska kunna logga in i på 1177 behöver de ha ett eget konto. Det har redan över 75 000 invånare i Halland idag. Har man e-legitimation kan man logga in direkt på www.1177.se.\r\n\r\nÖver 95 procent av alla som använder e-tjänsterna loggar in med e-legitimation. Man kan också välja att logga in med personnummer, lösenord och engångskod via sms. Det tar cirka en dag tills lösenordsbrevet kommer hem till invånarens folkbokföringsadress om man väljer att logga in med lösenord.\r\nFör vårdenheten innebär det:\r\nNär en invånare gjort ett nytt vårdval i 1177 Vårdguidens e-tjänster kommer valet slå igenom direkt i vårdvalssystemet Master och sedan därefter synas i VAS, om man har detta journalsystem. Valet sker alltså helt automatiskt utan manuell hantering.\r\n\r\n \tBehörig personal på alla vårdenheter kan se ”sina” patienter i Master Listinfo, dvs de som just nu är listade på enheten. Har ni inte redan behörighet till detta, så kontakta Region Hallands Service Desk IT Extranätet eller via telefon och beställ behörighet till Master och specificerar att det ska inkludera Listinfo i Master. Det gäller även privata vårdvalsenheter. Blankett finns att fylla i och bifoga ärendet. Behörighetsblankett\r\n \tTremånadersregeln gäller inte vid vårdval i 1177 Vårdguidens e-tjänster. Valet slår igenom direkt utan att mottagningen först har godkänt valet, vilket finns beskrivet sedan tidigare i Modellbeskrivningen för Vårdval Halland 2011.\r\n\r\nKontaktpersoner\r\n​1177 Vårdguidens e-tjänster:\r\nCharlotte Tavelin\r\ncharlotte.tavelin@regionhalland.se\r\n\r\nVårdval Halland:\r\nAnna-Carin Bergsten\r\nTfn. 010-45 539 00\r\n\r\nIT och Master:\r\nStefan Bäckström\r\nstefan.backstrom@regionhalland.se",
+      "created" : "2018-06-05 09:44:18",
+      "modified" : "2018-09-18 15:49:16",
+      "title" : "Vårdval via e-tjänsterna på 1177 vårdguiden",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1696"
+    }, {
+      "_id" : "works_1718",
+      "_type" : "default",
+      "content" : "Införande av KBT-behandling via nätet\r\n\r\nSocialstyrelsens nationella riktlinjer (2010) rankar psykologisk behandling, framför allt KBT, som prioriterat behandlingsalternativ vid i princip alla lindriga och medelsvåra tillstånd av depression och ångestsyndrom. Huvudskälet till detta är att KBT har god till mycket god effekt på symtom och funktionsnivå, både på kort och på lång sikt. För att uppnå rekommendationen om att kunna erbjuda befolkningen flera effektiva behandlingsalternativ behöver hälso- och sjukvården öka tillgången till psykologisk behandling, främst KBT. Ett växande antal forskningsstudier har under de senaste åren visat på positiva behandlingseffekter av internetbaserad behandling vid lindriga och måttliga depressions- och ångesttillstånd.\r\n\r\nKBT-behandling har erbjudits i Region Halland sedan en längre tid men inte tidigare via nätet. Syftet med detta pilotprojekt blev därmed att öka patienters tillgång till kvalitetssäkrad behandling för ångestproblematik på ett användarvänligt, säkert och flexibelt sätt via nätet.\r\n\r\nPlattformen stöd- och behandling är nationellt framtagen och en nationell förvaltning av tjänsten finns vilket indikerar kvalitet och säkerhet. Internetbaserad behandling bedöms ligga väl i tiden med det ökande användandet och efterfrågan av e-tjänster samt kraven på tillgänglighet och likabehandling för regionens alla invånare.\r\nPilotverksamhet vid Falkenbergs vårdcentral\r\nInitialt kommer KBT-baserat behandlingsprogram att användas för närsjukvårdens patienter med lindrig eller måttlig ångestproblematik.\r\n\r\nProjekttid och pilotverksamhet: Projektet skall pågå under tiden 2015-12-01 t o m 2016-12-31 och inkludera femton patienter med lindrig till måttlig ångestproblematik vid Vårdcentralen i Falkenberg. Två psykologer med KBT-kompetens vid Hälsa- och Rehab i Falkenberg tar behandlarrollen.\r\n\r\nBehandlingsprogram: Ångesthjälpen är inköpt för 15 patientbehandlingar av leverantören Psykologpartners AB. Innan patienten startar har behandlaren ett inledande bedömningssamtal på mottagningen. Patienter når behandlingen via inloggning i 1177 Vårdguidens e-tjänster och behandlare loggar in via Inera.se med hjälp av SITHS-kortet. Behandlingen tar sedan 8-10 veckor med nya övningar varje vecka via textavsnitt och filmer. Behandlarens uppgift är att stötta och svara på frågor under tiden via textmeddelandefunktion i behandlingsprogrammet eller via telefon. Ett uppföljande samtal genomförs efter behandlingens slut. Utvärdering sker sedan med skattningsformulär och enkät till patient.\r\n\r\nFörberedelser: Projektgruppen har i en förberedelsefas upprättat;\r\nProjektplan, Kommunikationsplan, Tjänsteresa, Intressentanalys, Riskanalys och Utvärderingsplan. Dessutom har Manual för KBT-behandling via nätet (behandlare och personal) samt Rutin/checklista vid patientbesök framtagits.\r\n\r\nI april månad fick behandlarna utbildning av Psykologpartners och i juni månad startades de två första patientbehandlingarna.\r\nInförande av Min Hälsoplan via nätet\r\nMin hälsoplan har tidigare varit infört som ett projekt i Halland vid ett antal vårdcentraler samt vid några andra verksamheter. Grunden till det projektet var att stödja implementering av nya Nationella riktlinjer för sjukdomsförebyggande metoder. Min hälsoplan var digitalt införd med inloggning via 1177, vilket låg väl i linje med den nationella och regionala satsningen kring utveckling av ehälsa. Detta projekt avslutades 2015 då den nya nationella plattformen för Stöd och behandling skulle införas.\r\n\r\nMålet för år 2016 är att ett par pilotprojekt inom nya plattformen Stöd och behandling ska genomföras. Ett stödprogram kommer att vara Min hälsoplan. Syftet är att öka patienters tillgång till kvalitetssäkrat stöd såsom exempelvis Min Hälsoplan på ett användarvänligt, säkert och flexibelt sätt via nätet.\r\n\r\nPlattformen stöd- och behandling är nationellt framtagen och en nationell förvaltning av tjänsten finns vilket indikerar kvalitet och säkerhet. Internetbaserat stöd bedöms ligga väl i tiden med det ökande användandet och efterfrågan av e-tjänster samt kraven på tillgänglighet och likabehandling för regionens alla invånare. Stöd via nätet ska på sikt medföra minskade kostnader för hälso- och sjukvården genom att alternativa tekniska lösningar kan minska behov av fysiska möten och öka effektiviteten i verksamheten.\r\nNeurorehabiliteringen vid Vårdcentralen Kolla i Kungsbacka\r\nProjekttid och pilotverksamhet: Projektet kommer att huvudsakligen genomföras under 2016 med beräknad avslutning december 2016. Initialt kommer införande och anslutning av stödprogram att gälla Neurorehabiliteringen, Kungsbacka (knutna till Vårdcentralen Kolla Kungsbacka). Det är 5 till 8 patienter som kommer erbjudas detta stöd genom Neurorehabiliteringens behandlare. Det är fyra behandlare, två sjukgymnaster och två arbetsterapeuter som är knutna till projektet.\r\n\r\nAktiviteter: Aktiviteter definieras i detta projekt som fysisk aktivitet, vardagsaktivitet, hjärnvila samt kognitiv träning. Stödprogrammet är framtaget av projektgruppens designers utefter tidigare mallar av Min Hälsoplan som fanns tidigare. Behandlare skräddarsyr ifrån fall till fall vilka aktiviter som patienten ska fylla i samt i vilket intervall. Patienter når behandlingen via inloggning i 1177 Vårdguidens e-tjänster och behandlare loggar in via Inera.se med hjälp av SITHS-kortet.\r\n\r\nFörberedelser: Projektgruppen har i en förberedelsefas upprättat; Projektplan, Kommunikationsplan, Intressentanalys, Riskanalys och Utvärderingsplan. Dessutom har Patientinformation samt Checklista för behandlare tagits fram.\r\n\r\nI maj månad fick behandlarna utbildning av Projektgruppen och efter några justeringar av frågor i programmet beräknas start ske direkt efter sommaren.",
+      "created" : "2018-06-05 10:24:00",
+      "modified" : "2018-09-18 15:40:49",
+      "title" : "Piloter - Stöd och behandling via nätet",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1718"
+    }, {
+      "_id" : "works_1723",
+      "_type" : "default",
+      "content" : "Nu införs webbtidbokning kopplat till journalsystemet VAS i vården i Halland. Det innebär att när en invånare bokar tid, eller av- och ombokar tid sköts det automatiskt utan inblandning av vårdpersonal. Invånaren når webbtidboken genom att logga in på www.1177.se\r\n\r\nWebbtidbokning kommer att ge stora möjligheter för invånaren att själv sköta sina tidbokningsärenden till vården. Syftet med webbtidbokning är att öka patientens tillgänglighet och delaktighet men också minska antalet uteblivna besök och avlasta vården med rutinärenden som ombokningar, avbokningar och tidsbokning via telefon.\r\nDet hänger ihop!\r\nInförandet av webbtidbok är en del i regionens framtidsarbete och hälso- och sjukvårdsstrategi som syftar till att nå en långsiktig kvalitetshöjning.\r\nKopplat till framtidsarbetet är utvecklad arbetsfördelning en metod som handlar om att frigöra tid, hushålla med kompetenser och där varje kompetens ska göra rätt saker. Webbtidboken, i sin tur, är ett exempel på ett verktyg för att nå detta - med webbtidbokning lämnar vården över ansvaret till patienten att själv boka, av- och omboka. Det i sin tur leder till att vi bättre nyttjar våra kompetenser och resurser.\r\nTjänster som ingår i webbtidbokningen:\r\n\r\n \tBoka tid\r\n \tAvboka tid\r\n \tOmboka tid\r\n \tSe sina tider\r\n\r\nMål\r\nNationella mål, tagna av Region Halland, ligger till grund för införandet av webbtidbokning. När det gäller webbtidbokning är målet att 40 % av besöken till vården (2015) ska bokas via e-hälsotjänster (1177 Vårdguidens e-tjänster). 2017 ska 60 % av alla invånare använda 1177 Vårdguidens e-tjänster och 1177 Vårdguiden på telefon som första kontakt med vården.\r\nPiloter\r\nUnder april till september 2016 var Vårdcentralen Västra Vall Breared och Ögonmottagningen i Halmstad och Varberg pilotverksamheter och de erbjuder sedan dess webbtidbokning till sina patienter.\r\nBreddinförande\r\nBreddinförandet startade 2017 och fortsätter under 2018.\r\nFörst ut är vårdcentralerna inom Närsjukvården (alla erbjuder tjänsten sedan oktober 2017), sedan de privata vårdcentralera (alla erbjuder tjänsten sedan mars 2018) och Hallands sjukhus (sedan mars 2018 erbjuder hudmottagningarna, logopedimottagningarna och öron-näs-och halsmottagningarna tjänsten). Breddinförandeplanen hittar du i högerspalten under dokument.",
+      "created" : "2018-06-05 10:31:02",
+      "modified" : "2018-10-03 11:23:37",
+      "title" : "VAS webbtidbok",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1723"
+    }, {
+      "_id" : "works_1766",
+      "_type" : "default",
+      "content" : "Vissa nyheter som publicerats på intranätet har kommenterats. Kommentarsfunktionen stöds dock inte av Extranätet, så därför syns inte kommentarerna på Extranätet. Men, vi som arbetar i Region Halland och har tillgång till intranätet kan nå kommentarerna ändå genom att kopiera länk och ersätta ”extra” med ”intra”.\r\n\r\nInformationen om Journalen via nätet är intressant både internt i Region Halland och för t ex privata vårdgivare.  Informationen samlas på en sida på extranätet, för att så många som möjligt ska kunna nå den.  Varje nyhet om Journalen via nätet publiceras både på intranätet och på extranätet (nyheterna speglas).  Extranätet stödjer dock inte kommentarsfunktionen, vilket innebär att eventuella kommentarer på intranätet ”faller bort” när nyheten speglas på Extranätet.\r\nKommentarerna kan nås på intranätet\r\nVi som arbetar inom Region Halland och som når intranätet, kan enkelt nå kommentarerna ändå, genom att göra så här:\r\nHögerklicka på länken till nyheten på Extranätsidan och välj ”Kopiera genväg”. Klistra in länken (URLen) i webbläsarens adressfält, men byt i länkadressen ut  ”extra” mot ”intra”. På så vis når du sedan den nyhet som publicerats på intranätet och som innehåller kommentarerna. Observera att detta alltså bara fungerar om du har tillgång till intranätet.\r\nExempel:\r\nExtranätnyhet exklusive kommentarer: https://extra.regionhalland.se/nyheter/Sidor/Journalen-via-nätet-önskar-God-Jul-!.aspx\r\nIntranätnyhet inklusive kommentarer https://intra.regionhalland.se/nyheter/Sidor/Journalen-via-nätet-önskar-God-Jul-!.aspx\r\n\r\nDet går också bra att nå gamla intranätnyheter inklusive kommentarerna om man söker efter nyheten på intranätet – då kan man nå den via intranätarkivet.",
+      "created" : "2018-06-05 11:16:16",
+      "modified" : "2018-06-05 11:16:16",
+      "title" : "Så här når du intranätnyheternas kommentarer",
+      "type" : "page",
+      "url" : "http://vardgivare.regionhalland.se/?page_id=1766"
+    } ],
+    "pagination" : {
+      "offset" : 0,
+      "hitsPerPage" : 10,
+      "firstPage" : null,
+      "previousPage" : null,
+      "nextPage" : {
+        "displayName" : "Next",
+        "selected" : false,
+        "query" : "offset=10&hits=10&q=*"
+      },
+      "lastPage" : {
+        "displayName" : "Last",
+        "selected" : false,
+        "query" : "offset=860&hits=10&q=*"
+      },
+      "pages" : [ {
+        "displayName" : "1",
+        "selected" : true,
+        "query" : "offset=0&hits=10&q=*"
+      }, {
+        "displayName" : "2",
+        "selected" : false,
+        "query" : "offset=10&hits=10&q=*"
+      }, {
+        "displayName" : "3",
+        "selected" : false,
+        "query" : "offset=20&hits=10&q=*"
+      }, {
+        "displayName" : "4",
+        "selected" : false,
+        "query" : "offset=30&hits=10&q=*"
+      }, {
+        "displayName" : "5",
+        "selected" : false,
+        "query" : "offset=40&hits=10&q=*"
+      }, {
+        "displayName" : "6",
+        "selected" : false,
+        "query" : "offset=50&hits=10&q=*"
+      }, {
+        "displayName" : "7",
+        "selected" : false,
+        "query" : "offset=60&hits=10&q=*"
+      }, {
+        "displayName" : "8",
+        "selected" : false,
+        "query" : "offset=70&hits=10&q=*"
+      }, {
+        "displayName" : "9",
+        "selected" : false,
+        "query" : "offset=80&hits=10&q=*"
+      }, {
+        "displayName" : "10",
+        "selected" : false,
+        "query" : "offset=90&hits=10&q=*"
+      } ]
+    },
+    "sortOptions" : [ ]
+  },
+  "facets" : [ {
+    "id" : "keyword",
+    "displayName" : "Nyckelord",
+    "selectionType" : "AND",
+    "multipleLevels" : false,
+    "filters" : [ {
+      "displayName" : "läkemedel",
+      "selected" : false,
+      "query" : "keyword=l%C3%A4kemedel&q=*",
+      "count" : 2,
+      "children" : [ ]
+    }, {
+      "displayName" : "term2",
+      "selected" : false,
+      "query" : "keyword=term2&q=*",
+      "count" : 2,
+      "children" : [ ]
+    }, {
+      "displayName" : "term3",
+      "selected" : false,
+      "query" : "keyword=term3&q=*",
+      "count" : 2,
+      "children" : [ ]
+    }, {
+      "displayName" : "term4",
+      "selected" : false,
+      "query" : "keyword=term4&q=*",
+      "count" : 2,
+      "children" : [ ]
+    }, {
+      "displayName" : "Läkemedel",
+      "selected" : false,
+      "query" : "keyword=L%C3%A4kemedel&q=*",
+      "count" : 1,
+      "children" : [ ]
+    }, {
+      "displayName" : "Sjukvård",
+      "selected" : false,
+      "query" : "keyword=Sjukv%C3%A5rd&q=*",
+      "count" : 1,
+      "children" : [ ]
+    }, {
+      "displayName" : "demo",
+      "selected" : false,
+      "query" : "keyword=demo&q=*",
+      "count" : 1,
+      "children" : [ ]
+    }, {
+      "displayName" : "test",
+      "selected" : false,
+      "query" : "keyword=test&q=*",
+      "count" : 1,
+      "children" : [ ]
+    } ]
+  } ],
+  "spell" : null,
+  "quicklinks" : null,
+  "errorMessages" : [ ]
+}
