@@ -15,19 +15,8 @@
 	<meta name="msapplication-config" content="@asset('images/favicons/browserconfig.xml')" />
 	<meta name="theme-color" content="#ffffff" />
 
-	<!-- Google Tag Manager
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': 
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-WJTVNM6');</script>
-	End Google Tag Manager -->
-	
-	<!-- Browsealoud || Talande Webb 
-	<script type="text/javascript">var _baTheme=0, _baMode='Aktivera Talande Webb', _baUseCookies=true, _baHideOnLoad=true;</script>
-	Browsealoud || Talande Webb -->
-	
-  	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/main.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/main.min.css' type='text/css' media='all' />
   	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/main.css' type='text/css' media='all' />  	
   	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/std-style.css' type='text/css' media='all' />
+  	
 </head>
