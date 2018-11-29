@@ -1,4 +1,3 @@
-<?php die("rollo") ?>
 <!doctype html>
 <html @php(language_attributes())>
 	@include('partials.head')

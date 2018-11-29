@@ -7,6 +7,8 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
+die("rollo setup");
+
 /**
  * Disable all plugin updates & WP update
  */
