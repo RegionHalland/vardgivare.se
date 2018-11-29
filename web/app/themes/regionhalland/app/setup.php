@@ -7,8 +7,6 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
-die("rollo setup");
-
 /**
  * Disable all plugin updates & WP update
  */
@@ -155,4 +153,7 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+
+    die("rollo setup theme");
+
 });
