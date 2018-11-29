@@ -71,26 +71,25 @@
 	{{-- Mobile Menu Drawer END --}}
 
 	{{-- Bottom bar --}}
-	@if(function_exists('get_region_halland_vg_top_level_pages'))
-		@php($top_level_pages = get_region_halland_vg_top_level_pages())	
-		@if(isset($top_level_pages) && !empty($top_level_pages))
-		<div class="hidden md:block container mx-auto px-4 overflow-auto scrolling-touch">
-			<ul class="list-reset flex flex-wrap -mx-4">
-				@foreach($top_level_pages as $top_level_page)
-					<li class="flex-no-shrink px-4">
+	@php($top_level_pages = get_region_halland_tree_first_level())	
+	@if(isset($top_level_pages) && !empty($top_level_pages))
+	<div class="hidden md:block container mx-auto px-4 overflow-auto scrolling-touch">
+		<ul class="list-reset flex flex-wrap -mx-4">
+			@foreach($top_level_pages as $top_level_page)
+				<li class="flex-no-shrink px-4">
 
-						@if($top_level_page->active === true)
-							<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block relative" href="{{ the_permalink($top_level_page->ID) }}">{{ $top_level_page->post_title }}
-								 <div class="absolute pin-b pin-l w-full h-1 rounded-t bg-blue-dark"></div>
-							</a>
-						@else
-							<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block" href="{{ the_permalink($top_level_page->ID) }}">{{ $top_level_page->post_title }}</a>
-						@endif
-					</li>
-				@endforeach
-			</ul>
-		</div>
-		@endif
+					@if($top_level_page->active === true)
+						<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block relative" href="{{ the_permalink($top_level_page->ID) }}">{{ $top_level_page->post_title }}
+							 <div class="absolute pin-b pin-l w-full h-1 rounded-t bg-blue-dark"></div>
+						</a>
+					@else
+						<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block" href="{{ the_permalink($top_level_page->ID) }}">{{ $top_level_page->post_title }}</a>
+					@endif
+				</li>
+			@endforeach
+		</ul>
+	</div>
 	@endif
+	
 	{{-- Bottom bar END --}}
 </nav>

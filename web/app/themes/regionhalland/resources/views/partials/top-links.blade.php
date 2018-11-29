@@ -1,3 +1,4 @@
+@php($top_links = get_region_halland_vg_top_links())
 @if($top_links)
 <div class="sticky pin-t">
 	<header class="relative pb-4 block mb-8">

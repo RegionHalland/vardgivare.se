@@ -36,11 +36,7 @@ class Search extends Controller
 		]);
 
 		$response_body = json_decode($response->getBody());
-		echo "<pre>";
-		print_r($response_body);
-		echo "<pre>";
-		die();
-
+		
 		foreach ($response_body->vardgivarwebben->documents as $key => $vdoc) {
 			$vdoc->category = "vgw";
 		}

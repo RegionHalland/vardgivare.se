@@ -55,26 +55,24 @@
 					<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
 				</header>
 				<ul class="flex flex-wrap items-stretch -mx-4 list-reset" aria-labelledby="Länklista">
-				@if(function_exists('get_region_halland_vg_top_level_pages'))
-					@php($top_level_pages = get_region_halland_vg_top_level_pages())	
-					@if(isset($top_level_pages) && !empty($top_level_pages))
-						@foreach($top_level_pages as $top_level_page)
-							<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8">
-								<a href="{{ the_permalink($top_level_page->ID) }}" class="text-blue-dark hover:bg-yellow-light focus:bg-yellow-light inline-block">
-									<h2 class="mb-2 text-xl md:text-2xl">{{ $top_level_page->post_title }}</h2>
-								</a>
-								<p class="leading-tight text-lg text-grey-darkest">
-									@if(get_field('excerpt', $top_level_page->ID)) 
-										{{ the_field('excerpt', $top_level_page->ID) }}
-									@else
-										{{ \App\trim_excerpt($top_level_page->post_content) }}
-									@endif
-								</p>
-							</li>
-						@endforeach
-					@endif
+				@php($top_level_pages = get_region_halland_tree_first_level())	
+				@if(isset($top_level_pages) && !empty($top_level_pages))
+					@foreach($top_level_pages as $top_level_page)
+						<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8">
+							<a href="{{ the_permalink($top_level_page->ID) }}" class="text-blue-dark hover:bg-yellow-light focus:bg-yellow-light inline-block">
+								<h2 class="mb-2 text-xl md:text-2xl">{{ $top_level_page->post_title }}</h2>
+							</a>
+							<p class="leading-tight text-lg text-grey-darkest">
+								@if(get_field('excerpt', $top_level_page->ID)) 
+									{{ the_field('excerpt', $top_level_page->ID) }}
+								@else
+									{{ \App\trim_excerpt($top_level_page->post_content) }}
+								@endif
+							</p>
+						</li>
+					@endforeach
 				@endif
-
+			
 				</ul>
 			</div>
 		</div>
