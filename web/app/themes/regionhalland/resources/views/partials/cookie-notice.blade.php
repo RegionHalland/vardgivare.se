@@ -1,6 +1,6 @@
 @php($checkCookieNotice = check_region_halland_cookie_notice())
 @if ($checkCookieNotice == false)
-	@php($myCookieNotice = get_region_halland_cookie_notice())	
+	@php($cookie_notice = get_region_halland_cookie_notice())	
 	<div id="cookie-notice" class="relative bg-blue-light py-4 z-4">
 		<div class="container mx-auto">
 			<div class="-mx-4">
