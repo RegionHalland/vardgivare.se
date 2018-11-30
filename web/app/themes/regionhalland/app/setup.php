@@ -128,9 +128,11 @@ add_action('the_post', function ($post) {
  * Setup Sage options
  */
 add_action('after_setup_theme', function () {
+    
     /**
      * Add JsonManifest to Sage container
      */
+
     sage()->singleton('sage.assets', function () {
         return new JsonManifest(config('assets.manifest'), config('assets.uri'));
     });
@@ -153,7 +155,5 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
-
-    die("rollo setup theme");
 
 });
