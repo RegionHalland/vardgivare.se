@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 {{-- Container --}}
 <div class="container mx-auto px-4 pt-8 md:pt-16 pb-12">
 	<div class="w-full mx-auto">
@@ -28,8 +29,8 @@
 			@while(have_posts()) @php(the_post())
 				<h1>{{ the_title() }}</h1>
 				{{-- Content --}}
-				@if(function_exists('get_region_halland_vg_prepare_the_content'))
-					@php(get_region_halland_vg_prepare_the_content())
+				@if(function_exists('get_region_halland_prepare_the_content'))
+					@php(get_region_halland_prepare_the_content())
 				@endif
 				<article class="article">{!! the_content() !!}</article>
 				{{-- Content END --}}

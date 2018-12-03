@@ -1,3 +1,4 @@
+@php($nav_site = get_region_halland_vg_nav_sidebar())	
 @if(isset($nav_site) && !empty($nav_site))
 <div class="">
 	<ul class="list-reset">
