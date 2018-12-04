@@ -1,4 +1,3 @@
-@php($news = get_region_halland_vg_news())	
 @if(isset($news) && !empty($news))
 	@foreach ($news as $myNews)
 		<article class="py-4">
