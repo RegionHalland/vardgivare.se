@@ -1,5 +1,5 @@
 @if(!is_front_page())
-@php($breadcrumbs = get_region_halland_breadcrumbs_pages())	
+@php($breadcrumbs = get_region_halland_breadcrumbs())	
 @if(isset($breadcrumbs))
 	<div class="bg-green-light border-b-4 border-green-light">
 		<div class="container mx-auto">
