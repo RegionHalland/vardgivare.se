@@ -25,14 +25,14 @@
 							<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-yellow-light z-10">
 						</header>
 						<ol class="list-reset bg-yellow-light relative rounded border border-grey-lightest overflow-hidden">
-							@while($news->have_posts()) @php($news->the_post())
+							@foreach ($news as $myNews)
 									<li class="px-4 py-4 border-grey-lightest truncate overflow-hidden relative">
 										<div class="absolute bg-yellow pin-l pin-t h-full w-1"></div>
-										<a class="text-black whitespace-no-wrap" href="{{ the_permalink() }}">{{ get_the_title() }}</a>
+										<a class="text-black whitespace-no-wrap" href="{{ $myNews->url }}">{{ $myNews->post_title }}</a>
 									</li>
-							@endwhile
+							@endforeach
 						</ol>
-						<a href="{{ get_post_type_archive_link(get_post_type()) }}" class="inline-block no-underline text-white bg-blue-dark px-6 mt-4 flex items-center justify-between py-4 text-lg rounded">{{ get_post_type_object(get_post_type())->labels->view_items }}<svg class="h-4 w-4"><use xlink:href="#chevron-right" /></svg></a>
+						<a href="{{ get_post_type_archive_link(get_post_type()) }}" class="inline-block no-underline text-white bg-blue-dark px-6 mt-4 flex items-center justify-between py-4 text-lg rounded">Se alla nyheter<svg class="h-4 w-4"><use xlink:href="#chevron-right" /></svg></a>
 						@endif
 					</div>
 				</div>

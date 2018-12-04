@@ -20,6 +20,6 @@
 		{{ $news_category ? 'inom ' . strtolower($news_category->name) : '' }}
 		<svg class="h-4 w-4"><use xlink:href="#chevron-right" /></svg></a>
 	@else
-		<a href="{{ get_post_type_archive_link(get_post_type()) }}" class="inline-flex no-underline text-white bg-blue-dark px-6 mt-4 items-center justify-between py-4 text-lg rounded">{{ get_post_type_object(get_post_type())->labels->view_items }}<svg class="h-4 w-4"><use xlink:href="#chevron-right" /></svg></a>
+		<a href="{!! env('WP_HOME') !!}/nyheter/nyheter" class="inline-flex no-underline text-white bg-blue-dark px-6 mt-4 items-center justify-between py-4 text-lg rounded">Se alla nyheter<svg class="h-4 w-4"><use xlink:href="#chevron-right" /></svg></a>
 	@endif
 @endif
