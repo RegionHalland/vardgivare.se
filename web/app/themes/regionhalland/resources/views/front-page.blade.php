@@ -59,14 +59,14 @@
 				@if(isset($top_level_pages) && !empty($top_level_pages))
 					@foreach($top_level_pages as $top_level_page)
 						<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8">
-							<a href="{{ the_permalink($top_level_page->ID) }}" class="text-blue-dark hover:bg-yellow-light focus:bg-yellow-light inline-block">
+							<a href="{{ $top_level_page->url }}" class="text-blue-dark hover:bg-yellow-light focus:bg-yellow-light inline-block">
 								<h2 class="mb-2 text-xl md:text-2xl">{{ $top_level_page->post_title }}</h2>
 							</a>
 							<p class="leading-tight text-lg text-grey-darkest">
 								@if(get_field('excerpt', $top_level_page->ID)) 
 									{{ the_field('excerpt', $top_level_page->ID) }}
 								@else
-									{{ \App\trim_excerpt($top_level_page->post_content) }}
+									{{ html_entity_decode(wp_trim_words($top_level_page->post_content, 10, '...')) }}
 								@endif
 							</p>
 						</li>
