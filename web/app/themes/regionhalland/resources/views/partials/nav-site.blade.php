@@ -1,3 +1,4 @@
+@php($deviceType = get_region_halland_device_type())
 <nav class="" aria-label="Huvudmeny">
 	{{-- Top bar --}}
 	<div class="w-full border-b border-grey-lighter bg-white relative z-50">
@@ -65,9 +66,11 @@
 	{{-- Top bar END --}}
 	
 	{{-- Mobile Menu Drawer --}}
-	<nav class="js-site-nav hidden md:hidden w-full pin-t pin-l bg-white z-40">
-		@include('partials.nav-mobile')
-	</nav>
+	@if($deviceType == "phone")
+		<nav class="js-site-nav hidden md:hidden w-full pin-t pin-l bg-white z-40">
+			@include('partials.nav-mobile')
+		</nav>
+	@endif
 	{{-- Mobile Menu Drawer END --}}
 
 	{{-- Bottom bar --}}

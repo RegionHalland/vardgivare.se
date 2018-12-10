@@ -1,4 +1,8 @@
-{{ session_start() }}
+<?php
+	if (!isset($_SESSION)) {
+    	session_start();
+	}
+?>	
 <!doctype html>
 <html @php(language_attributes())>
 	@include('partials.head')
