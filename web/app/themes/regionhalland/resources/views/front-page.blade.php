@@ -46,39 +46,43 @@
 		</div>
 	</div>
 
+	<!-- SUBPAGE-CARD -->
 	<div class="bg-white pt-16 pb-8">
 		<div class="container mx-auto px-4">
-			<div class="w-full mx-auto">
+			<div class="w-full mx-auto"><!--  card li -->
+
 				<header class="relative pb-4 block mb-8">
 					<span class="border-b-2 border-blue-dark text-2xl font-bold text-black pb-2 z-20 relative leading-none">Vad letar du efter?</span>
 					<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
 				</header>
+
 				<ul class="flex flex-wrap items-stretch -mx-4 list-reset" aria-labelledby="Länklista">
 				@php($top_level_pages = get_region_halland_tree_first_level())	
 				@if(isset($top_level_pages) && !empty($top_level_pages))
 					@foreach($top_level_pages as $top_level_page)
-						<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8 RH-nav__navigation-card">
+						<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8 RH-nav__navigation-card" title="{{ $top_level_page->post_title }}">						
 							<a href="{{ $top_level_page->url }}">
 								<div class="RH-nav__navigation-card--icon RH-icon__roundbg rh-bg-icon-subpage">
 						     		<i class="RH-icon__size-standard" data-feather="arrow-right"></i>
 						     	</div>
-						     	<h2 class="RH-nav__navigation-card--title">{{ $top_level_page->post_title }}</h2>
+						     	<h2 class="RH-nav__navigation-card--title">{{ $top_level_page->post_title }}</h2>				
+								<p class="RH-nav__navigation-card--content">
+									@if(get_field('excerpt', $top_level_page->ID)) 
+										{{ the_field('excerpt', $top_level_page->ID) }}
+									@else
+										{{ html_entity_decode(wp_trim_words($top_level_page->post_content, 10, '...')) }}
+									@endif
+								</p>
 							</a>
-							<p class="RH-nav__navigation-card--content">
-								@if(get_field('excerpt', $top_level_page->ID)) 
-									{{ the_field('excerpt', $top_level_page->ID) }}
-								@else
-									{{ html_entity_decode(wp_trim_words($top_level_page->post_content, 10, '...')) }}
-								@endif
-							</p>
 						</li>
 					@endforeach
 				@endif
-			
 				</ul>
-			</div>
+
+			</div><!-- end card li -->
 		</div>
 	</div>
+	<!-- end SUBPAGE-CARD -->
 
 	<div class="bg-white pt-16 pb-8">
 		<div class="container mx-auto px-4">
