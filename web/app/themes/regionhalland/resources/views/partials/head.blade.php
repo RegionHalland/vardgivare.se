@@ -18,5 +18,6 @@
 	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/main.min.css' type='text/css' media='all' />
   	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/main.css' type='text/css' media='all' />  	
   	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/std-style.css' type='text/css' media='all' />
-  	
+  	<link rel='stylesheet' href='{!! env('WP_HOME') !!}/include/style/rh-main.min.css' type='text/css' media='all' />
+	<script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/feather.min.js'></script>
 </head>

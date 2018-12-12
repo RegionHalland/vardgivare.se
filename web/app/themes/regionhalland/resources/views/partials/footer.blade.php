@@ -31,3 +31,6 @@
 <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery.min.js?ver=3.1.1'></script>
 <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/main.js'></script>
 <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/std-java.js'></script>
+<script>
+  feather.replace()
+</script>
