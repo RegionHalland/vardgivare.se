@@ -17,29 +17,35 @@
 					</div>
 				</form>
 			</div>
+
+	 
 			<ul class="tabs js--tabs">
+
 				<a href="#" data-collection="all" class="tab tab--active">
 					<li class="tab__item">
 						<span>Alla resultat</span>
 						<span class="tab__counter">{{ $results["stats"]["all_hits"] }}</span>
 					</li>
 				</a>
+
 				<a href="#" data-collection="styrdadokument" class="tab">
 					<li class="tab__item">
 						<span>Styrda dokument</span>
 						<span class="tab__counter">{{ $results["stats"]["std_hits"] }}</span>
 					</li>
 				</a>
+
 				<a href="#" data-collection="vardgivarwebben" class="tab">
 					<li class="tab__item">
 						<span>Sidor</span>
 						<span class="tab__counter">{{ $results["stats"]["vgw_hits"] }}</span>
 					</li>
 				</a>
+
 			</ul>
+
 		</div>
 	</div>
-
 
 	<div class="container mx-auto px-4">
 		<div class="w-full mx-auto">
@@ -50,6 +56,19 @@
 						<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-4 border-blue-light z-10">
 					</header>
 					
+							@foreach($results["all_documents"] as $result)
+
+								@if(isset($result->collection) && $result->collection === "vardgivarwebben")
+									@include('partials.content-search-vgw')
+								@endif
+
+								@if(isset($result->collection) && $result->collection === "styrdadokument")
+									@include('partials.content-search-std')
+								@endif
+
+							@endforeach
+
+
 					@if ($results["stats"]["all_hits"] == 0)
 						<div class="p-4 bg-grey-lightest text-lg rounded mt-4 mb-16">
 							{{  __('Din sökning gav tyvärr inga resultat.', 'sage') }}
@@ -58,14 +77,17 @@
 
 					@if ($results["stats"]["all_hits"] > 0)
 						<div class="js--search-results">
+
 							@foreach($results["all_documents"] as $result)
 								@if(isset($result->collection) && $result->collection === "vardgivarwebben")
 									@include('partials.content-search-vgw')
 								@endif
+
 								@if(isset($result->collection) && $result->collection === "styrdadokument")
 									@include('partials.content-search-std')
 								@endif
 							@endforeach
+
 						</div>
 					@endif
 
