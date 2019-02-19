@@ -40,7 +40,7 @@
 			<div class="bg-white pt-16 pb-8">
 				<div class="container mx-auto px-4">
 					<div class="w-full mx-auto">
-						@php($news = get_region_halland_vg_news_categories())
+						@php($news = get_region_halland_news_categories_vardgivare())
 						@if($news)
 							<header class="relative pb-4 block mb-8">
 								<span class="border-b-2 border-blue-dark text-2xl font-bold text-black pb-2 z-20 relative leading-none">Nyheter</span>

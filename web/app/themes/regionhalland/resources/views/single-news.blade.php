@@ -18,7 +18,7 @@
 				</div>
 				<div class="w-full sm:w-full md:w-4/12 px-4 mt-8 md:mt-0">
 					<div class="sticky pin-t">
-					@php($news = get_region_halland_vg_news())
+					@php($news = get_region_halland_news_archive_taxonomi_category_items())
 						@if(isset($news) && !empty($news))
 						<header class="relative pb-4 block mb-4">
 							<span class="border-b-2 border-yellow text-2xl font-bold text-black pb-2 z-20 relative leading-none">Fler nyheter</span>

@@ -8,7 +8,7 @@
 		<div class="flex flex-wrap items-stretch -mx-4 {{ isset($nav_sidebar) && !empty($nav_sidebar) ? 'justify-start' : 'justify-between' }}">
 		
 		{{-- Sidebar --}}
-		@php($nav_sidebar = get_region_halland_vg_nav_sidebar())	
+		@php($nav_sidebar = get_region_halland_nav_sidebar())	
 		@if(isset($nav_sidebar) && !empty($nav_sidebar))
 			<aside class="w-full md:w-3/12 px-4 mb-8 hidden md:block">
 				{{-- Sidebar Navigation --}}

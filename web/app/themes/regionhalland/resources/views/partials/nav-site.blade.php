@@ -82,11 +82,11 @@
 				<li class="flex-no-shrink px-4">
 
 					@if($top_level_page->active === true)
-						<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block relative" href="{{ the_permalink($top_level_page->ID) }}">{{ $top_level_page->post_title }}
+						<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block relative" href="{{ $top_level_page->url }}">{{ $top_level_page->post_title }}
 							 <div class="absolute pin-b pin-l w-full h-1 rounded-t bg-blue-dark"></div>
 						</a>
 					@else
-						<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block" href="{{ the_permalink($top_level_page->ID) }}">{{ $top_level_page->post_title }}</a>
+						<a class="no-underline hover:underline focus:underline text-black font-bold py-4 inline-block" href="{{ $top_level_page->url }}">{{ $top_level_page->post_title }}</a>
 					@endif
 				</li>
 			@endforeach
