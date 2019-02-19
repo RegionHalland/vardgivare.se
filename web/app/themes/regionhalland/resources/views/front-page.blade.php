@@ -96,7 +96,6 @@
 						@include('partials.news-list')
 					</div>
 					<div class="w-full lg:w-6/12 px-4 mb-8">
-						@include('partials.blurb-list')
 					</div>
 				</div>
 			</div>
