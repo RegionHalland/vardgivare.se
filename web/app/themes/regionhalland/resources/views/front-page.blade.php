@@ -63,7 +63,7 @@
 						<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8 RH-nav__navigation-card" title="{{ $top_level_page->post_title }}">						
 							<a href="{{ $top_level_page->url }}">
 								<div class="RH-nav__navigation-card--icon RH-icon__roundbg rh-bg-icon-subpage">
-						     		xxx<i class="RH-icon__size-standard" data-feather="arrow-right"></i>
+						     		<i class="RH-icon__size-standard" data-feather="arrow-right"></i>
 						     	</div>
 						     	<h2 class="RH-nav__navigation-card--title">{{ $top_level_page->post_title }}</h2>				
 								<p class="RH-nav__navigation-card--content">
