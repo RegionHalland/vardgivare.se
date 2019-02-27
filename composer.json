@@ -116,6 +116,10 @@
       "url": "https://github.com/RegionHalland/region-halland-template-top-links-vardgivare.git"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-api-analysforteckning.git"
+    },
+    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -166,7 +170,8 @@
     "regionhalland/region-halland-news-archive-taxonomi-category": "1.0.0",
     "regionhalland/region-halland-main-post-settings-vardgivare": "1.0.1",
     "regionhalland/region-halland-section-news-vardgivare": "1.0.0",
-    "regionhalland/region-halland-template-top-links-vardgivare": "1.1.0"
+    "regionhalland/region-halland-template-top-links-vardgivare": "1.1.0",
+    "regionhalland/region-halland-api-analysforteckning": "1.0.0"
     },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
