@@ -120,20 +120,20 @@
       "url": "https://github.com/RegionHalland/region-halland-api-analysforteckning.git"
     },
     {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.6.8",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
-        },
-        "require": {
-          "philippbaschke/acf-pro-installer": "^1.0",
-          "composer/installers": "^1.0"
-        }
-      }
+       "type": "package",
+       "package": {
+         "name": "advanced-custom-fields/advanced-custom-fields-pro",
+         "version": "5.6.8",
+         "type": "wordpress-plugin",
+         "dist": {
+           "type": "zip",
+           "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+         },
+         "require": {
+           "philippbaschke/acf-pro-installer": "^1.0",
+           "composer/installers": "^1.0"
+         }
+       }
     }
   ],
   "require": {
@@ -144,12 +144,9 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-config": "1.0.0",
-    "gridonic/princexml-php": "^1.2",
-    "wpackagist-plugin/wp-nested-pages": "2.0.4",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/user-role-editor": "^4.35",
     "wpackagist-plugin/admin-menu-editor": "1.8.7",
-    "wpackagist-plugin/disable-gutenberg": "*",
     "regionhalland/mfpconnect": "1.0.1",
     "regionhalland/mfpconnectmedia": "1.0.1",
     "helsingborg-stad/modularity": "2.3.54",
@@ -172,7 +169,7 @@
     "regionhalland/region-halland-section-news-vardgivare": "1.0.0",
     "regionhalland/region-halland-template-top-links-vardgivare": "1.1.0",
     "regionhalland/region-halland-api-analysforteckning": "1.0.0"
-    },
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
     "roave/security-advisories": "dev-master"
