@@ -6,41 +6,28 @@
 
 @section('content')
 
-<main class="bg-white pt-16 pb-8" id="main">
-	<div class="container mx-auto px-4">
-		<div class="w-full mx-auto">
-			<h1 class="mb-4">{!! get_the_title() !!}</h1>
-			@while(have_posts()) @php(the_post())
-				<div class="text-lg leading-tight md:text-xl mb-12 text-grey-darkest lg:w-5/12">
-					@php(the_content())
-				</div>
-			@endwhile
-			<header class="relative pb-4 block mb-8">
-				<span class="border-b-2 border-blue-dark text-lg font-bold text-black pb-2 z-20 relative leading-none">Gå till område</span>
-				<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
-			</header>
-			<ul class="flex flex-wrap items-stretch -mx-4 list-reset" aria-labelledby="Gå till område">
-				@php($page_children = get_region_halland_page_children())	
-				@foreach($page_children as $page)
-					<li class="w-full sm:w-6/12 lg:w-4/12 px-4 mb-8">
-						<a href="{{ $page->url }}" class="text-blue-dark hover:bg-yellow-light focus:bg-yellow-light inline-block">
-							<h2 class="mb-2 text-xl md:text-2xl">{{ $page->post_title }}</h2>
-						</a>
-						<p class="leading-tight text-lg text-grey-darkest">
-							@if(has_excerpt($page->ID)) 
-								{{ $page->acf_excerpt }}
-							@else
-								{{ html_entity_decode(wp_trim_words(region_halland_remove_shortcode($page->post_content), 10, '...'))  }}
-							@endif
-						</p>
-					</li>
-				@endforeach
-			</ul>
-			@if (is_active_sidebar('sidebar-article-bottom'))
-				@include('partials.sidebar-article-bottom')
-			@endif
+	<h1>{!! get_the_title() !!}</h1>
+	
+	@while(have_posts()) @php(the_post())
+		<div>
+			@php(the_content())
 		</div>
-	</div>
-</main>
+	@endwhile
+
+    <nav aria-label="Undersidor" style="background-color: #F4F4F4;">
+        <ul class="flex flex-wrap px3 pt3 center" aria-label="Undersidor" style="max-width: 1440px;">
+			@php($page_children = get_region_halland_page_children())	
+				@foreach($page_children as $page)
+                <li class="rh-navigation-card left-align col-12 sm-col-6 md-col-4 lg-col-3 pr2" style="position:relative">
+                    <div class="rh-navigation-card-title">
+                        <span class="rh-navigation-card-title-icon"></span>
+                        <strong><a href="{{ $page->url }}" class="h3" style="color:black; text-decoration: none;">
+                            {{ $page->post_title }}
+                        </a></strong>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+    </nav>
 
 @endsection

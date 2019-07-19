@@ -1,21 +1,15 @@
-<header class="relative pb-4 block mb-8">
-	<span class="border-b-2 border-blue-dark text-2xl font-bold text-black pb-2 z-20 relative leading-none">Vad letar du efter?</span>
-	<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
-</header>
-<ul class="flex flex-wrap list-reset items-stretch -mx-4" aria-labelledby="Länklista">
-	@php($page_children = get_region_halland_page_children())
-	@foreach($page_children as $index => $page)
-		<li class="w-full sm:w-6/12 lg:w-6/12 px-4 mb-8">
-			<a href="{{ $page->url }}" class="text-blue-dark hover:bg-yellow-light focus:bg-yellow-light inline-block">
-				<h2 class="mb-2 text-xl md:text-2xl">{{ $page->post_title }}</h2>
-			</a>
-			<p class="leading-tight text-lg text-grey-darkest">
-				@if(has_excerpt($page->ID)) 
-					{{ $page->acf_excerpt }}
-				@else
-					{{ html_entity_decode(wp_trim_words(region_halland_remove_shortcode($page->post_content), 10, '...'))  }}
-				@endif
-			</p>
-		</li>
-	@endforeach
-</ul>
+<nav aria-label="Undersidor">
+    <ul class="clearfix pt3 mb4" aria-label="Undersidor" style="background-color: white; border-radius: 0.4ex;box-shadow: 1px 2px 6px grey;">
+        @php($page_children = get_region_halland_page_children())
+        @foreach($page_children as $index => $page)
+            <li class="rh-navigation-card col col-12 sm-col-6 md-col-4 lg-col-4 px3" style="position:relative">
+                <div class="rh-navigation-card-title">
+                    <span class="rh-navigation-card-title-icon" style="height: 10em; width: 10em;"></span>
+                    <strong><a href="{{ $page->url }}" class="h3" style="text-decoration: none; color: black; line-height: 1.4;">
+                        {{ $page->post_title }}
+                    </a></strong>
+                </div>
+            </li>
+        @endforeach
+    </ul>
+</nav>

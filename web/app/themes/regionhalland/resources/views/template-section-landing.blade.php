@@ -29,7 +29,7 @@
 								@include('partials.section-navigation')
 							</div>
 							<div class="w-full lg:w-4/12 px-4 mt-12 lg:mt-0">
-								@include('partials.top-links')
+								{{-- @include('partials.top-links') --}}
 							</div>
 						</div>
 					</div>
@@ -37,27 +37,35 @@
 			</div>
 
 
-			<div class="bg-white pt-16 pb-8">
-				<div class="container mx-auto px-4">
-					<div class="w-full mx-auto">
-						@php($news = get_region_halland_news_categories_vardgivare())
-						@if($news)
-							<header class="relative pb-4 block mb-8">
-								<span class="border-b-2 border-blue-dark text-2xl font-bold text-black pb-2 z-20 relative leading-none">Nyheter</span>
-								<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
-							</header>
-						@endif
-						<div class="flex flex-wrap -mx-4">
-							<div class="w-full w-full lg:w-6/12 px-4 mb-8">
-								@include('partials.news-list-category')
-							</div>
-							<div class="w-full lg:w-6/12 px-4 mb-8">
-								@include('partials.blurb-list')
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			@if(function_exists('get_region_halland_page_news_taxonomi_category'))
+            @php($newsitems = get_region_halland_page_news_taxonomi_category())
+            @if($newsitems)
+                <div style="background-color: #F4F4F4;" class="pb3 pt3">
+                    <div class="center" style="max-width:1440px;">
+                        <div class="left-align">
+                            <div class="mx3 pt3 pb2">
+                                <h1 class="pb2">Nyheter</h1>
+                            </div>
+                            <ul class="flex flex-wrap pb3 mx3 pt3 px2" aria-label="Nyheter" style="background-color: white; border-radius: 0.4ex; box-shadow: 1px 2px 6px grey;">
+                                @foreach($newsitems as $item)
+                                    <li class="rh-article pb2 col-12 sm-col-6 md-col-6 lg-col-6 px2">
+                                        <h2 class="h3 rh-article-title"><a class="rh-article-title-link" style="color: #378A30;" href="{{ $item['permalink'] }}">{{ $item['title'] }}<a/></h2>
+                                        <p class="rh-article-published">Publicerad: {{ $item['date'] }}</p>
+                                        <p class="rh-article-description">
+                                            {{ wp_trim_words(region_halland_remove_shortcode($item['content']), 20, '...') }}
+                                        </p>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            <div class="col-12 mt3" style="display: flex; justify-content: center;">
+                                <a href="/nyheter" class="rh-button rh-button--secondary" aria-label="Visa fler nyheter" role="button" style="text-decoration: none;">Visa fler nyheter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endif
+        
 		</main>
 
 	@endwhile

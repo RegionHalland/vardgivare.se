@@ -3,54 +3,55 @@
 @section('content')
 
 {{-- Container --}}
-<div class="container mx-auto px-4 pt-8 md:pt-16 pb-12">
-	<div class="w-full mx-auto">
-		<div class="flex flex-wrap items-stretch -mx-4 {{ isset($nav_sidebar) && !empty($nav_sidebar) ? 'justify-start' : 'justify-between' }}">
-		
-		{{-- Sidebar --}}
-		@php($nav_sidebar = get_region_halland_nav_sidebar())	
-		@if(isset($nav_sidebar) && !empty($nav_sidebar))
-			<aside class="w-full md:w-3/12 px-4 mb-8 hidden md:block">
-				{{-- Sidebar Navigation --}}
-				@include('partials.nav-sidebar')
-				{{-- Sidebar Navigation END--}}
+<div class="mx-auto clearfix" style="max-width: 1440px">
+	<div>
+		<div class="{{ isset($nav_sidebar) && !empty($nav_sidebar) ? 'justify-start' : 'justify-between' }}">
 
-				{{-- Left Sidebar END --}}
-				@if (is_active_sidebar('sidebar-left'))
-					@include('partials.sidebar-left')
-				@endif
-				{{-- Left Sidebar END --}}
-			</aside>
+		{{-- Sidebar --}}
+		@if(function_exists('get_region_halland_nav_sidebar'))
+			@php($nav_sidebar = get_region_halland_nav_sidebar())
+			@if(isset($nav_sidebar) && !empty($nav_sidebar))
+				<aside class="rh-xpad--left pt3 pb2 col col-12 sm-col-12 md-col-12 lg-col-3">
+					{{-- Sidebar Navigation --}}
+					@include('partials.nav-sidebar')
+					{{-- Sidebar Navigation END--}}
+				</aside>
+			@endif
 		@endif
 		{{-- Sidebar END --}}
 
 		{{-- Main Content --}}
-		<main class="w-full px-4 md:w-9/12 lg:w-6/12" id="main">
+		<main class="pl3 pr2 pt3 pb1 col col-12 sm-col-12 md-col-12 lg-col-6" id="main">
 			@while(have_posts()) @php(the_post())
+				
 				<h1>{{ the_title() }}</h1>
+				
 				{{-- Content --}}
 				@if(function_exists('get_region_halland_prepare_the_content'))
 					@php(get_region_halland_prepare_the_content())
 				@endif
-				<article class="article">{!! the_content() !!}</article>
+				<article class="rh-article">
+					{!! the_content() !!}
+				</article>
 				{{-- Content END --}}
-				
-				{{-- Sidebar Bottom --}}
-				@if (is_active_sidebar('sidebar-article-bottom'))
-				<aside class="w-full mt-8">
-					@include('partials.sidebar-article-bottom')
-				</aside>
-				@endif
-				{{-- Sidebar Bottom END --}}
+
+				@include('partials.link-lists')
+
+				@include('partials.rss-repeater-lists')
 
 				{{-- Author --}}
-				@include('partials.author-info')
+				<div class="pt4">
+					@include('partials.author-info')
+				</div>
 				{{-- Author END --}}
+				@include('partials.feedback')
+
 			@endwhile
+
 		</main>
 		{{-- Main Content END --}}
 
-		<aside class="w-full md:w-3/12 px-4">
+		<aside class="pt4 col col-12 sm-col-12 md-col-12 lg-col-3">
 			{{-- Content Navigation --}}
 			@include('partials.content-nav')
 			{{-- Content Navigation END --}}

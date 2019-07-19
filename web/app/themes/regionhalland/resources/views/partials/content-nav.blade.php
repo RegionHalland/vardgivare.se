@@ -1,18 +1,23 @@
-@php($content_nav = get_region_halland_find_on_page())	
-@if(isset($content_nav) && count($content_nav) > 0)
-@php($id = uniqid())
-<nav class="hidden md:block content-nav sticky pin-t">
-	<header class="relative pb-4 block mb-2">
-		<span class="border-b-2 border-blue-dark text-xl font-bold text-black pb-2 z-20 relative leading-none">Hitta på sidan</span>
-		<hr class="absolute pin-b pin-l w-full h-0 border-b-2 mb-1 border-blue-light z-10">
-	</header>
-	<ul class="content-nav__list list-reset" itemscope itemtype="http://schema.org/ItemList">
-		@foreach ($content_nav as $item)
-		<li class="content-nav__item mb-2 hover:bg-yellow-light focus:bg-yellow-light" itemprop="itemListElement">
-			<a class="content-nav__link text-black no-underline hover:underline focus:underline" href="#{{ $item['slug'] }}" data-pointstoid="{{ $item['slug'] }}">{!! $item['content'] !!}</a>
-			<meta itemprop="position" content="{{ $loop->iteration }}" />
-		</li>
-		@endforeach
-	</ul>
-</nav>
+@if(function_exists('get_region_halland_find_on_page'))
+	@php($myNavs = get_region_halland_find_on_page())
+	@if(isset($myNavs) && count($myNavs) > 0)
+		@php($id = uniqid())
+		<div id="content-nav-placeholder"></div>
+		<nav class="content-nav-container rh-get-sticky hidden-sm" id="content-nav-container">
+			<div>
+				<p class="h2" id="{{ $id }}">Hitta på sidan</p>
+				<ul>
+					@foreach ($myNavs as $myNav)
+						<li class="content-nav__item {{ $myNav['class'] }}" >
+							<a class="content-nav__item-link" href="#{{ $myNav['slug'] }}" data-pointstoid="{{ $myNav['slug'] }}">
+								{!! $myNav['content'] !!}
+							</a>
+							<meta itemprop="position" content="{{ $loop->iteration }}" />
+						</li>
+					@endforeach
+				</ul>
+			</div>
+			<div id="content-nav-bottom-placeholder"></div>
+		</nav>
+	@endif
 @endif

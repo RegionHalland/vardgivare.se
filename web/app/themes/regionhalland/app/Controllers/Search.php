@@ -36,7 +36,7 @@ class Search extends Controller
 		]);
 
 		$response_body = json_decode($response->getBody());
-		
+
 		foreach ($response_body->vardgivarwebben->documents as $key => $vdoc) {
 			$vdoc->category = "vgw";
 		}
@@ -46,32 +46,12 @@ class Search extends Controller
 		$all = array_merge($response_body->vardgivarwebben->documents, $response_body->styrdadokument->documents);
 
 		return array(
-			#JSON SAKNAS-HOS-FINDWISE--> "all_documents" => $response_body->documents->documents,
-			"all_documents" => $response_body->halland->documents, #<-- JOHN ÄNDRAT 
-			
+			"all_documents" => $response_body->documents->documents,
 			"vgw" => $response_body->vardgivarwebben->documents,
 			"stats" => array(
-				#JSON SAKNAS-HOS-FINDWISE--> "all_hits" => $response_body->documents->numberOfHits,
-				"all_hits" => $response_body->halland->numberOfHits, #<-- JOHN ÄNDRAT 
+				"all_hits" => $response_body->documents->numberOfHits,
 				"vgw_hits" => $response_body->vardgivarwebben->numberOfHits,
 				"std_hits" => $response_body->styrdadokument->numberOfHits
-
-	/*  JOHN 5 DEC 2018 ######################################################################
-	FINDWISE NI MÅSTE LÄGGA TILL/TILLBAKA nedan på json indexeringen för att anropet ska fungera
-	VARIABEL RAD 52 $response_body->documents->documents
-
-	JSON - http://193.183.15.219:8080/rest/apps/regionhalland/searchers/halland
-
-  	"documents" : {
-    "id" : "vardgivarwebben",
-    "displayName" : "Documents",
-    "numberOfHits" : 76,
-    "documents" : [ { xxxxx } ]
-		},
-		
-	########################################################################################### */
-
-
 			)
 		);
 	}

@@ -1,27 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-12 -mx-4">
-	<div class="container mx-auto px-4">
+<div class="center py4 px4" style="max-width:1440px;">
+	<div class="rh-article left-align">
 		@if (!have_posts())
-			<h1 class="mb-4">{{ __('Sidan du söker efter verkar inte finnas.', 'halland') }}</h1>
-			<p class="text-lg mb-4">Nedan hittar du några av våra mest populära länkar</p>
-			@php
-				$frontpage_id = get_option('page_on_front');
-				$popular_links = get_field('popular_links', $frontpage_id);
-			@endphp
-			@if(isset($popular_links) && !empty($popular_links))
-				<ol class="list-reset bg-white relative">
-					@foreach($popular_links as $link)
-					<li class="py-4 border-b border-grey-lightest bg-white">
-						<svg class="h-4 w-4 align-middle mr-1">
-							<use xlink:href="#link-2"/>
-						</svg>
-						<a class="text-black" href="{{ $link['link']['url'] }}">{{ $link['link']['title'] }}</a>
-					</li>
-					@endforeach
-				</ol>
-			@endif
+			<h1 class="">{{ __('Sidan du söker efter verkar inte finnas.', 'halland') }}</h1>
+			<p>Kontaktuppgifter, öppettider och övrig information om vård- och tandvårdsmottagningar hittar du på <a href="https://www.1177.se/Halland/hitta-vard/">www.1177.se/Halland/hitta-vard/</a>.</p>
+
+			<h2>Det här kan du göra</h2>
+			<ul>
+				<li>Gå till startsidan <a href="/">www.regionhalland.se</a> och försök klicka dig fram till informationen du söker.</li>
+				<li>Använd den här webbplatsens sökfunktion.</li>
+				<li>Sök via en extern sökmotor som till exempel Google eller Bing.</li>
+				<li>Ladda om sidan för att se om det var ett tillfälligt fel.</li>
+				<li>Kontrollera om du skrivit in adressen rätt.</li>
+			</ul>
+
+			<h2 class="pt2">Hjälp oss att bli bättre</h2>
+			Att sidan inte hittades kan bero på flera saker. Det kan vara vi som har gjort fel eller det kan vara felaktiga länkar till vår webbplats någon annanstans. Välkommen att <a href="mailto:infomaster@regionhalland.se">höra av dig via e-post</a> så att vi får reda på vad som inte fungerar.
 		@endif
 	</div>
 </div>
