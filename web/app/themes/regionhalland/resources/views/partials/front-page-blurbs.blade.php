@@ -1,6 +1,5 @@
 @php($myFrontPageBlurbs = get_region_halland_acf_front_page_blurbs())
 @if(isset($myFrontPageBlurbs))
-@php(var_dump($myFrontPageBlurbs))
 <div>
     <ul class="clearfix center mb2 mt2" aria-label="Puffar" style="max-width:1440px;">
     @foreach ($myFrontPageBlurbs as $blurbs)
