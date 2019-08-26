@@ -26,3 +26,20 @@ web/wp/*
 # Dotenv
 .env
 .env.*
+
+# IDE
+.vs
+.vscode
+.idea
+
+# Using for front-end development
+node_modules
+package.json
+package-lock.json
+
+_dev
+.editorconfig
+.eslintignore
+.eslintrc.json
+devenv.config.json
+gulpfile.js
