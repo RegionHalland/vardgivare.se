@@ -1,0 +1,12 @@
+.rh-vg__home__main-content {
+  display: flex;
+  flex-direction: column-reverse; }
+  @media (min-width: 48em) {
+    .rh-vg__home__main-content {
+      display: block;
+      flex-direction: initial; } }
+
+.rh-page-content {
+  max-width: 90em;
+  margin-left: auto;
+  margin-right: auto; }
