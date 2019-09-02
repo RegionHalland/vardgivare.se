@@ -3,7 +3,7 @@
 @section('content')
     @include('partials.top-navigation')
 
-    <div class="clearfix rh-page-content rh-vg__home__main-content">
+    <div class="clearfix rh-container--auto rh-container-px rh-vg__home-page__main-content">
         <div class="col col-12 md-col-4">
             @include('partials.front-page-info')
             @include('partials.front-page-news')

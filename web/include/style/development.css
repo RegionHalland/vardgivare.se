@@ -1,0 +1,20 @@
+/* Specific styling for Vardgivare website */
+.rh-vg__home-page__main-content {
+    display: flex;
+    flex-direction: column-reverse; }
+    @media (min-width: 48em) {
+      .rh-vg__home-page__main-content {
+        display: block;
+        flex-direction: initial; } }
+  
+  .rh-vg__styling-1 {
+    color: #ffffff;
+    background-color: #005069; }
+  
+  .rh-vg__styling-2 {
+    color: #ffffff;
+    background-color: #417795; }
+  
+  .rh-vg__styling-3 {
+    color: #000000;
+    background-color: #BEDEE3; }

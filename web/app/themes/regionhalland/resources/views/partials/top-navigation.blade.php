@@ -1,15 +1,33 @@
 @php($myFirstLevelPages = get_region_halland_tree_first_level())
-<nav aria-label="Undersidor" style="background-color: #F4F4F4;">
-    <ul class="flex flex-wrap px3 pt3 center" aria-label="Undersidor" style="max-width: 1440px;">
-        @foreach($myFirstLevelPages as $page)
-            <li class="rh-navigation-card left-align col-12 sm-col-6 md-col-4 lg-col-3 pr2" style="position:relative">
-                <div class="rh-navigation-card-title">
-                    <span class="rh-navigation-card-title-icon"></span>
-                    <strong><a href="{{ $page->url }}" class="h3" style="color:black; text-decoration: none;">
-                        {{ $page->post_title }}
-                    </a></strong>
+<nav aria-label="Undersidor">
+    <div class="rh-container--auto clearfix rh-navigation-block-group rh-navigation-block-group__container rh-navigation-block-group__container-px rh-navigation-block-group__container-py">
+        <div class="row row-eq-height">
+
+            @foreach($myFirstLevelPages as $page)
+            <div class="col col-12 md-col-6 lg-col-4 rh-navigation-block-group__item-container">
+                <div class="rh-navigation-block">
+                    <div class="rh-navigation-block__header">
+                        <div class="rh-round-button rh-navigation-block__header-round-button">
+                            <span class="rh-navigation-block__header-round-button-icon"></span>
+                        </div>
+                        <div class="rh-navigation-block__header-title">
+                            <a href="{{ $page->url }}"
+                                class="rh-link--navigation rh-navigation-block__header-title-link">
+                                {{ $page->post_title }}
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="rh-navigation-block__description hidden-sm">
+                        <p class="rh-navigation-block__description-text">
+                            Halland ska hålla i längden. Det betyder att det vi gör i dag ska fungera även för framtida
+                            generationer.
+                        </p>
+                    </div>
                 </div>
-            </li>
-        @endforeach
-    </ul>
+            </div>
+            @endforeach
+
+        </div>
+    </div>
 </nav>

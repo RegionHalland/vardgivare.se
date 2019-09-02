@@ -33,12 +33,14 @@
 		}
 	</style> --}}
     {{-- <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.1.1'></script>--}}
-    
-    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide/css/stilguide.5.1.0.plus.css">
-    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/vardgivare.css">
+   
+    <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css">
+    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css">
+
+    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/_dev/css/development.css">
     
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
-	<script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
-
-    {{-- <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/_dev/css/vardgivare.css"> --}}
+    <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
+    
+	{{-- <script type='text/javascript' src='{!! env('WP_HOME') !!}/_dev/js/development.js'></script> --}}
 </head>
