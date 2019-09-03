@@ -65,6 +65,9 @@
         @if($myData['links-exist-provtagning'] == 1)
             <br><a href="{!! $myData['links-link-url-provtagning'] !!}" target="_blank">{!! $myData['links-link-text-provtagning'] !!}</a>
         @endif
+        @if($myData['links-exist-sampling-material'] == 1)
+            <br><a href="{!! $myData['links-link-url-sampling-material'] !!}" target="_blank">{!! $myData['links-link-text-sampling-material'] !!}</a>
+        @endif
     </td>
 </tr>
 @endif
