@@ -16,7 +16,7 @@
     </p>
 </div>
 
-<h2 class="mb3" style="border-bottom: 2px solid #004890;">({!! $myData['name'] !!})</h2>
+<h2 class="mb3" style="border-bottom: 2px solid #004890;">{!! $myData['name'] !!}</h2>
 <table class="rh-table-listing--hr mb3" style="width:100%; line-height: 1.4">
 @if($myData['vas-order-code'])
 <tr class="rh-table-listing__row">
