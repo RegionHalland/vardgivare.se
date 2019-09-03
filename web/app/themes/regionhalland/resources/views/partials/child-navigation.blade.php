@@ -1,10 +1,10 @@
 @php($myFirstLevelPages = get_region_halland_page_children())
 <nav aria-label="Undersidor">
-    <div class="rh-container--auto clearfix rh-navigation-block-group rh-navigation-block-group__container rh-navigation-block-group__container-px rh-navigation-block-group__container-py">
+    <div class="clearfix rh-container--auto rh-navigation-block-group__container-p">
         <div class="row row-eq-height">
 
             @foreach($myFirstLevelPages as $page)
-            <div class="col col-12 md-col-6 lg-col-4 rh-navigation-block-group__item-container">
+            <div class="col col-12 md-col-6 lg-col-3 rh-navigation-block-group__item-container">
                 <div class="rh-navigation-block">
                     <div class="rh-navigation-block__header">
                         <div class="rh-round-button rh-navigation-block__header-round-button">
