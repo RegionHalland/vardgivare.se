@@ -1,30 +1,63 @@
 /* Specific styling for Vardgivare website */
-.rh-vg__home-page__main-content {
-    display: flex;
-    flex-direction: column-reverse; }
-    @media (min-width: 48em) {
-      .rh-vg__home-page__main-content {
-        display: block;
-        flex-direction: initial; } }
-  
-  .rh-vg__styling-dark {
-    color: #ffffff;
-    background-color: #005069; }
-  
-  .rh-vg__styling-light-1 {
-    color: #ffffff;
-    background-color: #417795; }
-  
-  .rh-vg__styling-light-2 {
-    color: #000000;
-    background-color: #BEDEE3; }
-  
-  .rh-vg__bg-color-dark {
-    background-color: #005069; }
-  
-  .rh-vg__bg-color-light-1 {
-    background-color: #417795; }
-  
-  .rh-vg__bg-color-light-2 {
-    background-color: #BEDEE3; }
-  
+.rh-vg__home-main {
+  display: flex;
+  flex-direction: column-reverse; }
+  @media (min-width: 62em) {
+    .rh-vg__home-main {
+      display: block;
+      flex-direction: initial; } }
+
+.rh-vg__home-left-group {
+  padding-bottom: 2.5em; }
+  @media (min-width: 62em) {
+    .rh-vg__home-left-group {
+      padding-top: 2.5em;
+      padding-left: 3.75em;
+      padding-right: 1.875em; } }
+  @media (min-width: 75em) {
+    .rh-vg__home-left-group {
+      padding-left: 5em; } }
+
+.rh-vg__home-blocks-container {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  padding-left: 1em;
+  padding-right: 1em; }
+  @media (min-width: 48em) {
+    .rh-vg__home-blocks-container {
+      padding-top: 1.9em;
+      padding-bottom: 1.9em;
+      padding-left: 1.275em;
+      padding-right: 1.275em; } }
+  @media (min-width: 62em) {
+    .rh-vg__home-blocks-container {
+      padding-left: 1.875em;
+      padding-right: 3.15em; } }
+  @media (min-width: 75em) {
+    .rh-vg__home-blocks-container {
+      padding-right: 4.4em; } }
+
+.rh-vg__styling-dark {
+  color: #ffffff;
+  background-color: #005069; }
+  .rh-vg__styling-dark p {
+    color: #ffffff; }
+
+.rh-vg__styling-light-1 {
+  color: #ffffff;
+  background-color: #417795; }
+  .rh-vg__styling-light-1 p {
+    color: #ffffff; }
+
+.rh-vg__styling-light-2 {
+  color: #000000;
+  background-color: #BEDEE3; }
+
+.rh-vg__bg-color-dark {
+  background-color: #005069; }
+
+.rh-vg__bg-color-light-1 {
+  background-color: #417795; }
+
+.rh-vg__bg-color-light-2 {
+  background-color: #BEDEE3; }

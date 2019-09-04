@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css">
 
     {{-- <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css">
-    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/_dev/css/development.css"> --}}
+    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css"> --}}
     
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
