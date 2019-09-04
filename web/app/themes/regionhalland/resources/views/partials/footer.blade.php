@@ -1,14 +1,127 @@
-<footer id="footer-top-placeholder" style="background-color: #C3DCC1; line-height: 1.4;">
-    {{-- <div class="clearfix center px3 pb3" style="max-width: 1440px;"> --}}
-    <div class="clearfix rh-container--auto rh-container-px">
-        <div class="left-align col col-12 sm-col-12 md-col-3 lg-col-3">
-            <p class="h2 pt3">Kontakta Region Halland</p>
-            <ul>
-                <li><a href="https://www.1177.se/Halland">1177 Vårdguiden</a></li>
-                <li><a href="https://www.regionhalland.se/vard-halsa/hitta-din-vard/">Kontakta mottagning</a></li>
-                <li><a href="https://www.1177.se/Halland/Tema/E-tjanster/">1177 Vårdguidens e-tjänster</a></li>
-                <li><a href="https://www.regionhalland.se/kontakta-oss/">Kontakta personal på Region Halland</a></li>
-            </ul>
+<div class="rh-vg__styling-dark">
+    <footer class="clearfix rh-footer-group rh-container--auto rh-container-px rh-footer-group__container-py">
+        <div class="row row-eq-height">
+            <div class="col col-12 md-col-4">
+                <div class="rh-footer-group__item rh-footer-group__item-column-first">
+                    <div class="rh-footer-group__item-header">
+                        <p class="rh-footer-group__item-header-title">Kontakta oss</p>
+                    </div>
+
+                    <div class="rh-footer-group__item-body">
+                        <p>
+                            Region Halland<br>
+                            Box 517<br>
+                            301 80 Halmstad
+                        </p>
+
+
+                        <div class="rh-footer-group__item-body-address">
+                            <p><strong>Telefon:</strong> 035 - 13 48 00</p>
+                            <p><strong>E-post:</strong> <a class="rh-link--navigation rh-footer-group__item-body-link"
+                                    href="mailto:regionen@regionhalland.se">regionen@regionhalland.se</a></p>
+                        </div>
+
+                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Kontakta
+                                mottagarna</a></p>
+                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Kontakta personal</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 md-col-4">
+                <div class="rh-footer-group__item rh-footer-group__item-column-between">
+                    <div class="rh-footer-group__item-header">
+                        <p class="rh-footer-group__item-header-title">Övriga webbplatser</p>
+                    </div>
+
+                    <div class="rh-footer-group__item-body">
+                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Regionhalland.se</a>
+                        </p>
+                        <p><a href="#"
+                                class="rh-link--navigation rh-footer-group__item-body-link">Vardgivare.regionhalland.se</a>
+                        </p>
+                        <p><a href="#"
+                                class="rh-link--navigation rh-footer-group__item-body-link">Intra.regionhalland.se</a>
+                        </p>
+                        <p><a href="#"
+                                class="rh-link--navigation rh-footer-group__item-body-link">Hallandstrafiken.se</a></p>
+                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">1177.se</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-12 md-col-4">
+                <div class="rh-footer-group__item rh-footer-group__item-column-last">
+                    <div class="rh-footer-group__item-header">
+                        <p class="rh-footer-group__item-header-title">Om webbplatsen</p>
+                    </div>
+
+                    <div class="rh-footer-group__item-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation allamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+</div>
+{{-- <footer id="footer-top-placeholder" class="rh-footer rh-container--auto rh-container-px">
+        
+            <div class="rh-footer-section">
+                <h5>Kontakta oss </h5>
+                <hr class="rh-footer-title-hr">
+                <p>
+                    Region Halland </br>
+                    Box 517 </br>
+                    301 80 Halmstad
+                </p>
+                <p><strong> Telefon:</strong> 035 - 13 48 00 </p>
+                <p><strong> E-post:</strong> <a class="rh-link"> regionen@regionhalland.se</a> </p>
+                <br>
+                <p><a class="rh-link"> Kontakta mottagning</a></p>
+                <p><a class="rh-link"> Kontakta personal</a></p>
+            </div>
+        
+            <div class="rh-footer-section">
+                <h5>Övriga webbplatser </h5>
+                <hr class="rh-footer-title-hr">
+                <ul>
+                    <li class="rh-footer-item">
+                        <a class="rh-link" href="#">
+                            Regionhalland.se
+                        </a>
+                    </li>
+                    <li class="rh-footer-item">
+                        <a class="rh-link" href="#">
+                            Vardgivare.regionhalland.se
+                        </a>
+                    </li>
+                    <li class="rh-footer-item">
+                        <a class="rh-link" href="#">
+                            Intra.regionhalland.se
+                        </a>
+                    </li>
+                    <li class="rh-footer-item">
+                        <a class="rh-link" href="#">
+                            Hallandstrafiken.se
+                        </a>
+                    </li>
+                    <li class="rh-footer-item">
+                        <a class="rh-link" href="#">
+                            1177.se
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="rh-footer-section">
+                <h5>Om webbplatsen </h5>
+                <hr class="rh-footer-title-hr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation allamco laboris nisi ut aliquip ex ea
+                    commodo consequat. </p>
+            </div>
+        
+        </footer> --}}
