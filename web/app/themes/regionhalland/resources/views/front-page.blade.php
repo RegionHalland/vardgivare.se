@@ -7,7 +7,7 @@
     <div class="rh-vg__home-main">
         <div class="col col-12 lg-col-4">
             <div class="rh-container-px rh-vg__home-left-group">
-                @include('partials.front-page-info')
+                @include('partials.site-info')
                 @include('partials.front-page-news')
             </div>
         </div>

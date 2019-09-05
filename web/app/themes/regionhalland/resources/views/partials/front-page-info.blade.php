@@ -1,5 +1,5 @@
 @php($myFrontPage = get_region_halland_single_page_information(get_option('page_on_front')))
-<div>
-    <span><strong>{{$myFrontPage->post_title}}</strong></span><br>
-    <span>{{$myFrontPage->post_content}}</span>
+<div class="rh-vg__home-site-info">
+    <p class="rh-vg__home-site-info__title">{{$myFrontPage->post_title}}</p>
+    <p>{{$myFrontPage->post_content}}</p>
 </div>

@@ -1,4 +1,8 @@
 /* Specific styling for Vardgivare website */
+.rh-vg__header-search-button {
+  box-shadow: none;
+  font-weight: bold; }
+
 .rh-vg__home-main {
   display: flex;
   flex-direction: column-reverse; }
@@ -21,8 +25,12 @@
 .rh-vg__home-blocks-container {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
-  padding-left: 1em;
-  padding-right: 1em; }
+  padding-left: 0.7em;
+  padding-right: 0.7em; }
+  @media (min-width: 36em) {
+    .rh-vg__home-blocks-container {
+      padding-left: 1em;
+      padding-right: 1em; } }
   @media (min-width: 48em) {
     .rh-vg__home-blocks-container {
       padding-top: 1.9em;
@@ -37,17 +45,72 @@
     .rh-vg__home-blocks-container {
       padding-right: 4.4em; } }
 
+.rh-vg__home-site-info {
+  padding: 1.875em 0 0 0; }
+  @media (min-width: 62em) {
+    .rh-vg__home-site-info {
+      padding-top: 0; } }
+  .rh-vg__home-site-info__title {
+    font-size: 1.875em;
+    font-weight: bold;
+    word-break: break-word; }
+
+@media (min-width: 62em) {
+  .rh-vg__home-news {
+    margin-top: 2em; } }
+
+.rh-vg__home-news__header {
+  border-bottom-style: solid;
+  border-bottom-width: 0.125em;
+  border-bottom-color: #005069; }
+  .rh-vg__home-news__header-title {
+    font-size: 1.125em;
+    font-weight: bold;
+    line-height: 1em; }
+    @media (min-width: 62em) {
+      .rh-vg__home-news__header-title {
+        font-size: 1.5em; } }
+
+.rh-vg__home-news__item {
+  margin-top: 1.5625em; }
+  .rh-vg__home-news__item-publish {
+    display: flex; }
+    .rh-vg__home-news__item-publish-info {
+      margin: 0;
+      font-size: 0.8125em; }
+      @media (min-width: 62em) {
+        .rh-vg__home-news__item-publish-info {
+          font-size: 0.875em; } }
+    .rh-vg__home-news__item-publish-icon {
+      font-family: "feather";
+      font-size: 0.8125em;
+      margin: .168em .3em 0 0; }
+      .rh-vg__home-news__item-publish-icon:before {
+        content: "\e84d"; }
+  .rh-vg__home-news__item-title {
+    font-size: 1em;
+    font-weight: bold; }
+    @media (min-width: 62em) {
+      .rh-vg__home-news__item-title {
+        font-size: 1.25em; } }
+    .rh-vg__home-news__item-title-link {
+      color: #005069; }
+  .rh-vg__home-news__item-description {
+    font-size: 0.9375em; }
+    @media (min-width: 62em) {
+      .rh-vg__home-news__item-description {
+        font-size: 1em; } }
+
+.rh-vg__home-news__view-more {
+  margin-top: 2em; }
+
 .rh-vg__styling-dark {
   color: #ffffff;
   background-color: #005069; }
-  .rh-vg__styling-dark p {
-    color: #ffffff; }
 
 .rh-vg__styling-light-1 {
   color: #ffffff;
   background-color: #417795; }
-  .rh-vg__styling-light-1 p {
-    color: #ffffff; }
 
 .rh-vg__styling-light-2 {
   color: #000000;
