@@ -1,5 +1,5 @@
 <nav class="rh-header center px3 rh-container--auto rh-container-px" aria-label="Sidhuvud">
-    <a href="/"><img class="" src="/include/img/rh-logo.jpg" alt="Länk till förstasidan"></a>
+    <a href="/"><img style="max-width: 100%;" class="" src="/include/img/rh-logo.jpg" alt="Länk till förstasidan"></a>
     {{-- Utilities --}}
     <div class="rh-toplinks">
         <ul class="rh-toplinks-nav" aria-label="Genvägar i sidhuvudet">
@@ -21,7 +21,7 @@
             ?>
             <div class="rh-search-field">
                 <input type="text" name="q" class="rh-search-term" placeholder="Skriv din sökning här" value="<?=$strSearchText?>" style="height:5ex;" aria-label="Sökruta">
-                <button type="submit" class="rh-search-button" style="height:5ex; width:8ex;">
+                <button type="submit" class="rh-button rh-vg__header-search-button" style="height:5ex; width:8ex;">
                     Sök
                 </button>
             </div>
