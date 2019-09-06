@@ -11,7 +11,7 @@
         <div class="rh-block-box">
             <div class="rh-block">
                 <img src="{!! $blurbs['image_url'] !!}"
-                    alt="{{$blurbs['image_alt']}}" aria-labelledby="334455">
+                    alt="{{$blurbs['image_alt']}}">
                 <div class="rh-block-text">
                     <p class="h3">
                         <a class="rh-block-text-title rh-link--navigation" href="{{ $blurbs['link_url'] }}" target="{{ $blurbs['link_target'] }}">
