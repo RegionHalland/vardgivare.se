@@ -77,6 +77,10 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-acf-page-ingress.git"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/RegionHalland/region-halland-acf-front-page-blurbs.git"
     },
     {
@@ -176,6 +180,7 @@
     "regionhalland/mfpconnectmedia": "1.0.1",
     "regionhalland/region-halland-acf-add-theme-subpage": "1.3.2",
     "regionhalland/region-halland-acf-cookie-notice": "1.3.2",
+    "regionhalland/region-halland-acf-page-ingress": "1.3.0",
     "regionhalland/region-halland-acf-front-page-blurbs": "1.1.0",
     "regionhalland/region-halland-acf-options-page-site-message": "1.3.1",
     "regionhalland/region-halland-acf-page-link-lists-repeater": "1.3.0",
