@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+	
 	@while (have_posts()) @php the_post() @endphp
 
 		<main id="main">
@@ -26,16 +26,12 @@
 					<div class="w-full mx-auto">
 						<div class="flex flex-wrap -mx-4">
 							<div class="w-full lg:w-8/12 px-4">
-								@include('partials.section-navigation')
-							</div>
-							<div class="w-full lg:w-4/12 px-4 mt-12 lg:mt-0">
-								{{-- @include('partials.top-links') --}}
+								   @include('partials.child-navigation')
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 
 			@if(function_exists('get_region_halland_page_news_taxonomi_category'))
             @php($newsitems = get_region_halland_page_news_taxonomi_category())

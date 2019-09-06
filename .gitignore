@@ -20,6 +20,10 @@ web/app/uploads/*
 web/app/upgrade/*
 !web/app/upgrade/.gitkeep
 
+# Datafiler
+web/app/datafiler/*
+!web/app/datafiler/.gitkeep
+
 # Wordpress
 web/wp/*
 
