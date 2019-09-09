@@ -1,5 +1,5 @@
 <div class="rh-vg__styling-dark">
-    <footer class="clearfix rh-footer-group rh-container--auto rh-footer-group__container-p">
+    <div class="clearfix rh-footer-group rh-container--auto rh-footer-group__container-p">
         <div class="row row-eq-height">
             <div class="col col-12 md-col-4 rh-footer-group__item">
                 <div>
@@ -65,5 +65,5 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 </div>
