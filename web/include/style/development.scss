@@ -1,0 +1,225 @@
+@import '../../../../RH-sites/RhSettingsVardgivare/_settings-vardgivare.scss';
+@import '../../../../RH-styleguide/components/scss/_breakpoints.scss';
+
+/* Specific styling for Vardgivare website */
+$home-main-glutter: 1.875em; //30px
+$home-main-padding-y: 2.5em; //40px
+$home-blocks-offset: .6em;
+
+.rh-vg {
+    &__header {
+        &-search {
+            &-button {
+                box-shadow: none;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__home {
+        &-main {
+            display: flex;
+            flex-direction: column-reverse;
+
+            @include large {
+                display: block;
+                flex-direction: initial;
+            }
+        }
+
+        &-left-group {
+            padding-bottom: $home-main-padding-y;
+
+            @include large {
+                padding-top: $home-main-padding-y;
+                
+                padding-left: $page__container-large--padding-x;
+                padding-right: $home-main-glutter;
+            }
+            @include xlarge {
+                padding-left: $page__container-xlarge--padding-x;
+            }
+        }
+
+        &-blocks {
+            
+            &-container {
+                padding-top: $home-main-padding-y;
+                padding-bottom: $home-main-padding-y;
+
+                padding-left: $page__container--padding-x;
+                padding-right: $page__container--padding-x;
+
+                @include small {
+                    padding-left: $page__container-small--padding-x;
+                    padding-right: $page__container-small--padding-x;
+                }
+
+                @include medium {
+                    padding-top: $home-main-padding-y - $home-blocks-offset;
+                    padding-bottom: $home-main-padding-y - $home-blocks-offset;
+                    
+                    padding-left: $page__container-medium--padding-x - $home-blocks-offset;
+                    padding-right: $page__container-medium--padding-x - $home-blocks-offset;
+                }
+
+                @include large {
+                    padding-left: $home-main-glutter;
+                    padding-right: $page__container-large--padding-x - $home-blocks-offset;
+                }
+
+                @include xlarge {
+                    padding-right: $page__container-xlarge--padding-x - $home-blocks-offset;
+                }
+            }
+        }
+
+        &-site-info {
+            padding: 1.875em 0 0 0; //30px
+
+            @include large {
+                padding-top: 0;
+            }
+
+            &__title {
+                @extend .rh-vg__title;
+
+                font-size: 1.875em;
+                font-weight: bold;
+                word-break: break-word;
+
+                color: #ffffff;
+
+                @include medium {
+                    color: #000000;
+                }
+            }
+        }
+
+        &-news {
+            @include large {
+                margin-top: 2em;
+            }
+
+            &__header {
+                border-bottom-style: solid;
+                border-bottom-width: 0.125em; //2px
+                border-bottom-color: $vg-color-main;
+
+                &-title {
+                    @extend .rh-vg__title;
+
+                    font-size: 1.125em; //18px
+                    font-weight: bold;
+                    line-height: 1em; //25px
+
+                    @include large {
+                        font-size: 1.5em; //24px
+                    }
+                }
+            }
+
+            &__item {
+                margin-top: 1.5625em; //25px
+
+                &-publish {
+                    display: flex;
+                    
+                    &-info {
+                        margin: 0;
+                        font-size: 0.8125em; //13px
+
+                        @include large {
+                            font-size: 0.875em; //14px
+                        }
+                    }
+                    
+                    &-icon {
+                        font-family:"feather";
+                        font-size: 0.8125em; //13px
+                        margin: .168em .3em 0 0;
+    
+                        &:before {
+                            content: "\e84d";
+                        }
+                    }
+                }
+
+                &-title {
+                    @extend .rh-vg__title;
+
+                    font-size: 1em;
+                    font-weight: bold;
+
+                    @include large {
+                        font-size: 1.25em; //20px
+                    }
+                    
+                    &-link {
+                        color: $vg-color-main;
+                    }
+                }
+
+                &-description {
+                    @extend .rh-vg__description;
+
+                    font-size: 0.9375em; //15px
+
+                    @include large {
+                        font-size: 1em; //16px
+                    }
+                }
+            }
+
+            &__view-more {
+                margin-top: 2em;
+            }
+        }
+    }
+
+    // Helpers
+    &__title {
+        line-height: 1.3125em;
+        margin-bottom: .1em;
+
+        @include medium {
+            line-height: 1.375em;
+        }
+    }
+
+    &__description {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    &__styling {
+        &-dark {
+            color: #ffffff;
+            background-color: $vg-color-main;
+        }
+
+        &-light-1 {
+            color: #ffffff;
+            background-color: $vg-color-light-1;
+        }
+
+        &-light-2 {
+            color: #000000;
+            background-color: $vg-color-light-2;
+        }
+    }
+
+    &__bg-color {
+        &-dark {
+            background-color: $vg-color-main;
+        }
+
+        &-light-1 {
+            background-color: $vg-color-light-1;
+        }
+
+        &-light-2 {
+            background-color: $vg-color-light-2;
+        }
+    }
+}

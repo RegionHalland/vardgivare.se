@@ -1,3 +1,4 @@
+/* Specific settings */
 /* Specific styling for Vardgivare website */
 .rh-vg__header-search-button {
   box-shadow: none;
@@ -53,7 +54,11 @@
   .rh-vg__home-site-info__title {
     font-size: 1.875em;
     font-weight: bold;
-    word-break: break-word; }
+    word-break: break-word;
+    color: #ffffff; }
+    @media (min-width: 48em) {
+      .rh-vg__home-site-info__title {
+        color: #000000; } }
 
 @media (min-width: 62em) {
   .rh-vg__home-news {
@@ -103,6 +108,17 @@
 
 .rh-vg__home-news__view-more {
   margin-top: 2em; }
+
+.rh-vg__title, .rh-vg__home-site-info__title, .rh-vg__home-news__header-title, .rh-vg__home-news__item-title {
+  line-height: 1.3125em;
+  margin-bottom: .1em; }
+  @media (min-width: 48em) {
+    .rh-vg__title, .rh-vg__home-site-info__title, .rh-vg__home-news__header-title, .rh-vg__home-news__item-title {
+      line-height: 1.375em; } }
+
+.rh-vg__description, .rh-vg__home-news__item-description {
+  margin-top: .5em;
+  margin-bottom: .5em; }
 
 .rh-vg__styling-dark {
   color: #ffffff;

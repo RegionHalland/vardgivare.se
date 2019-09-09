@@ -1,7 +1,7 @@
 @php($myNews = get_region_halland_news_archive_taxonomi_category_items(3))
 <article class="rh-vg__home-news">
     <div class="rh-vg__home-news__header">
-        <p class="rh-vg__home-news__header-title">Nyheter</p>
+        <h2 class="rh-vg__home-news__header-title">Nyheter</h2>
     </div>
 
     @foreach($myNews as $news)
@@ -13,9 +13,9 @@
         </div>
 
         <div>
-            <p class="rh-vg__home-news__item-title">
+            <h3 class="rh-vg__home-news__item-title">
                 <a class="rh-link--navigation rh-vg__home-news__item-title-link" href="{{ $news->permalink }}" title="">{{ $news->post_title }}</a>
-            </p>
+            </h3>
             <p class="rh-vg__home-news__item-description">
                 {{ html_entity_decode(wp_trim_words($news->post_content, 40, '...')) }}
             </p>
