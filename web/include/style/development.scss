@@ -3,7 +3,7 @@
 @import '../../../../RH-styleguide/components/scss/_mixin.scss';
 
 /* Specific styling for Vardgivare website */
-$home-main-glutter: 1.875em; //30px
+$home-main-glutter: 1.875em; //30px x 2 = 60px
 $home-main-padding-y: 2.5em; //40px
 $home-blocks-offset: .6em;
 
@@ -63,12 +63,13 @@ $home-blocks-offset: .6em;
                 @include create-container-px($container-px, 0, $container-px-offset-right);
 
                 @include create-container-p($container-p, $container-py, $container-px) {
+                    // Changes container's behavior (only padding-left) on md mode - lg mode and upp
                     @include medium {
                         padding-left: $page__container-medium--padding-x - $home-blocks-offset;
                     }
 
                     @include large {
-                        padding-left: $home-main-glutter;
+                        padding-left: $home-main-glutter - $home-blocks-offset;
                     }
                 }
             }
