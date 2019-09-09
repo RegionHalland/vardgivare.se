@@ -5,7 +5,7 @@
 </div>
 
 @if(isset($myFrontPageBlurbs))
-<div class="row row-eq-height rh-vg__home-blocks-container" aria-label="Puffar">
+<div class="row row-eq-height rh-vg__home-blocks-container-p" aria-label="Puffar">
     @foreach ($myFrontPageBlurbs as $blurbs)
     <div class="col col-12 md-col-6 lg-col-12 xl-col-6 rh-block-group__item">
         <div class="rh-block-box">

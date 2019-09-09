@@ -1,5 +1,6 @@
 @import '../../../../RH-sites/RhSettingsVardgivare/_settings-vardgivare.scss';
 @import '../../../../RH-styleguide/components/scss/_breakpoints.scss';
+@import '../../../../RH-styleguide/components/scss/_mixin.scss';
 
 /* Specific styling for Vardgivare website */
 $home-main-glutter: 1.875em; //30px
@@ -32,44 +33,43 @@ $home-blocks-offset: .6em;
 
             @include large {
                 padding-top: $home-main-padding-y;
-                
+
                 padding-left: $page__container-large--padding-x;
                 padding-right: $home-main-glutter;
             }
+
             @include xlarge {
                 padding-left: $page__container-xlarge--padding-x;
             }
         }
 
         &-blocks {
-            
+
             &-container {
-                padding-top: $home-main-padding-y;
-                padding-bottom: $home-main-padding-y;
+                // Definition
+                $prefix: "rh-vg__home-blocks-container";
+                $container-py: $prefix + "-py";
+                $container-px: $prefix + "-px";
+                $container-p: $prefix + "-p";
 
-                padding-left: $page__container--padding-x;
-                padding-right: $page__container--padding-x;
+                // Offset calculation for grid system
+                $container-py-offset-top: $home-main-padding-y - $home-blocks-offset;
+                $container-py-offset-bottom: $home-main-padding-y - $home-blocks-offset;
 
-                @include small {
-                    padding-left: $page__container-small--padding-x;
-                    padding-right: $page__container-small--padding-x;
-                }
+                $container-px-offset-right: $home-blocks-offset;
 
-                @include medium {
-                    padding-top: $home-main-padding-y - $home-blocks-offset;
-                    padding-bottom: $home-main-padding-y - $home-blocks-offset;
-                    
-                    padding-left: $page__container-medium--padding-x - $home-blocks-offset;
-                    padding-right: $page__container-medium--padding-x - $home-blocks-offset;
-                }
+                // CSS Generation
+                @include create-container-py($container-py, $home-main-padding-y, 0, 0);
+                @include create-container-px($container-px, 0, $container-px-offset-right);
 
-                @include large {
-                    padding-left: $home-main-glutter;
-                    padding-right: $page__container-large--padding-x - $home-blocks-offset;
-                }
+                @include create-container-p($container-p, $container-py, $container-px) {
+                    @include medium {
+                        padding-left: $page__container-medium--padding-x - $home-blocks-offset;
+                    }
 
-                @include xlarge {
-                    padding-right: $page__container-xlarge--padding-x - $home-blocks-offset;
+                    @include large {
+                        padding-left: $home-main-glutter;
+                    }
                 }
             }
         }
@@ -124,7 +124,7 @@ $home-blocks-offset: .6em;
 
                 &-publish {
                     display: flex;
-                    
+
                     &-info {
                         margin: 0;
                         font-size: 0.8125em; //13px
@@ -133,12 +133,12 @@ $home-blocks-offset: .6em;
                             font-size: 0.875em; //14px
                         }
                     }
-                    
+
                     &-icon {
-                        font-family:"feather";
+                        font-family: "feather";
                         font-size: 0.8125em; //13px
                         margin: .168em .3em 0 0;
-    
+
                         &:before {
                             content: "\e84d";
                         }
@@ -154,7 +154,7 @@ $home-blocks-offset: .6em;
                     @include large {
                         font-size: 1.25em; //20px
                     }
-                    
+
                     &-link {
                         color: $vg-color-main;
                     }
