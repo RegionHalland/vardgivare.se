@@ -6,7 +6,9 @@
 
 @section('content')
 
-	<h1>{!! get_the_title() !!}</h1>
+    <div class="rh-container--auto rh-container-px">
+        <h1>{!! get_the_title() !!}</h1>
+    </div>
 	
 	@while(have_posts()) @php(the_post())
 		<div>

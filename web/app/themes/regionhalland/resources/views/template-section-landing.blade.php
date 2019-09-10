@@ -9,7 +9,7 @@
 	@while (have_posts()) @php the_post() @endphp
 
 		<main id="main">
-			<div class="pt-16 pb-8 relative bg-blue-dark">
+			<div class="rh-container--auto rh-container-px pt-16 pb-8 relative bg-blue-dark">
 				<div class="container mx-auto px-4 relative">
 					<div class="w-full mx-auto">
 						<h1 class="mb-4 text-white">{!! get_the_title() !!}</h1>
@@ -25,7 +25,7 @@
 				<div class="container mx-auto px-4">
 					<div class="w-full mx-auto">
 						<div class="flex flex-wrap -mx-4">
-							<div class="w-full lg:w-8/12 px-4">
+							<div class="w-full lg:w-8/12 px-4 rh-container--auto">
 								   @include('partials.child-navigation')
 							</div>
 						</div>
