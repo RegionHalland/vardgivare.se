@@ -2,7 +2,6 @@
 <nav aria-label="Undersidor">
     <div class="clearfix rh-container--auto rh-navigation-block-group__container-p">
         <div class="row row-eq-height">
-
             @foreach($myFirstLevelPages as $page)
             <div class="col col-12 md-col-6 xl-col-4 rh-navigation-block-group__item-container">
                 <div class="rh-navigation-block">
@@ -17,11 +16,9 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="rh-navigation-block__description hidden-sm">
                         <p class="rh-navigation-block__description-text">
-                            Halland ska hålla i längden. Det betyder att det vi gör i dag ska fungera även för framtida
-                            generationer.
+                            {{ get_region_halland_acf_page_navigation_text($page->ID) }}
                         </p>
                     </div>
                 </div>

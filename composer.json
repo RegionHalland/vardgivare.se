@@ -144,6 +144,10 @@
       "url": "https://github.com/RegionHalland/region-halland-single-page-information.git"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-tree-all-levels-vardgivare.git"
+    },
+    {
        "type": "package",
        "package": {
          "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -203,6 +207,7 @@
     "regionhalland/region-halland-parent-page": "1.1.0",
     "regionhalland/region-halland-search-findwise-vardgivare": "1.1.0",
     "regionhalland/region-halland-single-page-information": "1.1.0",
+    "regionhalland/region-halland-tree-all-levels-vardgivare": "1.0.0",
     "regionhalland/std-plugin": "4.0.3"
   },
   "require-dev": {

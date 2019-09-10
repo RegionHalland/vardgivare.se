@@ -1,1 +1,1 @@
-<a href="#"><img src="{!! env('WP_HOME') !!}/include/img/arrow-up.png" alt="Scrolla till toppen" id="back-to-top" style="position:fixed;right:0;bottom:0;"/></a>
+<a href="#" aria-label="Scrolla till toppen"><img src="{!! env('WP_HOME') !!}/include/img/arrow-up.png" alt="Scrolla till toppen" id="back-to-top" style="position:fixed;right:0;bottom:0;"/></a>
