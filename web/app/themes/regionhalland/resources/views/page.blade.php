@@ -21,13 +21,8 @@
 				<h1>{{ the_title() }}</h1>
 				
 				{{-- Content --}}
-				@if(function_exists('get_region_halland_prepare_the_content'))
-					@php(get_region_halland_prepare_the_content())
-				@endif
-				<article class="rh-article">
-					{!! the_content() !!}
-				</article>
-
+				@include('partials.article')
+				
 				{{-- Links lists --}}
 				@include('partials.link-lists')
 

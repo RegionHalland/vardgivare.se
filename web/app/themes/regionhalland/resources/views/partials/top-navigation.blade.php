@@ -4,7 +4,6 @@
         <div class="rh-container--auto rh-container-px rh-dp-sm rh-vg__styling-dark">
             @include('partials.front-page-info')
         </div>
-
         <div class="clearfix rh-container--auto rh-navigation-block-group__container-p">
             <div class="row row-eq-height">
                 @foreach($myFirstLevelPages as $page)
@@ -21,12 +20,9 @@
                                 </a>
                             </div>
                         </div>
-
                         <div class="rh-navigation-block__description hidden-sm">
                             <p class="rh-navigation-block__description-text">
-                                Halland ska hålla i längden. Det betyder att det vi gör i dag ska fungera även för
-                                framtida
-                                generationer.
+                                {{ get_region_halland_acf_page_navigation_text($page->ID) }}
                             </p>
                         </div>
                     </div>
