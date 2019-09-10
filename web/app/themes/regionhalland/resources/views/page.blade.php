@@ -3,55 +3,49 @@
 @section('content')
 
 {{-- Container --}}
-<div class="mx-auto clearfix" style="max-width: 1440px">
-	<div>
-		
-		<div class="justify-between">
+<div class="clearfix rh-container--auto rh-container-px pt3 pb3">
+    <div class="row">
+        {{-- Sidebar --}}
+        <aside class="col col-12 sm-col-12 md-col-12 lg-col-3 rh-vg__page-left-container-px">
+            @include('partials.nav-sidebar')
+        </aside>
 
-		{{-- Sidebar --}}
-		<aside class="rh-xpad--left pt3 pb2 col col-12 sm-col-12 md-col-12 lg-col-3">
-			@include('partials.nav-sidebar')
-		</aside>
+        {{-- Main Content --}}
+		<main id="main" class="col col-12 sm-col-12 md-col-12 lg-col-6 pt3 rh-vg__page-between-container-px">
+            @while(have_posts()) @php(the_post())
+                
+                {{-- Title --}}
+                <h1>{{ the_title() }}</h1>
+                
+                {{-- Content --}}
+                @if(function_exists('get_region_halland_prepare_the_content'))
+                    @php(get_region_halland_prepare_the_content())
+                @endif
+                <article class="rh-article">
+                    {!! the_content() !!}
+                </article>
 
-		{{-- Main Content --}}
-		<main class="pl3 pr2 pt3 pb1 col col-12 sm-col-12 md-col-12 lg-col-6" id="main">
-			@while(have_posts()) @php(the_post())
-				
-				{{-- Title --}}
-				<h1>{{ the_title() }}</h1>
-				
-				{{-- Content --}}
-				@if(function_exists('get_region_halland_prepare_the_content'))
-					@php(get_region_halland_prepare_the_content())
-				@endif
-				<article class="rh-article">
-					{!! the_content() !!}
-				</article>
+                {{-- Links lists --}}
+                @include('partials.link-lists')
 
-				{{-- Links lists --}}
-				@include('partials.link-lists')
+                {{-- RSS Repeater list --}}
+                @include('partials.rss-repeater-lists')
 
-				{{-- RSS Repeater list --}}
-				@include('partials.rss-repeater-lists')
+                {{-- Author --}}
+                <div class="pt4">
+                    @include('partials.author-info')
+                </div>
+                
+                {{-- Feedback --}}
+                @include('partials.feedback')
 
-				{{-- Author --}}
-				<div class="pt4">
-					@include('partials.author-info')
-				</div>
-				
-				{{-- Feedback --}}
-				@include('partials.feedback')
+            @endwhile
+        </main>
 
-			@endwhile
-
-		</main>
-
-		<aside class="pt4 col col-12 sm-col-12 md-col-12 lg-col-3">
-			@include('partials.content-nav')
-		</aside>
-
-		</div>
-	</div>
+        <aside class="col col-12 sm-col-12 md-col-12 lg-col-3 pt3 rh-vg__page-right-container-px">
+            @include('partials.content-nav')
+        </aside>
+    </div>
 </div>
 {{-- Container END --}}
 @endsection

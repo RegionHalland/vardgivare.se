@@ -1,34 +1,40 @@
 @php($myParentPage = get_region_halland_parent_page())
 @if($myParentPage['has_back'] == 1)
-    <div class="pb3 rh-label-previous">
-        <span class="rh-label-previous-icon"></span>
+    <div class="pb2 rh-label-previous">
+        {{-- <span class="rh-label-previous-icon"></span>
         <p class="rh-label-previous-title">
 			<a href="{{$myParentPage['url']}}" style="color:black;">{{$myParentPage['post_title']}}</a>
+        </p> --}}
+
+        <span class="rh-round-button icon-corner-left-up" style="margin-right: 0.5em;"></span>
+
+        <p class="rh-label-previous-title">
+			<a href="{{$myParentPage['url']}}" class="rh-link--navigation rh-vg__nav-left__link">{{$myParentPage['post_title']}}</a>
         </p>
     </div>
 @endif
-@if(function_exists('get_region_halland_current_page_and_child_pages'))
-	@php($myPages = get_region_halland_current_page_and_child_pages())
-	@if(isset($myPages))
-		<ul class="rh-secondary-nav">
-			<li>
-				<a class="rh-secondary-nav-link">
-					<span class="rh-secondary-nav-item-parentlevel" style="font-size: 1.1em; font-weight:bold; color:black; background-color:#E4E4E4; border:none;">
-						{{ $myPages['current_page']->post_title }}
-					</span>
-				</a>
-			</li>
-			@if (!empty($myPages['page_children']))
-				@foreach ($myPages['page_children'] as $myChilds)
-					<li>
-						<a class="rh-secondary-nav-link" style="color:black; font-size: 1.125em; text-decoration:none;" href="{{ $myChilds->url }}">
-							<span class="rh-secondary-nav-item-toplevel">
-								{{ $myChilds->post_title }}
-							</span>
-						</a>
-					</li>
-				@endforeach
-			@endif
-		</ul>
-	@endif
+
+@php($myPages = get_region_halland_current_page_and_child_pages())
+@if(isset($myPages))
+<div class="rh-navigation-left rh-dp-from-lg">
+    <div class="rh-navigation-left__header">
+        <p class="rh-navigation-left__header-text">
+            {{ $myPages['current_page']->post_title }}
+        </p>
+    </div>
+
+    @if (!empty($myPages['page_children']))
+    <div>
+        @foreach ($myPages['page_children'] as $myChilds)
+        <div class="rh-navigation-left__item">
+            <p class="rh-navigation-left__item-text">
+                <a class="rh-link--navigation rh-navigation-left__item-link" href="{{ $myChilds->url }}">
+                    <span class="rh-navigation-left__item-box">{{ $myChilds->post_title }}</span>
+                </a>
+            </p>
+        </div>
+        @endforeach
+    </div>
+    @endif
+</div>
 @endif
