@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <div class="rh-container--auto rh-container-px">
+    <div class="rh-container--auto rh-container-px pt3">
         <h1>{!! get_the_title() !!}</h1>
     </div>
 	

@@ -28,9 +28,64 @@
  * @content {callback} is using for extend code
 */
 /* Specific styling for Vardgivare website */
-.rh-vg__header-search-button {
-  box-shadow: none;
-  font-weight: bold; }
+.rh-vg__header {
+  min-height: 80px; }
+  .rh-vg__header-logo-group {
+    margin-top: 1em;
+    display: flex;
+    align-items: flex-end; }
+    .rh-vg__header-logo-group__name {
+      margin-left: 1em;
+      margin-bottom: .55em;
+      font-size: 1em; }
+      @media (min-width: 62em) {
+        .rh-vg__header-logo-group__name {
+          margin-bottom: .4em;
+          font-size: 1.25em; } }
+    @media (min-width: 62em) {
+      .rh-vg__header-logo-group--align-bottom {
+        justify-content: flex-end;
+        margin-bottom: 1em; } }
+  .rh-vg__header-round-button {
+    width: 2.1875em;
+    min-width: 2.1875em;
+    height: 2.1875em;
+    min-height: 2.1875em;
+    text-align: center;
+    padding-top: .55em; }
+    @media (min-width: 48em) {
+      .rh-vg__header-round-button {
+        width: 2.5em;
+        min-width: 2.5em;
+        height: 2.5em;
+        min-height: 2.5em;
+        padding-top: .75em; } }
+  .rh-vg__header-icon-theme {
+    background-color: #005069;
+    color: #ffffff; }
+  .rh-vg__header-icon-link {
+    text-decoration: none; }
+  .rh-vg__header-search-button {
+    box-shadow: none;
+    font-weight: bold; }
+  .rh-vg__header-functions {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+    .rh-vg__header-functions__item {
+      display: flex;
+      align-items: center; }
+      .rh-vg__header-functions__item-link {
+        margin-left: .2em;
+        color: #000000;
+        text-decoration: none; }
+    .rh-vg__header-functions-search-and-menu {
+      display: flex;
+      margin-left: auto;
+      justify-content: flex-end; }
+    @media (min-width: 62em) {
+      .rh-vg__header-functions-talking {
+        margin-left: .5em;
+        margin-bottom: 1em; } }
 
 .rh-vg__home-main {
   display: flex;
@@ -238,3 +293,18 @@
 
 .content-nav-container {
   background-color: white; }
+
+.jump-to-content {
+  display: block;
+  background: #fff;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  height: 0; }
+
+.jump-to-content:focus {
+  position: initial;
+  background: #fcaf15;
+  padding: 0.5rem;
+  height: auto;
+  color: black; }
