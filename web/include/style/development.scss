@@ -9,10 +9,95 @@ $home-blocks-offset: .6em;
 
 .rh-vg {
     &__header {
+        min-height: 80px;
+
+        &-logo-group {
+            margin-top: 1em;
+
+            display: flex;
+            align-items: flex-end;
+
+            &__name {
+                margin-left: 1em;
+                margin-bottom: .55em;
+                font-size: 1em;
+
+                @include large {
+                    margin-bottom: .4em;
+                    font-size: 1.25em;
+                }
+            }
+
+            &--align-bottom {
+                @include large {
+                    justify-content: flex-end;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+
+        &-round-button {
+            width: 2.1875em; //35px
+            min-width: 2.1875em; // Fix for IE11
+            height: 2.1875em;
+            min-height: 2.1875em; // Fix for IE11
+            text-align: center;
+            padding-top: .55em;
+
+            @include medium {
+                width: 2.5em; //40px
+                min-width: 2.5em;
+                height: 2.5em;
+                min-height: 2.5em;
+
+                padding-top: .75em;
+            }
+        }
+
+        &-icon {
+            &-theme {
+                background-color: $vg-color-main;
+                color: #ffffff;
+            }
+
+            &-link {
+                text-decoration: none;
+            }
+        }
+
         &-search {
             &-button {
                 box-shadow: none;
                 font-weight: bold;
+            }
+        }
+
+        &-functions {
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            &__item {
+                display: flex;
+                align-items: center;
+
+                &-link {
+                    margin-left: .2em;
+                    color: #000000;
+                    text-decoration: none;
+                }
+            }
+
+            &-search-and-menu {
+                display: flex;
+                margin-left: auto;
+                justify-content: flex-end;
+            }
+
+            &-talking {
+                @include large {
+                    margin-left: .5em;
+                    margin-bottom: 1em;
+                }
             }
         }
     }
@@ -63,6 +148,7 @@ $home-blocks-offset: .6em;
                 @include create-container-px($container-px, 0, $container-px-offset-right);
 
                 @include create-container-p($container-p, $container-py, $container-px) {
+
                     // Changes container's behavior (only padding-left) on md mode - lg mode and upp
                     @include medium {
                         padding-left: $page__container-medium--padding-x - $home-blocks-offset;
@@ -178,6 +264,49 @@ $home-blocks-offset: .6em;
         }
     }
 
+    &__page {
+        &-left-container-px {
+            @include large {
+                padding-right: 0.9375em; //15px
+            }
+
+            @include xlarge {
+                padding-right: 1.875em; //30px
+            }
+        }
+
+        &-between-container-px {
+            @include large {
+                padding-left: 0.9375em; //15px
+                padding-right: 0.9375em;
+            }
+
+            @include xlarge {
+                padding-left: 1.875em; //30px
+                padding-right: 1.875em;
+            }
+        }
+
+        &-right-container-px {
+            @include large {
+                padding-left: 0.9375em; //15px
+            }
+
+            @include xlarge {
+                padding-left: 1.875em; //30px
+            }
+        }
+
+    }
+
+    &__nav {
+        &-left {
+            &__link {
+                color: #000000;
+            }
+        }
+    }
+
     // Helpers
     &__title {
         line-height: 1.3125em;
@@ -223,4 +352,56 @@ $home-blocks-offset: .6em;
             background-color: $vg-color-light-2;
         }
     }
+}
+
+.content-nav__item {
+    border-left: 4px solid #E4E4E4;
+    line-height: 1.4;
+    padding-left: 1ex;
+    padding-top: 0.8ex;
+    padding-bottom: 0.8ex;
+}
+
+.content-nav__item--tight {
+    line-height: 1.1;
+    padding-top: 0.2ex;
+    padding-bottom: 0.2ex;
+}
+
+.content-nav__item-level--3 {
+    padding-left: 2ex;
+}
+
+.content-nav__item-level--4 {
+    padding-left: 4ex;
+}
+
+.content-nav__item-link {
+    text-decoration: none;
+    color: black;
+}
+
+.content-nav__item:hover {
+    border-left: 4px solid $vg-color-main; //#378A30;
+}
+
+.content-nav-container {
+    background-color: white;
+}
+
+.jump-to-content {
+    display: block;
+    background: #fff;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    height: 0;
+}
+
+.jump-to-content:focus {
+    position: initial;
+    background: #fcaf15;
+    padding: 0.5rem;
+    height: auto;
+    color: black;
 }

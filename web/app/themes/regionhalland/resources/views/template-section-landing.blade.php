@@ -11,7 +11,7 @@
 		<main id="main">
 			<div class="rh-container--auto rh-container-px pt-16 pb-8 relative bg-blue-dark">
 				<div class="container mx-auto px-4 relative">
-					<div class="w-full mx-auto">
+					<div class="w-full mx-auto pt3">
 						<h1 class="mb-4 text-white">{!! get_the_title() !!}</h1>
 						<div class="text-lg leading-tight md:text-xl mb-12 text-white white-link lg:w-5/12">
 							@php the_content() @endphp
