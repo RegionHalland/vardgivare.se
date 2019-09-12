@@ -31,7 +31,7 @@
                         {{-- Showed only on moblie (medium) and down --}}
                         <div class="rh-vg__header-functions__item mr1">
                             <div class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-dp-md">
-                                <span id="searchtoggle" class="icon-search"></span>
+                                <span class="icon-search"></span>
                             </div>
 
                         </div>
@@ -60,7 +60,7 @@
 
                         <div class="rh-vg__header-functions__item">
                             <div class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme">
-                                <span id="searchtoggle" class="icon-menu"></span>
+                                <span class="icon-menu"></span>
                             </div>
                         </div>
                     </div>
