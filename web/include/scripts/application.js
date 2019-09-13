@@ -123,36 +123,28 @@ function throttle(fn, threshhold, scope) {
 
 /* Dropdown menu */
 $(document).ready(function () {
-    var $menuMaxBodySize = 643, //643px
-        onloadScreenSize = $(document).width();
-
-    var $menuMainButton = $('#rh-menu-main-button'),
+    var $body = $('body'),
+        $menuMainButton = $('#rh-menu-main-button'),
         $menuCloseButton = $('#rh-menu-close-button'),
         $menuBody = $('#rh-menu-body'),
         $menuOverlay = $('.rh-menu__overlay');
 
-
-
-    var $menuBodySize = onloadScreenSize < $menuMaxBodySize ? "100%" : $menuMaxBodySize;
-
     // Check screen size
     $(window).resize(function () {
-        if ($(document).width() <= $menuMaxBodySize) {
-            $menuBodySize = "100%";
-        } else {
-            $menuBodySize = $menuMaxBodySize;
-        }
+        
     });
 
     $menuMainButton.click(function () {
-        $menuBody.css({ "width": $menuBodySize, "height": "100%" });
+        $body.addClass('rh-noscroll');
         $menuOverlay.toggleClass('rh-dp--show rh-dp--none');
+        $menuBody.addClass('rh-menu__body--show');
 
     });
 
     $menuCloseButton.click(function () {
-        $menuBody.css({ "width": 0, "height": "auto" });
+        $body.removeClass('rh-noscroll');
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
+        $menuBody.removeClass('rh-menu__body--show');
     });
 
 

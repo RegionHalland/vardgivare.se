@@ -414,33 +414,41 @@ $home-blocks-offset: .6em;
         cursor: pointer;
 
         &--close {
-            margin: 1em .8em 1em auto;
-
+            margin-left: auto;
             background-color: #ffffff;
             color: $vg-color-main;
         }
+    }
+
+    &__top-bar {
+        padding: 1em .8em;
     }
 
     &__body {
         z-index: 60;
         position: fixed;
         top: 0px;
-        right: 0px;
+        right: -643px;
 
-        width: 0; // Controlled by JS
-        height: auto; // Controlled by JS - TODO
-
-        max-width: 500px;
-
+        width: 100%; // Controlled by JS
+        min-width: 320px;
+        max-width: 643px;
+        height: 100%;
+        
         background-color: #ffffff;
 
         overflow-x: hidden;
+        overflow-y: scroll;
 
-        -webkit-transition: width .3s;
-        transition: width .3s;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
 
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+
+        &--show {
+            right: 0;
+        }
     }
 
     &__overlay {
