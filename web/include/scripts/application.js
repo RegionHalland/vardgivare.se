@@ -144,7 +144,10 @@ $(document).ready(function () {
         lockBodyScrolling(true, makeScrollBarOffset(true));
 
         $menuOverlay.toggleClass('rh-dp--show rh-dp--none');
-        $menuBody.addClass('rh-menu__body--show');
+
+        $menuBody
+            .addClass('rh-menu__body--show')
+            .addClass('rh-menu-pos--absolute'); // Using for iOS performance
 
         $menuTopBar
             .addClass('rh-pos--fixed')
@@ -153,20 +156,25 @@ $(document).ready(function () {
                 "max-width": $menuBody.width(),
                 "padding-right": parseInt($menuTopBar.css('padding-right')) + scrollbarWidth
             });
-
-        $menuBodyOffsetTop.css({ "height": parseInt($menuTopBar.height() + 20) });
+        $menuBodyOffsetTop.css({ "height": parseInt($menuTopBar.height() + 30) });
     });
 
     $menuCloseButton.click(function () {
         lockBodyScrolling(false, makeScrollBarOffset(false));
 
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
-        $menuBody.removeClass('rh-menu__body--show');
+
+        $menuBody
+            .removeClass('rh-menu__body--show')
+            .removeClass('rh-menu-pos--absolute');
 
         $menuTopBar
             .removeClass('rh-pos--fixed')
-            .css({ "width": "", "max-width": "", "padding-right": "11.2px" }); //11.2px === .7em - Default
-
+            .css({
+                "width": "",
+                "max-width": "",
+                "padding-right": "11.2px"
+            }); //11.2px === .7em - Default
         $menuBodyOffsetTop.css({ "height": "" });
     });
 
@@ -199,7 +207,7 @@ $(document).ready(function () {
 
     /* Helpers */
     function calculateScrollbarWidth() {
-        return (window.innerWidth - $(document).width());
+        return (window.innerWidth - document.body.clientWidth);
     }
 
     function isMobileDevice() {

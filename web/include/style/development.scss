@@ -411,7 +411,8 @@ $menu-item__icon-size: 30px;
 $menu-top-bar__height: 70px;
 $menu-body--min-width: 320px;
 $menu-body--max-width: 643px;
-
+$menu-body__offset-bottom: 90px;
+//div { -webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000; }
 .rh-menu {
 
     // Main button
@@ -433,14 +434,14 @@ $menu-body--max-width: 643px;
 
         padding-right: .8em;
         background-color: #ffffff;
+        
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-
-        overflow: hidden;
     }
 
     &__body {
         z-index: 60;
-        position: fixed;
+        position: fixed;//TODO
+
         top: 0px;
         right: $menu-body--max-width * -1;
 
@@ -451,13 +452,14 @@ $menu-body--max-width: 643px;
 
         background-color: #ffffff;
 
-        overflow-x: hidden;
-        overflow-y: scroll;
-
         -webkit-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
-
+        
         scroll-behavior: smooth;
+        
+        // iOS
+        overflow-x: hidden;
+        overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
 
         &--show {
@@ -467,7 +469,7 @@ $menu-body--max-width: 643px;
 
     &__overlay {
         z-index: 50;
-        position: fixed;
+        position: absolute;
 
         top: 0;
         right: 0;
@@ -569,7 +571,14 @@ $menu-body--max-width: 643px;
 
         &-bottom {
             background-color: $vg-color-main;
-            height: 80px;
+            height: $menu-body__offset-bottom;
+        }
+    }
+
+    //TODO
+    &-pos {
+        &--absolute {
+            position: absolute;
         }
     }
 }

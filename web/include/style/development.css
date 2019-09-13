@@ -323,8 +323,7 @@
   height: 70px;
   padding-right: .8em;
   background-color: #ffffff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  overflow: hidden; }
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
 
 .rh-menu__body {
   z-index: 60;
@@ -336,18 +335,18 @@
   max-width: 643px;
   height: 100%;
   background-color: #ffffff;
-  overflow-x: hidden;
-  overflow-y: scroll;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
   .rh-menu__body--show {
     right: 0; }
 
 .rh-menu__overlay {
   z-index: 50;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -412,4 +411,7 @@
 
 .rh-menu__offset-bottom {
   background-color: #005069;
-  height: 80px; }
+  height: 90px; }
+
+.rh-menu-pos--absolute {
+  position: absolute; }
