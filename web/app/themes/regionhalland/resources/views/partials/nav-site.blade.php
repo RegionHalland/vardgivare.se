@@ -81,10 +81,12 @@
 
     <div class="rh-menu__top-bar">
         <div id="rh-menu-close-button"
-            class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-menu__button rh-menu__button--close">
+            class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-menu__button rh-menu__button-close">
             <span id="searchtoggle" class="icon-x"></span>
         </div>
     </div>
+
+    <div class="rh-menu__offset-top"></div>
 
 
     {{-- Item - Level 1 - Root --}}
@@ -94,7 +96,7 @@
                 Behandlingsstöd
             </a>
 
-            <div id="1" class="rh-round-button rh-round-button--small rh-menu__item-button">
+            <div id="1" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-parent">
                 <span class="icon-minus"></span>
             </div>
         </div>
@@ -194,7 +196,7 @@
                     </div>
 
                     <div class="rh-menu__item rh-menu__item-sub-item rh-pl-3">
-                        <a href="#" class="rh-link--navigation rh-menu__link rh-menu__link--active">
+                        <a href="#" class="rh-link--navigation rh-menu__link rh-menu__link">
                             Patientinformation
                         </a>
 
@@ -216,7 +218,7 @@
                 Kompetens och utveckling
             </a>
 
-            <div id="2" class="rh-round-button rh-round-button--small rh-menu__item-button">
+            <div id="2" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-parent">
                 <span class="icon-plus"></span>
             </div>
         </div>
@@ -229,9 +231,11 @@
                 Medicinska områden
             </a>
 
-            <div id="2" class="rh-round-button rh-round-button--small rh-menu__item-button">
+            <div id="2" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-parent">
                 <span class="icon-plus"></span>
             </div>
         </div>
     </div>
+
+    <div class="rh-menu__offset-bottom"></div>
 </div>

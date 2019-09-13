@@ -123,50 +123,81 @@ function throttle(fn, threshhold, scope) {
 
 /* Dropdown menu */
 $(document).ready(function () {
+    var scrollbarWidth = calculateScrollbarWidth(),
+        isIDevice = isMobileDevice();
+
     var $body = $('body'),
         $menuMainButton = $('#rh-menu-main-button'),
         $menuCloseButton = $('#rh-menu-close-button'),
         $menuBody = $('#rh-menu-body'),
-        $menuOverlay = $('.rh-menu__overlay');
+        $menuOverlay = $('.rh-menu__overlay'),
+        $menuTopBar = $('.rh-menu__top-bar'),
+        $menuBodyOffsetTop = $('.rh-menu__offset-top');
 
     // Check screen size
     $(window).resize(function () {
-        
+        // Update max-width for menu when windows resizing
+        $menuTopBar.css({ "max-width": $menuBody.width() });
     });
 
     $menuMainButton.click(function () {
-        $body.addClass('rh-noscroll');
+        lockBodyScrolling(true, makeScrollBarOffset(true));
+
         $menuOverlay.toggleClass('rh-dp--show rh-dp--none');
         $menuBody.addClass('rh-menu__body--show');
 
+        $menuTopBar
+            .addClass('rh-pos--fixed')
+            .css({
+                "width": "100%",
+                "max-width": $menuBody.width(),
+                "padding-right": parseInt($menuTopBar.css('padding-right')) + scrollbarWidth
+            });
+
+        $menuBodyOffsetTop.css({ "height": parseInt($menuTopBar.height() + 20) });
     });
 
     $menuCloseButton.click(function () {
-        $body.removeClass('rh-noscroll');
+        lockBodyScrolling(false, makeScrollBarOffset(false));
+
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
         $menuBody.removeClass('rh-menu__body--show');
+
+        $menuTopBar
+            .removeClass('rh-pos--fixed')
+            .css({ "width": "", "max-width": "", "padding-right": "11.2px" }); //11.2px === .7em - Default
+
+        $menuBodyOffsetTop.css({ "height": "" });
     });
 
+    /* Common */
+    function lockBodyScrolling(status, fnCallback) {
+        //github.com/willmcpo/body-scroll-lock
+        var disableBodyScroll = bodyScrollLock.disableBodyScroll,
+            enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
-    /* Helpers */
-    function getElementTopById($elementId) {
-        if (!$elementId) {
-            throw new Error("$element ID is missing");
+        var targetElement = document.querySelector(".rh-menu__body");
+
+        if (status) {
+            $body.addClass("rh-noscroll");
+            isIDevice && disableBodyScroll(targetElement);
+        } else {
+            $body.removeClass("rh-noscroll");
+            isIDevice && enableBodyScroll(targetElement);
         }
 
-        var bodyTop = $(window).scrollTop(),
-            elementTop = $elementId.position().top,
-            viewportTop = elementTop - bodyTop,
-            isOverViewportTop = bodyTop >= elementTop;
-
-        return {
-            bodyTop: bodyTop,
-            fromTop: elementTop,
-            viewportTop: viewportTop,
-            isOverViewport: isOverViewportTop
-        };
+        typeof fnCallback === 'function' && fnCallback();
     }
 
+    function makeScrollBarOffset(status) {
+        if (status) {
+            $body.css({ "margin-right": scrollbarWidth });
+        } else {
+            $body.css({ "margin-right": "" }); // Reset to default
+        }
+    }
+
+    /* Helpers */
     function calculateScrollbarWidth() {
         return (window.innerWidth - $(document).width());
     }

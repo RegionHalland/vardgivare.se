@@ -407,13 +407,18 @@ $home-blocks-offset: .6em;
 }
 
 /* Menu */
+$menu-item__icon-size: 30px;
+$menu-top-bar__height: 70px;
+$menu-body--min-width: 320px;
+$menu-body--max-width: 643px;
+
 .rh-menu {
 
     // Main button
     &__button {
         cursor: pointer;
 
-        &--close {
+        &-close {
             margin-left: auto;
             background-color: #ffffff;
             color: $vg-color-main;
@@ -421,27 +426,36 @@ $home-blocks-offset: .6em;
     }
 
     &__top-bar {
-        padding: 1em .8em;
+        display: flex;
+        align-items: center;
+
+        height: $menu-top-bar__height;
+
+        padding-right: .8em;
+        background-color: #ffffff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+        overflow: hidden;
     }
 
     &__body {
         z-index: 60;
         position: fixed;
         top: 0px;
-        right: -643px;
+        right: $menu-body--max-width * -1;
 
-        width: 100%; // Controlled by JS
-        min-width: 320px;
-        max-width: 643px;
+        width: 100%;
+        min-width: $menu-body--min-width;
+        max-width: $menu-body--max-width;
         height: 100%;
-        
+
         background-color: #ffffff;
 
         overflow-x: hidden;
         overflow-y: scroll;
 
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
 
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
@@ -457,23 +471,18 @@ $home-blocks-offset: .6em;
 
         top: 0;
         right: 0;
-        left: 0;
         bottom: 0;
+        left: 0;
+
         width: 100%;
         height: 100%;
 
         background-color: rgba(0, 0, 0, 0.3);
-
-        
-    }
-
-    &__text {
-       
     }
 
     &__link {
         color: #000000;
-        line-height: 1.5;
+        line-height: 1.4;
 
         &-level-1 {
             font-size: 18px;
@@ -498,7 +507,7 @@ $home-blocks-offset: .6em;
         padding-bottom: 1em;
 
         min-height: 60px;
-        
+
         border-bottom: 1px solid #9CB8C8;
 
         &-level-1 {
@@ -507,20 +516,25 @@ $home-blocks-offset: .6em;
         }
 
         &-button {
-            width: 30px;
-            max-width: 30px;
-            height: 30px;
-            max-height: 30px;
+            width: $menu-item__icon-size;
+            min-width: $menu-item__icon-size;
+            max-width: $menu-item__icon-size;
+
+            height: $menu-item__icon-size;
+            min-height: $menu-item__icon-size;
+            max-height: $menu-item__icon-size;
 
             text-align: center;
             padding-top: .45em;
 
             margin-left: 1em;
 
-            background-color: #ffffff;
-            color: $vg-color-main;
-
             cursor: pointer;
+
+            &-parent {
+                background-color: #ffffff;
+                color: $vg-color-main;
+            }
 
             &-sub-item {
                 background-color: $vg-color-light-1;
@@ -533,23 +547,29 @@ $home-blocks-offset: .6em;
             }
         }
 
-        &-sub {
-            &-container {
-                &-level-3 {
-                    background-color: $vg-color-light-4;
-                }
-                &-level-4 {
-                    background-color: $vg-color-light-5;
-                }
-                &-level-5 {
-                    background-color: $vg-color-light-6;
-                }
+        &-sub-container {
+            &-level-3 {
+                background-color: $vg-color-light-4;
             }
 
-            &-item {
-                
+            &-level-4 {
+                background-color: $vg-color-light-5;
+            }
+
+            &-level-5 {
+                background-color: $vg-color-light-6;
             }
         }
-        
+    }
+
+    &__offset {
+        &-top {
+            background-color: $vg-color-main;
+        }
+
+        &-bottom {
+            background-color: $vg-color-main;
+            height: 80px;
+        }
     }
 }
