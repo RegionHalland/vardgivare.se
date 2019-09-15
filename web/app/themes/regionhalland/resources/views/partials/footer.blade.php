@@ -37,7 +37,7 @@
                         <p id="$id2" class="rh-footer-group__item-header-title">Övriga webbplatser</p>
                     </div>
 
-                    <ul class="rh-footer-group__item-body" aria-labelledby="$id2" role="list">
+                    <ul class="rh-footer-group__item-body" aria-labelledby="$id2">
                         <li><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Regionhalland.se</a>
                         </li>
                         <li><a href="#"

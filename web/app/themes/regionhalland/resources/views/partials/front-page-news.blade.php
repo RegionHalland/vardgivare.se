@@ -6,7 +6,7 @@
         <h2 id="$id" class="rh-vg__home-news__header-title">Nyheter</h2>
     </div>
 
-    <ul aria-labelledby="$id" role="list">
+    <ul aria-labelledby="$id">
     @foreach($myNews as $news)
     <li class="rh-vg__home-news__item">
         <div class="rh-vg__home-news__item-publish">
