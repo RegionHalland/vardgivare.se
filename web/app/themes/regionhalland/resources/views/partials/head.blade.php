@@ -38,8 +38,8 @@
     {{-- <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css">
     
-    <script src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
-    <script src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
+    <script src="{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js"></script>
+    <script src="{!! env('WP_HOME') !!}/include/scripts/application.js"></script>
     
 	{{-- <script type='text/javascript' src='{!! env('WP_HOME') !!}/_dev/js/development.js'></script> --}}
 </head>
