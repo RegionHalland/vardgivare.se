@@ -5,9 +5,9 @@
 
 <body style="height: 101%" @php(body_class())>
     <header>
+        @include('partials.jump-to-content')
         @include('partials.arrow-up')
         @include('partials.site-message')
-        @include('partials.jump-to-content')
         @include('partials.cookie-notice')
         @include('partials.header')
     </header>
