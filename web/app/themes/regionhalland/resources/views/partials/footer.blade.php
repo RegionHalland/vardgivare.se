@@ -48,7 +48,7 @@
                         </li>
                         <li><a href="#"
                                 class="rh-link--navigation rh-footer-group__item-body-link">Hallandstrafiken.se</a></li>
-                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">1177.se</a></p>
+                        <li><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">1177.se</a></li>
                     </ul>
                 </div>
             </div>
