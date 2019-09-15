@@ -35,19 +35,19 @@
                         <p class="rh-footer-group__item-header-title">Övriga webbplatser</p>
                     </div>
 
-                    <div class="rh-footer-group__item-body">
-                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Regionhalland.se</a>
-                        </p>
-                        <p><a href="#"
+                    <ul class="rh-footer-group__item-body" aria-label="Övriga webbplatser" role="group">
+                        <li><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Regionhalland.se</a>
+                        </li>
+                        <li><a href="#"
                                 class="rh-link--navigation rh-footer-group__item-body-link">Vardgivare.regionhalland.se</a>
-                        </p>
-                        <p><a href="#"
+                        </li>
+                        <li><a href="#"
                                 class="rh-link--navigation rh-footer-group__item-body-link">Intra.regionhalland.se</a>
-                        </p>
-                        <p><a href="#"
-                                class="rh-link--navigation rh-footer-group__item-body-link">Hallandstrafiken.se</a></p>
+                        </li>
+                        <li><a href="#"
+                                class="rh-link--navigation rh-footer-group__item-body-link">Hallandstrafiken.se</a></li>
                         <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">1177.se</a></p>
-                    </div>
+                    </ul>
                 </div>
             </div>
 
