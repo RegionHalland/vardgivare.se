@@ -11,7 +11,7 @@
     <li class="rh-vg__home-news__item">
         <div class="rh-vg__home-news__item-publish">
             <span class="rh-vg__home-news__item-publish-icon"></span>
-            <p class="rh-vg__home-news__item-publish-info">Publicerad: <time itemprop="datePublished"
+            <p class="rh-vg__home-news__item-publish-info">Publicerad: <time
                 datetime="{{ $news->date }}">{{ $news->date }}</time></p>
         </div>
 
