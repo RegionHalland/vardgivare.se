@@ -11,7 +11,7 @@
 	<meta name="apple-mobile-web-app-title" content="Region Halland" />
 	<meta name="application-name" content="Region Halland" />
 	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-config" href="{!! env('WP_HOME') !!}/include/favicons/browserconfig.xml" />
+	<meta name="msapplication-config" content="{!! env('WP_HOME') !!}/include/favicons/browserconfig.xml" />
 	<meta name="theme-color" content="#ffffff" />
 	<meta name="description" content="Vårdgivare - Region Halland" />
 	<title>Vårdgivare - Region Halland</title>
@@ -38,8 +38,8 @@
     {{-- <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css">
     
-    <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
-    <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
+    <script src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
+    <script src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
     
 	{{-- <script type='text/javascript' src='{!! env('WP_HOME') !!}/_dev/js/development.js'></script> --}}
 </head>
