@@ -129,10 +129,13 @@ $(document).ready(function () {
     var $body = $('body'),
         $menuMainButton = $('#rh-menu-main-button'),
         $menuCloseButton = $('#rh-menu-close-button'),
-        $menuBody = $('#rh-menu-body'),
-        $menuOverlay = $('.rh-menu__overlay'),
+        $menuBody = $('#rh-menu-body');
+
+    var $menuOverlay = $('.rh-menu__overlay'),
         $menuTopBar = $('.rh-menu__top-bar'),
         $menuBodyOffsetTop = $('.rh-menu__offset-top');
+
+    var $menuBodySpaceTop = 30;
 
     // Check screen size
     $(window).resize(function () {
@@ -140,14 +143,14 @@ $(document).ready(function () {
         $menuTopBar.css({ "max-width": $menuBody.width() });
     });
 
+    $(document).scroll(throttle(function () {
+        $menuBody.css({ "top": $(window).scrollTop() });
+    }, 100));
+
     $menuMainButton.click(function () {
         lockBodyScrolling(true, makeScrollBarOffset(true));
 
         $menuOverlay.toggleClass('rh-dp--show rh-dp--none');
-
-        $menuBody
-            .addClass('rh-menu__body--show')
-            .addClass('rh-menu-pos--absolute'); // Using for iOS performance
 
         $menuTopBar
             .addClass('rh-pos--fixed')
@@ -156,17 +159,20 @@ $(document).ready(function () {
                 "max-width": $menuBody.width(),
                 "padding-right": parseInt($menuTopBar.css('padding-right')) + scrollbarWidth
             });
-        $menuBodyOffsetTop.css({ "height": parseInt($menuTopBar.height() + 30) });
+
+        $menuBody
+            .removeClass('rh-pos--fixed')
+            .addClass('rh-pos--absolute')// Using the position "absolute" for iOS performance
+            .css({ "top": $(window).scrollTop() })
+            .addClass('rh-menu__body--show');
+
+        $menuBodyOffsetTop.css({ "height": parseInt($menuTopBar.height() + $menuBodySpaceTop) });
     });
 
     $menuCloseButton.click(function () {
         lockBodyScrolling(false, makeScrollBarOffset(false));
 
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
-
-        $menuBody
-            .removeClass('rh-menu__body--show')
-            .removeClass('rh-menu-pos--absolute');
 
         $menuTopBar
             .removeClass('rh-pos--fixed')
@@ -175,9 +181,24 @@ $(document).ready(function () {
                 "max-width": "",
                 "padding-right": "11.2px"
             }); //11.2px === .7em - Default
-        $menuBodyOffsetTop.css({ "height": "" });
+
+        $('#rh-menu-body').removeClass('rh-menu__body--show');
+        hideMenuBody();
+
+        $menuBodyOffsetTop.css({ "height": $menuBodySpaceTop });
     });
 
+    var menuBodyHidden;
+    function hideMenuBody() {
+        clearTimeout(menuBodyHidden);
+        menuBodyHidden = setTimeout(function () {
+            $('#rh-menu-body').removeClass('rh-pos--absolute').addClass('rh-pos--fixed');
+            console.log('I am here now');
+        }, 600);
+
+        /* clearTimeout(menuBodyHidden);
+        menuBodyHidden = null; */
+    }
     /* Common */
     function lockBodyScrolling(status, fnCallback) {
         //github.com/willmcpo/body-scroll-lock

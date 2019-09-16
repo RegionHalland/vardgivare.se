@@ -77,7 +77,7 @@
 
 
 <div class="rh-menu__overlay rh-dp--none"></div>
-<div id="rh-menu-body" class="rh-menu__body">
+<div id="rh-menu-body" class="rh-menu__body rh-pos--fixed">
 
     <div class="rh-menu__top-bar">
         <div id="rh-menu-close-button"
