@@ -6,12 +6,12 @@
 <div class="clearfix rh-container--auto rh-container-px pt3 pb3">
     <div class="row">
         {{-- Sidebar --}}
-        <aside class="col col-12 sm-col-12 md-col-12 lg-col-3 rh-vg__page-left-container-px">
+        <nav title="Undersidor" class="col col-12 sm-col-12 md-col-12 lg-col-3 rh-vg__page-left-container-px">
             @include('partials.nav-sidebar')
-        </aside>
+        </nav>
 
         {{-- Main Content --}}
-		<main id="main" class="col col-12 sm-col-12 md-col-12 lg-col-6 pt3 rh-vg__page-between-container-px">
+		<div class="col col-12 sm-col-12 md-col-12 lg-col-6 pt3 rh-vg__page-between-container-px">
             @while(have_posts()) @php(the_post())
                 
                 {{-- Title --}}
@@ -35,11 +35,11 @@
                 @include('partials.feedback')
 
             @endwhile
-        </main>
+        </div>
 
-        <aside class="col col-12 sm-col-12 md-col-12 lg-col-3 pt3 rh-vg__page-right-container-px">
+        <nav title="Hitta på sidan" class="col col-12 sm-col-12 md-col-12 lg-col-3 pt3 rh-vg__page-right-container-px">
             @include('partials.content-nav')
-        </aside>
+        </nav>
     </div>
 </div>
 {{-- Container END --}}
