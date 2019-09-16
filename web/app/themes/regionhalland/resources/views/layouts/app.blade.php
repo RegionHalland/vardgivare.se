@@ -17,8 +17,8 @@
 
     <footer>
         @include('partials.footer')
+        @include('partials.arrow-up')
     </footer>
-    @include('partials.arrow-up')
 
 </body>
 
