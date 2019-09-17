@@ -7,6 +7,16 @@ $home-main-glutter: 1.875em; //30px x 2 = 60px
 $home-main-padding-y: 2.5em; //40px
 $home-blocks-offset: .6em;
 
+.rh-article img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rh-article figure {
+    max-width: 100%;
+    height: auto;
+}
+
 .rh-vg {
     &__header {
         min-height: 80px;
