@@ -1,6 +1,7 @@
 .rh-article img {
     max-width: 100%;
     height: auto;
+}
 
 .rh-article figure {
     max-width: 100%;
@@ -69,4 +70,60 @@
     padding: 0.5rem;
     height: auto;
     color: black;
+}
+
+.content-highlight {
+    -webkit-animation-name: content-hightlight-animation;
+    -o-animation-name: content-hightlight-animation;
+    animation-name: content-hightlight-animation;
+    -webkit-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-animation-iteration-count: 1;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes content-hightlight-animation {
+    0% {
+        background: #417795;
+    }
+
+    100% {
+        background: none;
+    }
+}
+
+@-o-keyframes content-hightlight-animation {
+    0% {
+        background: #417795;
+    }
+
+    100% {
+        background: none;
+    }
+}
+
+@keyframes content-hightlight-animation {
+    0% {
+        background: #417795;
+    }
+
+    100% {
+        background: none;
+    }
+}
+
+.rh-get-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
+}
+
+.rh-get-fixed-sticky {
+    position: fixed;
+    top: 15px;
 }
