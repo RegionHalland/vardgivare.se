@@ -19,35 +19,13 @@
 
 		{{-- Main Content --}}
 		<main class="pl3 pr2 pt3 pb1 col col-12 sm-col-12 md-col-12 lg-col-6" id="main">
-			@while(have_posts()) @php(the_post())
-				
-				{{-- Title --}}
-				<h1>{{ the_title() }}</h1>
-				
-				{{-- Content --}}
-				@if(function_exists('get_region_halland_prepare_the_content'))
-					@php(get_region_halland_prepare_the_content())
-				@endif
-				<article class="rh-article">
-					{!! the_content() !!}
-				</article>
-
-				{{-- Links lists --}}
-				@include('partials.link-lists')
-
-				{{-- RSS Repeater list --}}
-				@include('partials.rss-repeater-lists')
-
-				{{-- Author --}}
-				<div class="pt4">
-					@include('partials.author-info')
-				</div>
-				
-				{{-- Feedback --}}
-				@include('partials.feedback')
-
-			@endwhile
-
+	
+			{{-- Title --}}
+			<h1>{{ the_title() }}</h1>
+			
+			{{-- Ingress --}}
+			<p>{{ get_region_halland_acf_page_ingress() }}</p>
+	
 			@php($myResult = get_region_halland_api_analysforteckning_form_iohexol())
 			<?php 
 				$myHasSubmittedIohexol = 0;
@@ -57,7 +35,7 @@
 			?>
 			@if($myHasSubmittedIohexol == 0)
 				<form method="post" action="./">
-					<h3>Beräkna Iohexol</h3>
+					<h3 class="pt1">Beräkna Iohexol</h3>
 					<input type="hidden" name="has-submitted-iohexol" value="1">
 					<h5>Kön (m/k)</h5>
 					<select name="my-iohexol-kon" style="width:100%;height:32px;">
@@ -125,6 +103,27 @@
 					<div class="pt2 pl2" style="height:80px;width:100%;background-color:#eeeeee">Prov 1 efter injektionen ska tas efter <strong><?=$myResult['2']?></strong> timmar (OBS! exakta tidpunkterna [timme, minuter] för proverna måste anges!)"</div>
 				</div>
 			@endif
+
+			@while(have_posts()) @php(the_post())
+				
+				{{-- Content --}}
+				@if(function_exists('get_region_halland_prepare_the_content'))
+					@php(get_region_halland_prepare_the_content())
+				@endif
+				<article class="rh-article">
+					{!! the_content() !!}
+				</article>
+
+			@endwhile
+
+			{{-- Author --}}
+			<div class="pt2">
+				@include('partials.author-info')
+			</div>
+			
+			{{-- Feedback --}}
+			@include('partials.feedback')
+
 		</main>
 
 		<aside class="pt4 col col-12 sm-col-12 md-col-12 lg-col-3">
