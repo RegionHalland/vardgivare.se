@@ -19,34 +19,12 @@
 
 		{{-- Main Content --}}
 		<main class="pl3 pr2 pt3 pb1 col col-12 sm-col-12 md-col-12 lg-col-6" id="main">
-			@while(have_posts()) @php(the_post())
+			
+			{{-- Title --}}
+			<h1>{{ the_title() }}</h1>
 				
-				{{-- Title --}}
-				<h1>{{ the_title() }}</h1>
-				
-				{{-- Content --}}
-				@if(function_exists('get_region_halland_prepare_the_content'))
-					@php(get_region_halland_prepare_the_content())
-				@endif
-				<article class="rh-article">
-					{!! the_content() !!}
-				</article>
-
-				{{-- Links lists --}}
-				@include('partials.link-lists')
-
-				{{-- RSS Repeater list --}}
-				@include('partials.rss-repeater-lists')
-
-				{{-- Author --}}
-				<div class="pt4">
-					@include('partials.author-info')
-				</div>
-				
-				{{-- Feedback --}}
-				@include('partials.feedback')
-
-			@endwhile
+			{{-- Ingress --}}
+			<p>{{ get_region_halland_acf_page_ingress() }}</p>
 
 			@php($myResult = get_region_halland_api_analysforteckning_form_absolut_gfr())
 			<?php 
@@ -107,7 +85,19 @@
 				</div>
 			@endif
 
-			<div>
+			@while(have_posts()) @php(the_post())
+				
+				{{-- Content --}}
+				@if(function_exists('get_region_halland_prepare_the_content'))
+					@php(get_region_halland_prepare_the_content())
+				@endif
+				<article class="rh-article">
+					{!! the_content() !!}
+				</article>
+
+			@endwhile
+			
+			<div class="pt2">
 				<h3>Referenser</h3>
 				<p>1.SBU.  Skattning av njurfunktion. 2013.</p>
 				<p>2.Nyman U et al, The revised Lund-Malmö GFR estimating equation outperforms MDRD and CKD-EPI across GFR, age and BMI intervals in a large Swedish population. Clin Chem Lab Med. 2014 Jun;52(6):815-24.</p>
@@ -121,10 +111,18 @@
 				<p>10.Elgadi A et al, Long-term effects of primary hypothyroidism on renal function in children. J Pediatr. 2008 Jun;152(6):860-4.</p>
 				<p>11.Strevens H et al, Serum cystatin C for assessment of glomerular filtration rate in pregnant and non-pregnant women. Indications of altered filtration process in pregnancy. Scand J Clin Lab Invest. 2002;62(2):141-7.</p>
 				<p>12.Grubb A et al, Reduction in glomerular pore size is not restricted to pregnant women. Evidence for a new syndrome: ‘Shrunken pore syndrome’. Scand J Clin Lab Invest. 2015 Jul;75(4):333-40.</p>
-				<p>&nbsp;</p>
 			
 			</div>
 
+			{{-- Author --}}
+			<div class="pt2">
+				@include('partials.author-info')
+			</div>
+				
+			{{-- Feedback --}}
+			@include('partials.feedback')
+
+			
 		</main>
 
 		<aside class="pt4 col col-12 sm-col-12 md-col-12 lg-col-3">
