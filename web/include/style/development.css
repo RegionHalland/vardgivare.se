@@ -1,3 +1,24 @@
+.rh-article img {
+    max-width: 100%;
+    height: auto;
+
+.rh-article figure {
+    max-width: 100%;
+    height: auto;
+}
+
+.rh-article ul {
+    list-style-type: disc;
+    padding-left: 2ex;
+    line-height: 1.37em;
+}
+
+.rh-article ol {
+    list-style-type: decimal;
+    padding-left: 2ex;
+    line-height: 1.37em;
+}
+
 .content-nav__item {
     border-left: 4px solid #E4E4E4;
     line-height: 1.4;
@@ -26,7 +47,7 @@
 }
 
 .content-nav__item:hover {
-    border-left: 4px solid $vg-color-main; //#378A30;
+    border-left: 4px solid #005069;
 }
 
 .content-nav-container {
