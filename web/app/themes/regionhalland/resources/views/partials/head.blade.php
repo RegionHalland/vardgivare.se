@@ -34,9 +34,10 @@
 	</style> --}}
     {{-- <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.1.1'></script>--}}
    
-    {{-- <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare/vardgivare.css"> --}}
-    <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css">
+    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare/vardgivare.css">
+    {{-- <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css">
+    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/application.css">
     
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/bodyScrollLock-2.6.4.js'></script>
