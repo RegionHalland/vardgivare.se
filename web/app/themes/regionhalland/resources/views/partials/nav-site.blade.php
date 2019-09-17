@@ -77,10 +77,9 @@
 
 
 <div class="rh-menu__overlay rh-dp--none"></div>
-
 @if(function_exists('get_region_halland_tree_all_levels_vardgivare'))
 @php($myTree = get_region_halland_tree_all_levels_vardgivare())
-<div id="rh-menu-body" class="rh-menu__body rh-pos--fixed">
+<div id="rh-menu-body" class="rh-menu__body">
 
     <div class="rh-menu__top-bar">
         <div id="rh-menu-close-button"
@@ -109,7 +108,7 @@
 
         {{-- Sub item container - Level 2 --}}
         @if($level1ChildrenCount > 0)
-        <div id="sub{{ $tree1['ID'] }}" class="rh-menu__item-sub-container rh-dp--none">
+        <div id="sub{{ $tree1['ID'] }}" class="rh-menu__item-sub-container">
             @foreach ($tree1['children'] as $tree2)
             @php ($level2ChildrenCount = count($tree2['children']))
             <div class="rh-menu__item rh-menu__item-sub-item rh-pl-1">
@@ -126,7 +125,7 @@
 
             {{-- Sub item container - Level 3 --}}
             @if($level2ChildrenCount > 0)
-            <div id="sub{{ $tree2['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-3 rh-dp--none">
+            <div id="sub{{ $tree2['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-3">
                 @foreach ($tree2['children'] as $tree3)
                 @php ($level3ChildrenCount = count($tree3['children']))
                 <div class="rh-menu__item rh-menu__item-sub-item rh-pl-2">
@@ -143,7 +142,7 @@
 
                 {{-- Sub item container - Level 4 --}}
                 @if($level3ChildrenCount > 0)
-                <div id="sub{{ $tree3['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-4 rh-dp--none">
+                <div id="sub{{ $tree3['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-4">
                     @foreach ($tree3['children'] as $tree4)
                     @php ($level4ChildrenCount = count($tree4['children']))
                     <div class="rh-menu__item rh-menu__item-sub-item rh-pl-3">
@@ -160,7 +159,7 @@
 
                     {{-- Sub item container - Level 5 --}}
                     @if($level4ChildrenCount > 0)
-                    <div id="sub{{ $tree4['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5 rh-dp--none">
+                    <div id="sub{{ $tree4['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5">
                         @foreach ($tree4['children'] as $tree5)
                         @php ($level5ChildrenCount = count($tree5['children']))
                         <div class="rh-menu__item rh-menu__item-sub-item rh-pl-4">
@@ -177,7 +176,7 @@
 
                         {{-- Sub item container - Level 6 --}}
                         @if($level5ChildrenCount > 0)
-                        <div id="sub{{ $tree5['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5 rh-dp--none">
+                        <div id="sub{{ $tree5['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5">
                             @foreach ($tree5['children'] as $tree6)
                             @php ($level6ChildrenCount = count($tree6['children']))
                             <div class="rh-menu__item rh-menu__item-sub-item rh-pl-5">
@@ -202,6 +201,7 @@
         @endif {{-- End of level 2 --}}
     </div>
     @endforeach
+    
     <div class="rh-menu__offset-bottom"></div>
 </div>
 @endif

@@ -135,20 +135,24 @@ $(document).ready(function () {
         $menuTopBar = $('.rh-menu__top-bar'),
         $menuBodyOffsetTop = $('.rh-menu__offset-top');
 
-    var $menuItemButton = $('.rh-menu__item-button');
+    var $menuItemButton = $('.rh-menu__item-button'),
+        $menuSubContainers = $('.rh-menu__item-sub-container');
 
     var $menuBodySpaceTop = 30;
 
     // Initial state
-    $menuBody.css({ "top": $(window).scrollTop() });
+    $menuSubContainers.addClass('rh-dp--none');
+    $menuBody.addClass('rh-pos--fixed').css({ "top": $(window).scrollTop() });
+    $menuTopBar.css({ "max-width": $menuBody.width() });
 
-    // Check screen size
     $(window).resize(throttle(function () {
         // Update max-width for menu when windows resizing
         $menuTopBar.css({ "max-width": $menuBody.width() });
-    }, 60));
+        scrollbarWidth = calculateScrollbarWidth();
+    }, 80));
 
     $(document).scroll(throttle(function () {
+        // Update menu position when scrolling
         $menuBody.css({ "top": $(window).scrollTop() });
     }, 200));
 
@@ -196,17 +200,13 @@ $(document).ready(function () {
         var $menuItemButton = $(this),
             $menuItemSubContainer = $("#sub" + $menuItemButton.attr('id')),  // Menu item's sub container ID
             $menuItemIsLevel1 = false,
-            $menuItemLink = $(this)
-                .closest("div[class^='rh-menu__item']")
-                .find("a");
+            $menuItemLink = $(this).closest("div[class^='rh-menu__item']").find("a");
 
         if ($menuItemButton.hasClass("rh-menu__item-button-parent")) {
             $menuItemIsLevel1 = true;
         }
 
-        $menuItemButton
-            .find("span")
-            .toggleClass("icon-plus icon-minus");
+        $menuItemButton.find("span").toggleClass("icon-plus icon-minus");
 
         if (!$menuItemIsLevel1) {
             $menuItemButton.toggleClass("rh-menu__item-button-sub-item rh-menu__item-button-sub-item--active");
