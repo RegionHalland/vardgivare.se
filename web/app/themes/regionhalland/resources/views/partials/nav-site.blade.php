@@ -32,7 +32,7 @@
                         {{-- Showed only on moblie (medium) and down --}}
                         <div class="rh-vg__header-functions__item mr1">
                             <div class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-dp-md">
-                                <span id="searchtoggle" class="icon-search"></span>
+                                <span class="icon-search"></span>
                             </div>
 
                         </div>
@@ -60,9 +60,8 @@
                         </div>
 
                         <div class="rh-vg__header-functions__item">
-                            <div id="rh-menu-main-button"
-                                class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-menu__button">
-                                <span id="searchtoggle" class="icon-menu"></span>
+                            <div id="rh-menu-main-button" class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-menu__button">
+                                <span class="icon-menu"></span>
                             </div>
                         </div>
 
