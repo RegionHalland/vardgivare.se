@@ -379,6 +379,7 @@ $menu-overlay--z-index: 50;
             margin-left: auto;
             background-color: #ffffff;
             color: $vg-color-main;
+            border-color: $vg-color-main;
         }
     }
 
@@ -486,6 +487,7 @@ $menu-overlay--z-index: 50;
             padding-top: .45em;
 
             margin-left: 1em;
+            border-color: $vg-color-main;
 
             cursor: pointer;
 
