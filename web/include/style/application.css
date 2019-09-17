@@ -1,6 +1,7 @@
 /* Specific settings */
 body {
-  font-family: proxima-nova, sans-serif, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  font-family: proxima-nova, sans-serif, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow-x: hidden; }
 
 /* Specific styling for Vardgivare website */
 .rh-vg__header {
@@ -250,7 +251,8 @@ body {
   .rh-menu__button-close {
     margin-left: auto;
     background-color: #ffffff;
-    color: #005069; }
+    color: #005069;
+    border-color: #005069; }
 
 .rh-menu__top-bar {
   top: 0;
@@ -324,6 +326,7 @@ body {
     text-align: center;
     padding-top: .45em;
     margin-left: 1em;
+    border-color: #005069;
     cursor: pointer; }
     .rh-menu__item-button-parent {
       background-color: #ffffff;
