@@ -20,7 +20,7 @@
                 <a class="rh-link--navigation rh-vg__home-news__item-title-link" href="{{ $news->permalink }}" title="">{{ $news->post_title }}</a>
             </h3>
             <p class="rh-vg__home-news__item-description">
-                {{ html_entity_decode(wp_trim_words($news->post_content, 40, '...')) }}
+                {{ html_entity_decode(wp_trim_words($news->post_content, 20, '...')) }}
             </p>
         </div>
     </li>
