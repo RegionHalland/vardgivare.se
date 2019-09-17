@@ -17,6 +17,18 @@ $home-blocks-offset: .6em;
     height: auto;
 }
 
+.rh-article ul {
+    list-style-type: disc;
+    padding-left: 2ex;
+    line-height: 1.37em;
+}
+
+.rh-article ol {
+    list-style-type: decimal;
+    padding-left: 2ex;
+    line-height: 1.37em;
+}
+
 .rh-vg {
     &__header {
         min-height: 80px;
