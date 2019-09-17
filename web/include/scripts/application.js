@@ -121,7 +121,7 @@ function throttle(fn, threshhold, scope) {
     };
 }
 
-/* Dropdown menu */
+/* Slide menu (from right) */
 $(document).ready(function () {
     var scrollbarWidth = calculateScrollbarWidth(),
         isIDevice = isMobileDevice();
@@ -135,17 +135,22 @@ $(document).ready(function () {
         $menuTopBar = $('.rh-menu__top-bar'),
         $menuBodyOffsetTop = $('.rh-menu__offset-top');
 
+    var $menuItemButton = $('.rh-menu__item-button');
+
     var $menuBodySpaceTop = 30;
 
+    // Initial state
+    $menuBody.css({ "top": $(window).scrollTop() });
+
     // Check screen size
-    $(window).resize(function () {
+    $(window).resize(throttle(function () {
         // Update max-width for menu when windows resizing
         $menuTopBar.css({ "max-width": $menuBody.width() });
-    });
+    }, 60));
 
     $(document).scroll(throttle(function () {
         $menuBody.css({ "top": $(window).scrollTop() });
-    }, 100));
+    }, 200));
 
     $menuMainButton.click(function () {
         lockBodyScrolling(true, makeScrollBarOffset(true));
@@ -172,33 +177,53 @@ $(document).ready(function () {
     $menuCloseButton.click(function () {
         lockBodyScrolling(false, makeScrollBarOffset(false));
 
-        $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
-
         $menuTopBar
             .removeClass('rh-pos--fixed')
             .css({
                 "width": "",
                 "max-width": "",
                 "padding-right": "11.2px"
-            }); //11.2px === .7em - Default
+            }); //11.2px === .7em - Default in CSS
 
         $('#rh-menu-body').removeClass('rh-menu__body--show');
         hideMenuBody();
 
         $menuBodyOffsetTop.css({ "height": $menuBodySpaceTop });
+        $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
+    });
+
+    $menuItemButton.click(function () {
+        var $menuItemButton = $(this),
+            $menuItemSubContainer = $("#sub" + $menuItemButton.attr('id')),  // Menu item's sub container ID
+            $menuItemIsLevel1 = false,
+            $menuItemLink = $(this)
+                .closest("div[class^='rh-menu__item']")
+                .find("a");
+
+        if ($menuItemButton.hasClass("rh-menu__item-button-parent")) {
+            $menuItemIsLevel1 = true;
+        }
+
+        $menuItemButton
+            .find("span")
+            .toggleClass("icon-plus icon-minus");
+
+        if (!$menuItemIsLevel1) {
+            $menuItemButton.toggleClass("rh-menu__item-button-sub-item rh-menu__item-button-sub-item--active");
+            $menuItemLink.toggleClass("rh-menu__link--active");
+        }
+
+        $menuItemSubContainer.length && $menuItemSubContainer.toggleClass("rh-dp--none rh-dp--show");
     });
 
     var menuBodyHidden;
     function hideMenuBody() {
-        clearTimeout(menuBodyHidden);
+        menuBodyHidden && clearTimeout(menuBodyHidden);
         menuBodyHidden = setTimeout(function () {
             $('#rh-menu-body').removeClass('rh-pos--absolute').addClass('rh-pos--fixed');
-            console.log('I am here now');
         }, 600);
-
-        /* clearTimeout(menuBodyHidden);
-        menuBodyHidden = null; */
     }
+
     /* Common */
     function lockBodyScrolling(status, fnCallback) {
         //github.com/willmcpo/body-scroll-lock
