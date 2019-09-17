@@ -580,10 +580,4 @@ $menu-overlay--z-index: 50;
             height: $menu-body__offset-bottom;
         }
     }
-
-    &-pos {
-        &--absolute {
-            position: absolute;
-        }
-    }
 }
