@@ -1,3 +1,5 @@
+@php($id2 = uniqid())
+
 <div class="rh-vg__styling-dark">
     <div class="clearfix rh-footer-group rh-container--auto rh-footer-group__container-p">
         <div class="row row-eq-height">
@@ -32,22 +34,22 @@
             <div class="col col-12 md-col-4 rh-footer-group__item">
                 <div>
                     <div class="rh-footer-group__item-header">
-                        <p class="rh-footer-group__item-header-title">Övriga webbplatser</p>
+                        <p id="$id2" class="rh-footer-group__item-header-title">Övriga webbplatser</p>
                     </div>
 
-                    <div class="rh-footer-group__item-body">
-                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Regionhalland.se</a>
-                        </p>
-                        <p><a href="#"
+                    <ul class="rh-footer-group__item-body" aria-labelledby="$id2">
+                        <li><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">Regionhalland.se</a>
+                        </li>
+                        <li><a href="#"
                                 class="rh-link--navigation rh-footer-group__item-body-link">Vardgivare.regionhalland.se</a>
-                        </p>
-                        <p><a href="#"
+                        </li>
+                        <li><a href="#"
                                 class="rh-link--navigation rh-footer-group__item-body-link">Intra.regionhalland.se</a>
-                        </p>
-                        <p><a href="#"
-                                class="rh-link--navigation rh-footer-group__item-body-link">Hallandstrafiken.se</a></p>
-                        <p><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">1177.se</a></p>
-                    </div>
+                        </li>
+                        <li><a href="#"
+                                class="rh-link--navigation rh-footer-group__item-body-link">Hallandstrafiken.se</a></li>
+                        <li><a href="#" class="rh-link--navigation rh-footer-group__item-body-link">1177.se</a></li>
+                    </ul>
                 </div>
             </div>
 
