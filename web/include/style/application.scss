@@ -356,7 +356,9 @@ $home-blocks-offset: .6em;
 
 
 /* Menu */
-body { overflow-x: hidden; }
+/* body {
+    overflow-x: hidden;
+} */
 
 $menu-item__icon-size: 30px;
 $menu-top-bar__height: 70px;
@@ -389,7 +391,7 @@ $menu-overlay--z-index: 50;
 
         padding-right: .8em;
         background-color: #ffffff;
-        
+
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
 
@@ -408,9 +410,9 @@ $menu-overlay--z-index: 50;
 
         -webkit-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
-        
+
         scroll-behavior: smooth;
-        
+
         // iOS
         overflow-x: hidden;
         overflow-y: scroll;
