@@ -78,7 +78,7 @@
 <div class="rh-menu__overlay rh-dp--none"></div>
 @if(function_exists('get_region_halland_tree_all_levels_vardgivare'))
 @php($myTree = get_region_halland_tree_all_levels_vardgivare())
-<div id="rh-menu-body" class="rh-menu__body">
+<div id="rh-menu-body" class="rh-menu__body rh-pos--fixed">
 
     <div class="rh-menu__top-bar">
         <div id="rh-menu-close-button"
