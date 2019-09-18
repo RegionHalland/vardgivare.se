@@ -1,8 +1,3 @@
-/* Specific settings */
-body {
-  font-family: proxima-nova, sans-serif, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  overflow-x: hidden; }
-
 /* Specific styling for Vardgivare website */
 .rh-vg__header {
   min-height: 80px; }
