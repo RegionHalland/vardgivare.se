@@ -53,19 +53,6 @@
 						<h2 class="mb1" style="border-bottom: 4px solid #378A30">Sökresultat - sida {{$currentPage}} av {{$numberOfPages}}</h2>
 
 						<ul>
-							<li>
-								<div class="mt2 rh-search-external-1177" style="border: 1px solid #378A30; background-color: rgba(195,220,193,0.3);">
-									<h3 class="h2 rh-search-external-1177-title">
-										<a href="https://www.1177.se/" style="font-weight: normal; text-decoration: none; color:black;">1177 Vårdguiden</a>
-									</h3>
-									<p class="rh-search-external-1177-text">
-										Länk till annan webbplats
-									</p>
-									<p class="rh-search-external-1177-description">
-										Kontaktuppgifter, öppettider och övrig information om vård- och tandvårdsmottagningar hittar du på 1177.se. Där finns också information om hälsa, sjukdomar, besvär och rättigheter.
-									</p>
-								</div>
-							</li>
 						@foreach ($myData['documentList']['documents'] as $data)
 							<li class="py2">
 								<p><a class="h2" href="{{ $data['url'] }}" style="color: #378A30; text-decoration: none; line-height: 1.3;">{!! $data['title'] !!}</a></p>
