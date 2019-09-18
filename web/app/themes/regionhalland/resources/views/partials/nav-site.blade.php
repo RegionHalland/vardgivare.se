@@ -18,7 +18,7 @@
                         <a class="rh-vg__header-icon-link" onclick="toggleBar();" title="Aktivera webbaserad talsyntes"
                             href="#">
                             <div class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme">
-                                <span id="searchtoggle" class="icon-volume-1"></span>
+                                <span class="icon-volume-1"></span>
                             </div>
                         </a>
 
