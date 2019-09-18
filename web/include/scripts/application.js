@@ -147,7 +147,8 @@ function throttle(fn, threshhold, scope) {
 /* Slide menu (from right) */
 $(document).ready(function () {
     var scrollbarWidth = calculateScrollbarWidth(),
-        isIDevice = isMobileDevice();
+        isIDevice = isMobileDevice(),
+        isSmallScreen = $(document).width() < 768;
 
     var $body = $('body'),
         $menuMainButton = $('#rh-menu-main-button'),
@@ -161,7 +162,8 @@ $(document).ready(function () {
     var $menuItemButton = $('.rh-menu__item-button'),
         $menuSubContainers = $('.rh-menu__item-sub-container');
 
-    var $menuBodySpaceTop = 30;
+    var $menuMainButtonDefaultPaddingRight = isSmallScreen ? "0.84375em" : "0.7em", // View more in CSS
+        $menuBodySpaceTop = 30;
 
     // Initial state
     $menuSubContainers.addClass('rh-dp--none');
@@ -170,8 +172,9 @@ $(document).ready(function () {
 
     $(window).resize(throttle(function () {
         // Update max-width for menu when windows resizing
-        $menuTopBar.css({ "max-width": $menuBody.width() });
         scrollbarWidth = calculateScrollbarWidth();
+        $menuMainButtonDefaultPaddingRight = isSmallScreen ? "0.84375em" : "0.7em";
+        $menuTopBar.css({ "max-width": $menuBody.width() });
     }, 80));
 
     $(document).scroll(throttle(function () {
@@ -209,8 +212,8 @@ $(document).ready(function () {
             .css({
                 "width": "",
                 "max-width": "",
-                "padding-right": "11.2px"
-            }); //11.2px === .7em - Default in CSS
+                "padding-right": $menuMainButtonDefaultPaddingRight
+            });
 
         $('#rh-menu-body').removeClass('rh-menu__body--show');
         hideMenuBody();
