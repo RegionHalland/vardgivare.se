@@ -43,8 +43,8 @@
 			@if(function_exists('get_region_halland_page_news_taxonomi_category'))
 	            @php($newsitems = get_region_halland_page_news_taxonomi_category())
 	            @if($newsitems)
-	                <div style="background-color: #F4F4F4;" class="pb3 pt3">
-	                    <div class="center" style="max-width:1440px;">
+	                <div style="background-color: #F4F4F4;" class="rh-container--auto rh-container-px">
+	                    <div class="center">
 	                        <div class="left-align">
 	                            <div class="mx3 pt3 pb2">
 	                                <h1 class="pb2">Nyheter</h1>
@@ -60,7 +60,7 @@
 	                                    </li>
 	                                @endforeach
 	                            </ul>
-	                            <div class="col-12 mt3" style="display: flex; justify-content: center;">
+	                            <div class="col-12 mt3 pb4" style="display: flex; justify-content: center;">
 	                                <a href="/nyheter" class="rh-button rh-button--secondary" aria-label="Visa fler nyheter" role="button" style="text-decoration: none;">Visa fler nyheter</a>
 	                            </div>
 	                        </div>
