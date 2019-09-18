@@ -16,6 +16,16 @@
 		</div>
 	@endwhile
 
+    <div class="pb2">&nbsp;</div>
+    
+    {{-- Parent Page --}}
+    <div class="rh-container--auto rh-container-px">
+        @include('partials.parent-page')
+    </div>
+    
+    {{-- Child Navigation --}}
     @include('partials.child-navigation')
+        
+    <div class="pb3">&nbsp;</div>
 
 @endsection
