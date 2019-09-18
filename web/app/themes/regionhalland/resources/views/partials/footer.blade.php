@@ -1,6 +1,6 @@
 @php($id2 = uniqid())
 
-<div class="rh-vg__styling-dark">
+<div class="rh-vg__styling-dark" id="footer-top-placeholder">
     <div class="clearfix rh-footer-group rh-container--auto rh-footer-group__container-p">
         <div class="row row-eq-height">
             <div class="col col-12 md-col-4 rh-footer-group__item">
