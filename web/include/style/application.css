@@ -38,7 +38,8 @@ body {
         padding-top: .75em; } }
   .rh-vg__header-icon-theme {
     background-color: #005069;
-    color: #ffffff; }
+    color: #ffffff;
+    border-color: #005069; }
   .rh-vg__header-icon-link {
     text-decoration: none; }
   .rh-vg__header-search-button {
@@ -259,9 +260,12 @@ body {
   display: flex;
   align-items: center;
   height: 70px;
-  padding-right: .8em;
+  padding-right: 0.84375em;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 48em) {
+    .rh-menu__top-bar {
+      padding-right: .7em; } }
 
 .rh-menu__body {
   z-index: 60;
