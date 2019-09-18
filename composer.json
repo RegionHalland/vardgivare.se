@@ -212,7 +212,7 @@
     "regionhalland/region-halland-search-findwise-vardgivare": "1.1.0",
     "regionhalland/region-halland-single-page-information": "1.1.0",
     "regionhalland/region-halland-tree-all-levels-vardgivare": "1.0.0",
-    "regionhalland/region-halland-findwise-vardgivare": "1.0.0",
+    "regionhalland/region-halland-findwise-vardgivare": "1.1.0",
     "regionhalland/std-plugin": "4.0.3"
   },
   "require-dev": {
