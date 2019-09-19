@@ -54,9 +54,9 @@ $(function () {
     // ****************************
     // *** Cookie notice accept ***
     // ****************************    
-    $("#cookie-consent").on( "click", function() {
+    $("#cookie-consent").on("click", function () {
         // set cookie with vanilla javascript function
-        setCookie('cookie_notice_accepted','1',365);
+        setCookie('cookie_notice_accepted', '1', 365);
         // Hide div with cookie notice text + button
         $("#cookie-notice").hide();
     });
@@ -65,14 +65,14 @@ $(function () {
     // **************************************
     // *** Javascript set cookie function ***
     // **************************************
-    function setCookie(name,value,days) {
+    function setCookie(name, value, days) {
         var expires = "";
         if (days) {
             var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
 
@@ -93,8 +93,8 @@ $(function () {
         }, 10));
     }
 
-    if ($("body.page-template-default")[0]){
-        $(window).scroll(debounce(function() {
+    if ($("body.page-template-default")[0]) {
+        $(window).scroll(debounce(function () {
 
             var myPosition = Math.round($('#content-nav-placeholder').offset().top - $(window).scrollTop());
             var myFooterTop = Math.round($('#footer-top-placeholder').offset().top - $(window).scrollTop());
@@ -204,9 +204,9 @@ $(document).ready(function () {
     }, 200));
 
     $menuMainButton.click(function () {
-        lockBodyScrolling(true, makeScrollBarOffset(true));
+        lockBodyScrolling(true);
 
-        $menuOverlay.toggleClass('rh-dp--show rh-dp--none');
+        $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
 
         $menuTopBar
             .addClass('rh-pos--fixed')
@@ -217,6 +217,8 @@ $(document).ready(function () {
             });
 
         $menuBody
+            .removeClass('rh-dp--none')
+            .addClass('rh-dp--show')
             .removeClass('rh-pos--fixed')
             .addClass('rh-pos--absolute')// Using the position "absolute" for iOS performance
             .css({ "top": $(window).scrollTop() })
@@ -226,7 +228,7 @@ $(document).ready(function () {
     });
 
     $menuCloseButton.click(function () {
-        lockBodyScrolling(false, makeScrollBarOffset(false));
+        lockBodyScrolling(false);
 
         $menuTopBar
             .removeClass('rh-pos--fixed')
@@ -267,7 +269,11 @@ $(document).ready(function () {
     function hideMenuBody() {
         menuBodyHidden && clearTimeout(menuBodyHidden);
         menuBodyHidden = setTimeout(function () {
-            $('#rh-menu-body').removeClass('rh-pos--absolute').addClass('rh-pos--fixed');
+            $('#rh-menu-body')
+                .removeClass('rh-pos--absolute')
+                .addClass('rh-pos--fixed')
+                .removeClass('rh-dp--show')
+                .addClass('rh-dp--none');
         }, 600);
     }
 
@@ -280,10 +286,10 @@ $(document).ready(function () {
         var targetElement = document.querySelector(".rh-menu__body");
 
         if (status) {
-            $body.addClass("rh-noscroll");
+            $body.addClass("rh-noscroll").css({ "margin-right": scrollbarWidth });
             isIDevice && disableBodyScroll(targetElement);
         } else {
-            $body.removeClass("rh-noscroll");
+            $body.removeClass("rh-noscroll").css({ "margin-right": "" });
             isIDevice && enableBodyScroll(targetElement);
         }
 

@@ -24,8 +24,8 @@
 
 
 	<main>
-		<div class="center" id="main" style="max-width:1440px;">
-			<div class="left-align px4">
+		<div class="rh-container--auto rh-container-px" id="main">
+			<div class="left-align">
 				<h1 class="mb3">Sök på Region Halland</h1>
 
 				<form name="myForm" method="get" action="{!! env('FINDWISE_SEARCH_URL') !!}">
@@ -36,8 +36,8 @@
 					}
 					?>
 					<div class="rh-search-field">
-						<input type="text" name="q" class="rh-search-term rh-search-term-larger" placeholder="Skriv din sökning här" value="<?=$strSearchText?>" aria-label="Sökruta" style="height: 7ex; max-width:60em;">
-						<button type="submit" class="rh-search-button rh-search-button-larger" style="background-color: #378A30; color:white; height: 7ex;">
+						<input type="text" name="q" class="rh-search-term rh-search-term-larger" placeholder="Skriv din sökning här" value="<?=$strSearchText?>" aria-label="Sökruta">
+						<button type="submit" class="rh-search-button rh-search-button-larger" style="height:61px">
 							Sök
 						</button>
 					</div>
@@ -46,16 +46,16 @@
 			</div>
 
 			<div class="left-align clearfix">
-				<div class="pt3 pb3 px3 col col-12 sm-col-12 md-col-8 lg-col-8">
+				<div class="pt3 pb3 col col-12 sm-col-12 md-col-8 lg-col-8">
 
 					@if(isset($myData))
 
-						<h2 class="mb1" style="border-bottom: 4px solid #378A30">Sökresultat - sida {{$currentPage}} av {{$numberOfPages}}</h2>
+						<h2 class="mb1" style="border-bottom: 4px solid #005069">Sökresultat - sida {{$currentPage}} av {{$numberOfPages}}</h2>
 
 						<ul>
 						@foreach ($myData['documentList']['documents'] as $data)
 							<li class="py2">
-								<p><a class="h2" href="{{ $data['url'] }}" style="color: #378A30; text-decoration: none; line-height: 1.3;">{!! $data['title'] !!}</a></p>
+								<p><a class="h2" href="{{ $data['url'] }}" style="color: #005069; text-decoration: none; line-height: 1.3;">{!! $data['title'] !!}</a></p>
 								<p>Senast ändrad: {!! truncateDate($data['modified']) !!}</p>
 								@if(function_exists('get_region_halland_breadcrumbs'))
 									@php($myBreadcrumbs = get_region_halland_breadcrumbs_pages_search(get_region_halland_breadcrumbs_pages_search_id($data['_id']), $data['title'], 'Start'))
@@ -84,9 +84,9 @@
 
 				</div>
 
-				<div class="pt3 pb3 pl2 pr4 col col-12 sm-col-12 md-col-4 lg-col-4">
-					<h2 style="border-bottom: 4px solid #378A30">Söktips - Region Halland</h2>
-					<div class="mt2 pt2 pl2 pb2" style="border-left: 4px solid #378A30; background-color: rgba(195,220,193,0.3); border-bottom-left-radius: 5px; border-top-left-radius: 5px;">
+				<div class="pt3 pb3 pl4 col col-12 sm-col-12 md-col-4 lg-col-4">
+					<h2 style="border-bottom: 4px solid #005069">Söktips - Region Halland</h2>
+					<div class="mt2 pt2 pl2 pb2" style="border-left: 4px solid #005069; background-color: #D9E4EA; border-bottom-left-radius: 5px; border-top-left-radius: 5px;">
 					<ul>
 						<li>Se till att alla ord är rättstavade</li>
 						<li class="pt1 pb1">Försök att använda synonymer</li>

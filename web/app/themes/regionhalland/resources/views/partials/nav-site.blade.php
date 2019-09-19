@@ -49,18 +49,16 @@
                                 <div class="rh-search-field">
                                     <input type="text" name="q" class="rh-search-term"
                                         placeholder="Skriv din sökning här" value="<?=$strSearchText?>"
-                                        style="height:5ex;" aria-label="Sökruta">
-                                    <button type="submit" class="rh-button rh-vg__header-search-button"
-                                        style="height:5ex; width:8ex;">
-                                        Sök
-                                    </button>
+                                        aria-label="Sökruta">
+                                    <button type="submit" class="rh-search-button" style="height:41px">Sök</button>
                                 </div>
 
                             </form>
                         </div>
 
                         <div class="rh-vg__header-functions__item">
-                            <div id="rh-menu-main-button" class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-menu__button">
+                            <div id="rh-menu-main-button"
+                                class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-menu__button">
                                 <span class="icon-menu"></span>
                             </div>
                         </div>
@@ -99,7 +97,8 @@
             </a>
 
             @if($level1ChildrenCount > 0)
-            <div id="{{ $tree1['ID'] }}" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-parent">
+            <div id="{{ $tree1['ID'] }}"
+                class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-parent">
                 <span class="icon-plus"></span>
             </div>
             @endif
@@ -116,7 +115,8 @@
                 </a>
 
                 @if($level2ChildrenCount > 0)
-                <div id="{{ $tree2['ID'] }}" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
+                <div id="{{ $tree2['ID'] }}"
+                    class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
                     <span class="icon-plus"></span>
                 </div>
                 @endif
@@ -133,7 +133,8 @@
                     </a>
 
                     @if($level3ChildrenCount > 0)
-                    <div id="{{ $tree3['ID'] }}" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
+                    <div id="{{ $tree3['ID'] }}"
+                        class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
                         <span class="icon-plus"></span>
                     </div>
                     @endif
@@ -150,7 +151,8 @@
                         </a>
 
                         @if($level4ChildrenCount > 0)
-                        <div id="{{ $tree4['ID'] }}" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
+                        <div id="{{ $tree4['ID'] }}"
+                            class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
                             <span class="icon-plus"></span>
                         </div>
                         @endif
@@ -158,7 +160,8 @@
 
                     {{-- Sub item container - Level 5 --}}
                     @if($level4ChildrenCount > 0)
-                    <div id="sub{{ $tree4['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5">
+                    <div id="sub{{ $tree4['ID'] }}"
+                        class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5">
                         @foreach ($tree4['children'] as $tree5)
                         @php ($level5ChildrenCount = count($tree5['children']))
                         <div class="rh-menu__item rh-menu__item-sub-item rh-pl-4">
@@ -167,7 +170,8 @@
                             </a>
 
                             @if($level5ChildrenCount > 0)
-                            <div id="{{ $tree5['ID'] }}" class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
+                            <div id="{{ $tree5['ID'] }}"
+                                class="rh-round-button rh-round-button--small rh-menu__item-button rh-menu__item-button-sub-item--active">
                                 <span class="icon-plus"></span>
                             </div>
                             @endif
@@ -175,7 +179,8 @@
 
                         {{-- Sub item container - Level 6 --}}
                         @if($level5ChildrenCount > 0)
-                        <div id="sub{{ $tree5['ID'] }}" class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5">
+                        <div id="sub{{ $tree5['ID'] }}"
+                            class="rh-menu__item-sub-container rh-menu__item-sub-container-level-5">
                             @foreach ($tree5['children'] as $tree6)
                             @php ($level6ChildrenCount = count($tree6['children']))
                             <div class="rh-menu__item rh-menu__item-sub-item rh-pl-5">
@@ -200,7 +205,7 @@
         @endif {{-- End of level 2 --}}
     </div>
     @endforeach
-    
+
     <div class="rh-menu__offset-bottom"></div>
 </div>
 @endif
