@@ -211,6 +211,37 @@ body {
 .rh-vg__nav-left__link {
   color: #000000; }
 
+.rh-vg__styrda-dokument {
+  margin-bottom: 4em; }
+  .rh-vg__styrda-dokument__items .std-container-inner.std-search-result {
+    background-color: #f4f4f4;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 4px; }
+  @media (min-width: 75em) {
+    .rh-vg__styrda-dokument__items {
+      padding-left: 4em;
+      padding-right: 4em; } }
+  .rh-vg__styrda-dokument__items .std-search-tab {
+    margin: 1em 0; }
+    .rh-vg__styrda-dokument__items .std-search-tab li {
+      height: 1.8em;
+      cursor: pointer; }
+      .rh-vg__styrda-dokument__items .std-search-tab li:hover {
+        color: #005069; }
+  .rh-vg__styrda-dokument__items .std-search-tab-active {
+    font-weight: bold; }
+  .rh-vg__styrda-dokument__items button {
+    display: none; }
+  .rh-vg__styrda-dokument__items a {
+    color: #005069; }
+  .rh-vg__styrda-dokument__items strong {
+    line-height: 1.4em; }
+  .rh-vg__styrda-dokument__items #std_orderby {
+    height: 2.8em;
+    width: 14em;
+    font-size: 1em; }
+
 .rh-vg__title, .rh-vg__home-site-info__title, .rh-vg__home-news__header-title, .rh-vg__home-news__item-title {
   line-height: 1.3125em;
   margin-bottom: .1em; }
