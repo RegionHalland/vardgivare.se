@@ -5,8 +5,12 @@
 @extends('layouts.app')
 
 @section('content')
+    {{-- Parent Page --}}
+    <div class="mt2 rh-container--auto rh-container-px">
+        @include('partials.parent-page')
+    </div>
 
-    <div class="rh-container--auto rh-container-px pt3">
+    <div class="mt1 rh-container--auto rh-container-px">
         <h1>{!! get_the_title() !!}</h1>
     </div>
 	
@@ -16,16 +20,8 @@
 		</div>
 	@endwhile
 
-    <div class="pb2">&nbsp;</div>
-    
-    {{-- Parent Page --}}
-    <div class="rh-container--auto rh-container-px">
-        @include('partials.parent-page')
-    </div>
-    
     {{-- Child Navigation --}}
     @include('partials.child-navigation')
-        
+    
     <div class="pb3">&nbsp;</div>
-
 @endsection
