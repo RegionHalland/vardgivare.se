@@ -32,7 +32,7 @@
 				<div class="container mx-auto px-4">
 					<div class="w-full mx-auto">
 						<div class="flex flex-wrap -mx-4">
-							<div class="w-full lg:w-8/12 px-4 rh-container--auto">
+							<div class="w-full lg:w-8/12 px-4 rh-container--auto pb2">
 								   @include('partials.child-navigation')
 							</div>
 						</div>
