@@ -228,8 +228,6 @@ $(document).ready(function () {
     });
 
     $menuCloseButton.click(function () {
-        lockBodyScrolling(false);
-
         $menuTopBar
             .removeClass('rh-pos--fixed')
             .css({
@@ -265,15 +263,22 @@ $(document).ready(function () {
         $menuItemSubContainer.length && $menuItemSubContainer.toggleClass("rh-dp--none rh-dp--show");
     });
 
-    var menuBodyHidden;
+    var menuBodyHiddenTimer;
+    var menuScrollbarShowingTimer;
     function hideMenuBody() {
-        menuBodyHidden && clearTimeout(menuBodyHidden);
-        menuBodyHidden = setTimeout(function () {
+        menuScrollbarShowingTimer && clearTimeout(menuScrollbarShowingTimer);
+        menuScrollbarShowingTimer = setTimeout(function () {
+            lockBodyScrolling(false);
+        }, 160);
+
+        menuBodyHiddenTimer && clearTimeout(menuBodyHiddenTimer);
+        menuBodyHiddenTimer = setTimeout(function () {
             $('#rh-menu-body')
                 .removeClass('rh-pos--absolute')
                 .addClass('rh-pos--fixed')
                 .removeClass('rh-dp--show')
                 .addClass('rh-dp--none');
+            
         }, 600);
     }
 
@@ -294,14 +299,6 @@ $(document).ready(function () {
         }
 
         typeof fnCallback === 'function' && fnCallback();
-    }
-
-    function makeScrollBarOffset(status) {
-        if (status) {
-            $body.css({ "margin-right": scrollbarWidth });
-        } else {
-            $body.css({ "margin-right": "" }); // Reset to default
-        }
     }
 
     /* Helpers */
