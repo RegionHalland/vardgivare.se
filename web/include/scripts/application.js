@@ -99,7 +99,7 @@ $(function () {
             var myPosition = Math.round($('#content-nav-placeholder').offset().top - $(window).scrollTop());
             var myFooterTop = Math.round($('#footer-top-placeholder').offset().top - $(window).scrollTop());
             var myContentNavBottom = Math.round($('#content-nav-bottom-placeholder').offset().top - $(window).scrollTop());
-            console.log(myPosition, myFooterTop, myContentNavBottom);
+            //console.log(myPosition, myFooterTop, myContentNavBottom);
             if (myPosition < 30) {
                 if (myFooterTop < myContentNavBottom + 40) {
                     $(".content-nav__item").addClass("content-nav__item--tight");
