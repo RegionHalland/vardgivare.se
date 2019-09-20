@@ -363,6 +363,14 @@ $home-blocks-offset: .6em;
         }
     }
 
+    &__abl-item-height {
+        height: auto;
+
+        @include medium {
+            height: 100%;
+        }
+    }
+
 
     // Helpers
     &__title {
