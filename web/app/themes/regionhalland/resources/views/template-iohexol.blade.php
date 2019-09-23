@@ -100,7 +100,15 @@
 					<br><h3>Resultat</h3>
 					<div class="pt2 pl2" style="height:50px;width:100%;background-color:#eeeeee">Du ska göra en <strong><?=$myResult['1']?>-punkts </strong> Iohexol undersökning</div>
 					<p style="height:5px;">&nbsp;</p>
-					<div class="pt2 pl2" style="height:80px;width:100%;background-color:#eeeeee">Prov 1 efter injektionen ska tas efter <strong><?=$myResult['2']?></strong> timmar (OBS! exakta tidpunkterna [timme, minuter] för proverna måste anges!)"</div>
+					@if($myResult['1'] == '1')
+						<div class="pt2 pl2" style="height:80px;width:100%;background-color:#eeeeee">
+							<strong>Prov 1</strong> efter injektionen ska tas efter <strong><?=$myResult['2']?></strong> timmar (OBS! exakta tidpunkterna [timme, minuter] för proverna måste anges!)
+						</div>
+					@else
+						<div class="pt2 pl2" style="height:80px;width:100%;background-color:#eeeeee">
+							<strong>Prov 1 och 2</strong> efter injektionen ska tas efter <strong><?=$myResult['2']?></strong> timmar (OBS! exakta tidpunkterna [timme, minuter] för proverna måste anges!)
+						</div>
+					@endif
 				</div>
 			@endif
 
