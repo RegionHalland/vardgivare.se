@@ -8,7 +8,7 @@
             <div class="row row-eq-height">
                 @foreach($myFirstLevelPages as $page)
                 <div class="col col-12 md-col-6 xl-col-4 rh-navigation-block-group__item-container">
-                    <div class="rh-navigation-block rh-vg__abl-item-height">
+                    <div class="rh-navigation-block">
                         <div class="rh-navigation-block__header">
                             <div class="rh-round-button rh-navigation-block__header-round-button">
                                 <span class="rh-navigation-block__header-round-button-icon"></span>

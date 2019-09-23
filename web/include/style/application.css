@@ -1,8 +1,4 @@
 /* Specific settings */
-body {
-  font-family: proxima-nova, sans-serif, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  overflow-x: hidden; }
-
 /* Specific styling for Vardgivare website */
 .rh-vg__header {
   min-height: 80px; }
@@ -211,40 +207,6 @@ body {
 .rh-vg__nav-left__link {
   color: #000000; }
 
-.rh-vg__styrda-dokument {
-  margin-bottom: 4em; }
-  .rh-vg__styrda-dokument__items .std-container-inner.std-search-result {
-    background-color: #f4f4f4;
-    margin: 1em 0;
-    padding: 1em;
-    border-radius: 4px; }
-  @media (min-width: 75em) {
-    .rh-vg__styrda-dokument__items {
-      padding-left: 4em;
-      padding-right: 4em; } }
-  .rh-vg__styrda-dokument__items .std-search-tab {
-    margin: 1em 0; }
-    .rh-vg__styrda-dokument__items .std-search-tab li {
-      height: 1.8em;
-      cursor: pointer; }
-      .rh-vg__styrda-dokument__items .std-search-tab li:hover {
-        color: #005069; }
-  .rh-vg__styrda-dokument__items .std-search-tab-active {
-    font-weight: bold; }
-  .rh-vg__styrda-dokument__items button {
-    display: none; }
-  .rh-vg__styrda-dokument__items a {
-    color: #005069; }
-  .rh-vg__styrda-dokument__items strong {
-    line-height: 1.4em; }
-  .rh-vg__styrda-dokument__items #std_orderby {
-    height: 2.8em;
-    width: 14em;
-    font-size: 1em; }
-
-.rh-vg__abl-item-height {
-  height: auto !important; }
-
 .rh-vg__title, .rh-vg__home-site-info__title, .rh-vg__home-news__header-title, .rh-vg__home-news__item-title {
   line-height: 1.3125em;
   margin-bottom: .1em; }
@@ -276,6 +238,42 @@ body {
 
 .rh-vg__bg-color-light-2 {
   background-color: #BEDEE3; }
+
+.rh-vg__styrda-dokument, #std-results {
+  margin-bottom: 4em; }
+  @media (min-width: 62em) {
+    .rh-vg__styrda-dokument-container {
+      padding-left: 8em;
+      padding-right: 8em; } }
+  @media (min-width: 75em) {
+    .rh-vg__styrda-dokument-container {
+      padding-left: 15em;
+      padding-right: 15em; } }
+  .rh-vg__styrda-dokument .std-container-inner.std-search-result, #std-results .std-container-inner.std-search-result {
+    background-color: #f4f4f4;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 4px; }
+  .rh-vg__styrda-dokument .std-search-tab, #std-results .std-search-tab {
+    margin: 1em 0; }
+    .rh-vg__styrda-dokument .std-search-tab li, #std-results .std-search-tab li {
+      height: 1.8em;
+      cursor: pointer; }
+      .rh-vg__styrda-dokument .std-search-tab li:hover, #std-results .std-search-tab li:hover {
+        color: #005069; }
+  .rh-vg__styrda-dokument .std-search-tab-active, #std-results .std-search-tab-active {
+    font-weight: bold; }
+  .rh-vg__styrda-dokument button, #std-results button {
+    display: none; }
+  .rh-vg__styrda-dokument a, #std-results a {
+    color: #005069;
+    word-break: break-word; }
+  .rh-vg__styrda-dokument strong, #std-results strong {
+    line-height: 1.4em; }
+  .rh-vg__styrda-dokument #std_orderby, #std-results #std_orderby {
+    height: 2.8em;
+    width: 14em;
+    font-size: 1em; }
 
 /* Menu */
 /* body {

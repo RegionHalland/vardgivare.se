@@ -8,7 +8,7 @@
 <div class="row row-eq-height rh-vg__home-blocks-container-p" aria-label="Puffar" role="group">
     @foreach ($myFrontPageBlurbs as $blurbs)
     <div class="col col-12 md-col-6 lg-col-12 xl-col-6 rh-block-group__item">
-        <div class="rh-block-box rh-vg__abl-item-height">
+        <div class="rh-block-box">
             <div class="rh-block">
                 <img src="{!! $blurbs['image_url'] !!}"
                     alt="{{$blurbs['image_alt']}}">

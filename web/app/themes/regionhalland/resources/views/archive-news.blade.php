@@ -6,7 +6,7 @@
 		<div class="left-align clearfix">
 			<div class="col col-12 sm-col-12 md-col-8 lg-col-8">
 				<header class="">
-					<h1 class="h1 pt3">Nyhetsarkiv </h1>
+					<h1 class="h1 pt3">Nyhetsarkiv</h1>
 				</header>
 				@php($myPosts = get_region_halland_news_archive_taxonomi_category_filter())
 				@foreach($myPosts as $post)
