@@ -207,6 +207,9 @@
 .rh-vg__nav-left__link {
   color: #000000; }
 
+.rh-vg__search-box {
+  font-family: proxima-nova; }
+
 .rh-vg__title, .rh-vg__home-site-info__title, .rh-vg__home-news__header-title, .rh-vg__home-news__item-title {
   line-height: 1.3125em;
   margin-bottom: .1em; }
