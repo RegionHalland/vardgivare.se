@@ -1,5 +1,5 @@
 <article class="rh-search-elements">
-	<h2 class="h3"><a href="{{ $post['permalink'] }}" title="" class="rh-search-elements-title" style="color:black">
+	<h2 class="h3"><a href="{{ $post['permalink'] }}" title="" class="rh-search-elements-title" style="color: #005069">
 		{{ $post['title'] }}
 	</a></h2>
 	<span class="rh-search-elements-inline">Publicerad: <time datetime="{{ $post['date'] }}">{{ $post['date'] }}</time></span>

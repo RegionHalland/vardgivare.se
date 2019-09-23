@@ -30,7 +30,7 @@
                 <div class="col col-6 lg-col-12">
                     <div class="rh-vg__header-functions-search-and-menu">
                         {{-- Showed only on moblie (medium) and down --}}
-                        <div class="rh-vg__header-functions__item mr1">
+                        <div class="rh-vg__header-functions__item mr2">
                             <div class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-dp-md">
                                 <span class="icon-search"></span>
                             </div>

@@ -3,7 +3,7 @@
 <div class="rh-vg__styling-dark" id="footer-top-placeholder">
     <div class="clearfix rh-footer-group rh-container--auto rh-footer-group__container-p">
         <div class="row row-eq-height">
-            <div class="col col-12 md-col-4 rh-footer-group__item rh-vg__abl-item-height">
+            <div class="col col-12 md-col-4 rh-footer-group__item">
                 <div>
                     <div class="rh-footer-group__item-header">
                         <p class="rh-footer-group__item-header-title">Kontakta oss</p>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-12 md-col-4 rh-footer-group__item rh-vg__abl-item-height">
+            <div class="col col-12 md-col-4 rh-footer-group__item">
                 <div>
                     <div class="rh-footer-group__item-header">
                         <p id="$id2" class="rh-footer-group__item-header-title">Övriga webbplatser</p>
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col col-12 md-col-4 rh-footer-group__item rh-vg__abl-item-height">
+            <div class="col col-12 md-col-4 rh-footer-group__item">
                 <div>
                     <div class="rh-footer-group__item-header">
                         <p class="rh-footer-group__item-header-title">Om webbplatsen</p>

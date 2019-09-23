@@ -308,65 +308,6 @@ $home-blocks-offset: .6em;
         }
     }
 
-    // Speciall - Ambulans
-    &__styrda-dokument {
-
-        margin-bottom: 4em;
-
-        &__items {
-            .std-container-inner.std-search-result {
-                background-color: #f4f4f4;
-                margin: 1em 0;
-                padding: 1em;
-                border-radius: 4px;
-            }
-
-            @include xlarge {
-                padding-left: 4em;
-                padding-right: 4em;
-            }
-
-            .std-search-tab {
-                margin: 1em 0;
-
-                li {
-                    height: 1.8em;
-                    cursor: pointer;
-
-                    &:hover {
-                        color: #005069;
-                    }
-                }
-            }
-
-            .std-search-tab-active {
-                font-weight: bold;
-            }
-
-            button {
-                display: none;
-            }
-
-            a {
-                color: $vg-color-main;
-            }
-
-            strong {
-                line-height: 1.4em;
-            }
-
-            #std_orderby {
-                height: 2.8em;
-                width: 14em;
-                font-size: 1em;
-            }
-        }
-    }
-
-    &__abl-item-height {
-        height: auto !important;
-    }
-
     // Helpers
     &__title {
         line-height: 1.3125em;
@@ -413,6 +354,72 @@ $home-blocks-offset: .6em;
         }
     }
 }
+
+// Speciall - Ambulans
+.rh-vg__styrda-dokument {
+
+    &-container {
+        @include large {
+            padding-left: 8em;
+            padding-right: 8em;
+        }
+
+        @include xlarge {
+            padding-left: 15em;
+            padding-right: 15em;
+        }
+    }
+
+    margin-bottom: 4em;
+
+    .std-container-inner.std-search-result {
+        background-color: #f4f4f4;
+        margin: 1em 0;
+        padding: 1em;
+        border-radius: 4px;
+    }
+
+    .std-search-tab {
+        margin: 1em 0;
+
+        li {
+            height: 1.8em;
+            cursor: pointer;
+
+            &:hover {
+                color: #005069;
+            }
+        }
+    }
+
+    .std-search-tab-active {
+        font-weight: bold;
+    }
+
+    button {
+        display: none;
+    }
+
+    a {
+        color: $vg-color-main;
+        word-break: break-word; //TODO
+    }
+
+    strong {
+        line-height: 1.4em;
+    }
+
+    #std_orderby {
+        height: 2.8em;
+        width: 14em;
+        font-size: 1em;
+    }
+}
+
+#std-results {
+    @extend .rh-vg__styrda-dokument;
+}
+// End of Ambulans
 
 
 /* Menu */

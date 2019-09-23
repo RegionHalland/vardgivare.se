@@ -188,7 +188,7 @@ $(document).ready(function () {
 
     // Initial state
     $menuSubContainers.addClass('rh-dp--none');
-    $menuBody.addClass('rh-pos--fixed').css({ "top": $(window).scrollTop() });
+    $menuBody.addClass('rh-pos--fixed rh-dp--none').css({ "top": $(window).scrollTop() });
     $menuTopBar.css({ "max-width": $menuBody.width() });
 
     $(window).resize(throttle(function () {
@@ -274,11 +274,8 @@ $(document).ready(function () {
         menuBodyHiddenTimer && clearTimeout(menuBodyHiddenTimer);
         menuBodyHiddenTimer = setTimeout(function () {
             $('#rh-menu-body')
-                .removeClass('rh-pos--absolute')
-                .addClass('rh-pos--fixed')
-                .removeClass('rh-dp--show')
-                .addClass('rh-dp--none');
-            
+                .removeClass('rh-pos--absolute rh-dp--show')
+                .addClass('rh-pos--fixed rh-dp--none');
         }, 600);
     }
 
