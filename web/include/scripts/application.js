@@ -104,15 +104,15 @@ $(function () {
                 if (myFooterTop < myContentNavBottom + 40) {
                     $(".content-nav__item").addClass("content-nav__item--tight");
                 } else {
-                    $("#content-nav-container").addClass("rh-get-fixed-sticky");
+                    $("#content-nav-container").addClass("rh-get-fixed-sticky").css({ "max-width": "18.125em" });
                     $(".content-nav__item--tight").removeClass("content-nav__item--tight");
                 }
             } else {
-                $("#content-nav-container").removeClass("rh-get-fixed-sticky");
+                $("#content-nav-container").removeClass("rh-get-fixed-sticky").css({ "max-width": "" });
                 $(".content-nav__item--tight").removeClass("content-nav__item--tight");
 
             }
-        }, 250));
+        }, 150));
     }
 
 });
