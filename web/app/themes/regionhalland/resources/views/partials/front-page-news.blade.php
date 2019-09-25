@@ -29,7 +29,7 @@
 </article>
 
 <div class="rh-vg__home-news__view-more">
-    <a class="rh-button rh-button--icon" aria-label="Visa alla nyheter" role="button"
+    <a class="rh-button rh-button--icon" style="text-decoration: none;" aria-label="Visa alla nyheter" role="button"
         href="{!! env('WP_HOME') !!}/nyheter/">
         Visa alla nyheter
     </a>

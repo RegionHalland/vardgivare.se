@@ -1,8 +1,13 @@
 @php($myFirstLevelPages = get_region_halland_tree_first_level())
 <nav aria-label="Undersidor">
     <div class="rh-vg__bg-color-dark">
-        <div class="rh-container--auto rh-container-px rh-dp-sm rh-vg__styling-dark">
-            @include('partials.front-page-info')
+        <div class="rh-container--auto rh-container-px rh-vg__styling-dark">
+            <div id="search-box-mobile-placeholder" class="pt2 rh-dp-md rh-dp--none">
+                @include('partials.search-box')
+            </div>
+            <div class="rh-dp-sm">
+                @include('partials.front-page-info')
+            </div>
         </div>
         <div class="clearfix rh-container--auto rh-navigation-block-group__container-p">
             <div class="row row-eq-height">
@@ -20,11 +25,15 @@
                                 </a>
                             </div>
                         </div>
+
+                        @php($blockContent = get_region_halland_acf_page_navigation_text($page->ID))
+                        @if($blockContent)
                         <div class="rh-navigation-block__description hidden-sm">
                             <p class="rh-navigation-block__description-text">
-                                {{ get_region_halland_acf_page_navigation_text($page->ID) }}
+                                {{ $blockContent }}
                             </p>
                         </div>
+                        @endif
                     </div>
                 </div>
                 @endforeach
