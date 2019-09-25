@@ -10,8 +10,6 @@ $home-blocks-offset: .6em;
 .rh-vg {
 
     &__header {
-        min-height: 80px;
-
         &-logo-group {
             margin-top: 1em;
 
@@ -100,6 +98,23 @@ $home-blocks-offset: .6em;
                     margin-left: .5em;
                     margin-bottom: 1em;
                 }
+            }
+        }
+    }
+
+    &__search {
+        &-container {
+            min-height: 0.125em; //2px
+            max-height: 6.25em;
+            background-color: $vg-color-main; //3px
+        }
+
+        &-box {
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+
+            &>form {
+                width: 100%;
             }
         }
     }
@@ -424,6 +439,7 @@ $home-blocks-offset: .6em;
 #std-results {
     @extend .rh-vg__styrda-dokument;
 }
+
 // End of Ambulans
 
 

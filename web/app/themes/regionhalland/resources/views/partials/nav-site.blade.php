@@ -58,6 +58,11 @@
     </div>
 </nav>
 
+<div class="rh-vg__search-container rh-vg__styling-dark">
+    <div id="search-box-mobile-placeholder" class="rh-vg__search-box rh-container--auto rh-container-px rh-dp-md rh-dp--none">
+        @include('partials.search-box')
+    </div>
+</div>
 
 <div class="rh-menu__overlay rh-dp--none"></div>
 @if(function_exists('get_region_halland_tree_all_levels_vardgivare'))
