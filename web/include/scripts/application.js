@@ -228,19 +228,7 @@ $(document).ready(function () {
     });
 
     $menuCloseButton.click(function () {
-        $menuTopBar
-            .removeClass('rh-pos--fixed')
-            .css({
-                "width": "",
-                "max-width": "",
-                "padding-right": $menuMainButtonDefaultPaddingRight
-            });
-
-        $('#rh-menu-body').removeClass('rh-menu__body--show');
-        hideMenuBody();
-
-        $menuBodyOffsetTop.css({ "height": $menuBodySpaceTop });
-        $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
+        closeMenu();
     });
 
     $menuItemButton.click(function () {
@@ -262,6 +250,30 @@ $(document).ready(function () {
 
         $menuItemSubContainer.length && $menuItemSubContainer.toggleClass("rh-dp--none rh-dp--show");
     });
+
+    // When the user clicks outside of the menu
+    $(document).on('mouseup touchstart', function (e) {
+        if ($(e.target).closest($menuBody).length === 0 && $menuOverlay.hasClass('rh-dp--show')) {
+            e.stopPropagation();
+            closeMenu();
+        }
+    });
+
+    function closeMenu() {
+        $menuTopBar
+            .removeClass('rh-pos--fixed')
+            .css({
+                "width": "",
+                "max-width": "",
+                "padding-right": $menuMainButtonDefaultPaddingRight
+            });
+
+        $('#rh-menu-body').removeClass('rh-menu__body--show');
+        hideMenuBody();
+
+        $menuBodyOffsetTop.css({ "height": $menuBodySpaceTop });
+        $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
+    }
 
     var menuBodyHiddenTimer;
     var menuScrollbarShowingTimer;
