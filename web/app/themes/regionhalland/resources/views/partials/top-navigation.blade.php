@@ -20,11 +20,15 @@
                                 </a>
                             </div>
                         </div>
+
+                        @php($blockContent = get_region_halland_acf_page_navigation_text($page->ID))
+                        @if($blockContent)
                         <div class="rh-navigation-block__description hidden-sm">
                             <p class="rh-navigation-block__description-text">
-                                {{ get_region_halland_acf_page_navigation_text($page->ID) }}
+                                {{ $blockContent }}
                             </p>
                         </div>
+                        @endif
                     </div>
                 </div>
                 @endforeach
