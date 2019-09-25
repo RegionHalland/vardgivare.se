@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Container --}}
-<div class="clearfix rh-container--auto rh-container-px pt3 pb3">
+<div class="clearfix rh-container--auto rh-container-px pt2 pb3">
     <div class="row">
         {{-- Sidebar --}}
         <nav title="Undersidor" class="col col-12 sm-col-12 md-col-12 lg-col-3 rh-vg__page-left-container-px">
