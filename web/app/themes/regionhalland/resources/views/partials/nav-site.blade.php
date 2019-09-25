@@ -31,7 +31,7 @@
                     <div class="rh-vg__header-functions-search-and-menu">
                         {{-- Showed only on moblie (medium) and down --}}
                         <div class="rh-vg__header-functions__item mr2">
-                            <div class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-dp-md">
+                            <div id="search-button-mobile" class="rh-round-button rh-vg__header-round-button rh-vg__header-icon-theme rh-dp-md" style="cursor: pointer;">
                                 <span class="icon-search"></span>
                             </div>
 
@@ -39,21 +39,7 @@
 
                         {{-- Showed only on desktop (large) and up --}}
                         <div class="rh-header-search-desktop mr2" style="width:100%;">
-                            <form name="myForm" method="get" action="{!! env('FINDWISE_SEARCH_URL') !!}">
-                                <?php 
-                                    $strSearchText = "";
-                                    if(isset($_GET["q"])){
-                                        $strSearchText = $_GET["q"];
-                                    }
-                                ?>
-                                <div class="rh-search-field">
-                                    <input type="text" name="q" class="rh-search-term"
-                                        placeholder="Skriv din sökning här" value="<?=$strSearchText?>"
-                                        aria-label="Sökruta">
-                                    <button type="submit" class="rh-search-button" style="height:41px">Sök</button>
-                                </div>
-
-                            </form>
+                            @include('partials.search-box')
                         </div>
 
                         <div class="rh-vg__header-functions__item">

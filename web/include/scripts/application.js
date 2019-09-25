@@ -307,3 +307,14 @@ $(document).ready(function () {
         return !!navigator.platform && /iPad|iPhone|iPod/g.test(navigator.platform);
     }
 });
+
+$(document).ready(function () {
+    var $searchMobileButton = $('#search-button-mobile'),
+        $searchBoxMobilePlaceholder = $('#search-box-mobile-placeholder');
+
+    if ($searchMobileButton.length && $searchBoxMobilePlaceholder.length) {
+        $searchMobileButton.click(function () {
+            $searchBoxMobilePlaceholder.toggleClass('rh-dp--none');
+        });
+    }
+});
