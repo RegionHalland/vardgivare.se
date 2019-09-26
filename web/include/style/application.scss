@@ -105,13 +105,12 @@ $home-blocks-offset: .6em;
     &__search {
         &-container {
             min-height: 0.1875em; //3px
-            max-height: 6.25em;
             background-color: $vg-color-main; //3px
         }
 
         &-box {
-            padding-top: 1.5em;
-            padding-bottom: 1.5em;
+            padding-top: 1.8em;
+            padding-bottom: 1.8em;
 
             &>form {
                 width: 100%;
