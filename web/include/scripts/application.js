@@ -10,15 +10,18 @@ $(function () {
     // **********************************
     // *** Scrolla högst upp på sidan ***
     // **********************************
-    $("#back-to-top").hide();
-    $(window).scroll(function () {
+    var $buttonBackToTop = $("#back-to-top");
+
+    $(window).scroll(throttle(function () {
         if ($(this).scrollTop() > 500) {
-            $('#back-to-top').fadeIn("slow");
+            $buttonBackToTop.fadeIn("slow");
         } else {
-            $('#back-to-top').fadeOut("slow");
+            $buttonBackToTop.fadeOut("slow");
         }
-    });
-    $('#back-to-top').click(function () {
+    }, 200));
+
+    $buttonBackToTop.hide();
+    $buttonBackToTop.click(function () {
         $('body,html').animate({ scrollTop: 0 }, 800);
         return false;
     });

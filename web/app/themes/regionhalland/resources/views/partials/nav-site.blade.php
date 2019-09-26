@@ -39,7 +39,20 @@
 
                         {{-- Showed only on desktop (large) and up --}}
                         <div class="rh-header-search-desktop mr2" style="width:100%;">
-                            @include('partials.search-box')
+                            <form name="myForm" method="get" action="{!! env('FINDWISE_SEARCH_URL') !!}">
+                                <?php 
+                                        $strSearchText = "";
+                                        if(isset($_GET["q"])){
+                                            $strSearchText = $_GET["q"];
+                                        }
+                                    ?>
+                                <div class="rh-search-field">
+                                    <input type="text" name="q" class="rh-search-term" placeholder="Skriv din sökning här"
+                                        value="<?=$strSearchText?>" aria-label="Sökruta">
+                                    <button type="submit" class="rh-search-button" aria-label="Sökknapp">Sök</button>
+                                </div>
+                            
+                            </form>
                         </div>
 
                         <div class="rh-vg__header-functions__item">
