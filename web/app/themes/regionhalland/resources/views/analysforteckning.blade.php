@@ -70,8 +70,8 @@
                             }
                             ?>
                             <div class="rh-search-field">
-                                <input type="text" name="q" class="rh-search-term rh-search-term-larger" placeholder="Skriv din sökning här" value="<?=$strSearchText?>" aria-label="Sökruta" style="height: 7ex; max-width:60em;">
-                                <button type="submit" class="rh-search-button rh-search-button-larger" style="background-color: #378A30; color:white; height: 7ex;">
+                                <input type="text" name="q" class="rh-search-term rh-search-term-larger" placeholder="Skriv din sökning här" value="<?=$strSearchText?>" aria-label="Sökruta">
+                                <button type="submit" class="rh-search-button rh-search-button-larger">
                                 Sök
                                 </button>
                             </div>
@@ -95,6 +95,10 @@
                                 @endforeach
                             </select>
                             <input class="ml1 rh-button rh-button--primary" type='submit' value="Visa"/>
+                            
+                            @if($sid != 0)
+                            <a href="./">Rensa</a>
+                            @endif
                         </form>
                         
 
