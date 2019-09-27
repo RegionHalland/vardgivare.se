@@ -21,7 +21,8 @@ $(function () {
     }, 200));
 
     $buttonBackToTop.hide();
-    $buttonBackToTop.click(function () {
+    $buttonBackToTop.click(function (e) {
+        e.stopPropagation();
         $('body,html').animate({ scrollTop: 0 }, 800);
         return false;
     });
@@ -29,12 +30,12 @@ $(function () {
     // ***************************************
     // *** Hamburger menu overlay function ***
     // ***************************************
-    $(".burger-menu__button, .overlay").on("click", function () {
+    /* $(".burger-menu__button, .overlay").on("click", function () {
         $(".burger-dropdown__container").toggle();
         $(".overlay").toggle();
         $(".burger-menu__burger-icon").toggle();
         $(".burger-menu__close-icon").toggle();
-    });
+    }); */
 
     // ************************************
     // *** Find on page scroll function ***
@@ -57,7 +58,8 @@ $(function () {
     // ****************************
     // *** Cookie notice accept ***
     // ****************************    
-    $("#cookie-consent").on("click", function () {
+    $("#cookie-consent").on("click", function (e) {
+        e.stopPropagation();
         // set cookie with vanilla javascript function
         setCookie('cookie_notice_accepted', '1', 365);
         // Hide div with cookie notice text + button
@@ -206,7 +208,8 @@ $(document).ready(function () {
         $menuBody.css({ "top": $(window).scrollTop() });
     }, 200));
 
-    $menuMainButton.click(function () {
+    $menuMainButton.click(function (e) {
+        e.stopPropagation();
         lockBodyScrolling(true);
 
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
@@ -230,11 +233,14 @@ $(document).ready(function () {
         $menuBodyOffsetTop.css({ "height": parseInt($menuTopBar.height() + $menuBodySpaceTop) });
     });
 
-    $menuCloseButton.click(function () {
+    $menuCloseButton.click(function (e) {
+        e.stopPropagation();
         closeMenu();
     });
 
-    $menuItemButton.click(function () {
+    $menuItemButton.click(function (e) {
+        e.stopPropagation();
+
         var $menuItemButton = $(this),
             $menuItemSubContainer = $("#sub" + $menuItemButton.attr('id')),  // Menu item's sub container ID
             $menuItemIsLevel1 = false,
@@ -256,8 +262,8 @@ $(document).ready(function () {
 
     // When the user clicks outside of the menu
     $(document).on('mouseup touchstart', function (e) {
+        e.stopPropagation();
         if ($(e.target).closest($menuBody).length === 0 && $menuOverlay.hasClass('rh-dp--show')) {
-            e.stopPropagation();
             closeMenu();
         }
     });
@@ -328,7 +334,8 @@ $(document).ready(function () {
         $searchBoxMobilePlaceholder = $('#search-box-mobile-placeholder');
 
     if ($searchMobileButton.length && $searchBoxMobilePlaceholder.length) {
-        $searchMobileButton.click(function () {
+        $searchMobileButton.click(function (e) {
+            e.stopPropagation();
             $searchBoxMobilePlaceholder.toggleClass('rh-dp--none');
         });
     }
