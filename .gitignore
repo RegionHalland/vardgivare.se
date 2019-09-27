@@ -36,6 +36,8 @@ web/wp/*
 .vscode
 .idea
 
+./*.txt
+
 # Using for front-end development
 node_modules
 package.json
