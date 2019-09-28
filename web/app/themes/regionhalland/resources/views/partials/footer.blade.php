@@ -55,6 +55,10 @@
                                 <a href="https://www.regionhalland.se/om-region-halland/dataskydd/"
                                 class="rh-link--navigation rh-footer-group__item-body-link">Behandling av personuppgifter</a>
                             </li>
+                            <li>
+                                <a href="https://vardgivare.regionhalland.se/service-it/om-webbplatsen/webbplatsens-tillganglighet/"
+                                   class="rh-link--navigation rh-footer-group__item-body-link">Redogörelse för tillgänglighet</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
