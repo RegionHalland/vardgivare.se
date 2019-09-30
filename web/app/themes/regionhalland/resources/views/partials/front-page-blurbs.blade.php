@@ -15,7 +15,7 @@
                     alt="{{$blurbs['image_alt']}}">
                 <div class="rh-block-content">
                     <p class="h3">
-                        <a class="rh-block-content__title rh-link--navigation" href="{{ $blurbs['link_url'] }}" @if($blurbs['link_target']) target="{{ $blurbs['link_target'] }}" @endif>
+                        <a class="rh-block-content__title rh-link--navigation" href="{{ $blurbs['link_url'] }}" tabindex="-1" @if($blurbs['link_target']) target="{{ $blurbs['link_target'] }}" @endif>
                             {{ $blurbs['link_title'] }}
                         </a>
                     </p>
