@@ -9,7 +9,7 @@
     @foreach ($myFrontPageBlurbs as $blurbs)
     <div class="col col-12 md-col-6 lg-col-12 xl-col-6 rh-block-group__item">
         <div class="rh-block-box">
-            <a href="{{ $blurbs['link_url'] }}" class="rh-link--navigation rh-block--clickable"></a>
+            <a href="{{ $blurbs['link_url'] }}" class="rh-link--navigation rh-block--clickable" title="{{ $blurbs['link_title'] }}"></a>
             <div class="rh-block">
                 <img src="{!! $blurbs['image_url'] !!}"
                     alt="{{$blurbs['image_alt']}}">
