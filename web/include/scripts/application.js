@@ -12,7 +12,9 @@ $(function () {
     // ************************************
     // *** Find on page scroll function ***
     // ************************************    
-    $('a[href^="#"]').on("click", function () {
+    $('a[href^="#"]').on("click", function (e) {
+        e.stopPropagation();
+
         var target = $(this.hash);
         if (target.length) {
             // Animate target
@@ -32,6 +34,7 @@ $(function () {
     // ****************************    
     $("#cookie-consent").on("click", function (e) {
         e.stopPropagation();
+
         // set cookie with vanilla javascript function
         setCookie('cookie_notice_accepted', '1', 365);
         // Hide div with cookie notice text + button
@@ -157,8 +160,9 @@ $(document).ready(function () {
         $menuTopBar = $('.rh-menu__top-bar'),
         $menuBodyOffsetTop = $('.rh-menu__offset-top');
 
-    var $menuItemButton = $('.rh-menu__item-button'),
-        $menuSubContainers = $('.rh-menu__item-sub-container');
+    /* var $menuItemButton = $('.rh-menu__item-button'),
+        $menuSubContainers = $('.rh-menu__item-sub-container'); */
+    var $menuSubContainers = $('.rh-menu__item-sub-container');
 
     var $menuMainButtonDefaultPaddingRight = isSmallScreen ? "0.84375em" : "0.7em", // View more in CSS
         $menuBodySpaceTop = 30;
@@ -182,6 +186,7 @@ $(document).ready(function () {
 
     $menuMainButton.click(function (e) {
         e.stopPropagation();
+
         lockBodyScrolling(true);
 
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
@@ -207,10 +212,11 @@ $(document).ready(function () {
 
     $menuCloseButton.click(function (e) {
         e.stopPropagation();
+
         closeMenu();
     });
 
-    $menuItemButton.click(function (e) {
+    $menuBody.on("click", ".rh-menu__item-button", function (e) {
         e.stopPropagation();
 
         var $menuItemButton = $(this),
@@ -235,6 +241,7 @@ $(document).ready(function () {
     // When the user clicks outside of the menu
     $(document).on('mouseup touchstart', function (e) {
         e.stopPropagation();
+
         if ($(e.target).closest($menuBody).length === 0 && $menuOverlay.hasClass('rh-dp--show')) {
             closeMenu();
         }
@@ -309,6 +316,7 @@ $(document).ready(function () {
     if ($searchMobileButton.length && $searchBoxMobilePlaceholder.length) {
         $searchMobileButton.click(function (e) {
             e.stopPropagation();
+
             $searchBoxMobilePlaceholder.toggleClass('rh-dp--none');
         });
     }
@@ -318,12 +326,12 @@ $(document).ready(function () {
 $(document).ready(function () {
     var $blockBoxItems = $(".rh-block-box");
 
-    $blockBoxItems.focusin(function(e) {
+    $blockBoxItems.focusin(function (e) {
         e.stopPropagation();
         $(this).addClass("rh-block--focus");
     });
 
-    $blockBoxItems.focusout(function(e) {
+    $blockBoxItems.focusout(function (e) {
         e.stopPropagation();
         $(this).removeClass("rh-block--focus");
     });
