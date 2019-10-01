@@ -160,8 +160,9 @@ $(document).ready(function () {
         $menuTopBar = $('.rh-menu__top-bar'),
         $menuBodyOffsetTop = $('.rh-menu__offset-top');
 
-    var $menuItemButton = $('.rh-menu__item-button'),
-        $menuSubContainers = $('.rh-menu__item-sub-container');
+    /* var $menuItemButton = $('.rh-menu__item-button'),
+        $menuSubContainers = $('.rh-menu__item-sub-container'); */
+    var $menuSubContainers = $('.rh-menu__item-sub-container');
 
     var $menuMainButtonDefaultPaddingRight = isSmallScreen ? "0.84375em" : "0.7em", // View more in CSS
         $menuBodySpaceTop = 30;
@@ -215,7 +216,7 @@ $(document).ready(function () {
         closeMenu();
     });
 
-    $menuItemButton.click(function (e) {
+    $menuBody.on("click", ".rh-menu__item-button", function (e) {
         e.stopPropagation();
 
         var $menuItemButton = $(this),
@@ -240,7 +241,7 @@ $(document).ready(function () {
     // When the user clicks outside of the menu
     $(document).on('mouseup touchstart', function (e) {
         e.stopPropagation();
-        
+
         if ($(e.target).closest($menuBody).length === 0 && $menuOverlay.hasClass('rh-dp--show')) {
             closeMenu();
         }
@@ -325,12 +326,12 @@ $(document).ready(function () {
 $(document).ready(function () {
     var $blockBoxItems = $(".rh-block-box");
 
-    $blockBoxItems.focusin(function(e) {
+    $blockBoxItems.focusin(function (e) {
         e.stopPropagation();
         $(this).addClass("rh-block--focus");
     });
 
-    $blockBoxItems.focusout(function(e) {
+    $blockBoxItems.focusout(function (e) {
         e.stopPropagation();
         $(this).removeClass("rh-block--focus");
     });
