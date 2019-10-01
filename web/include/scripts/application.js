@@ -12,7 +12,10 @@ $(function () {
     // ************************************
     // *** Find on page scroll function ***
     // ************************************    
-    $('a[href^="#"]').on("click", function () {
+    $('a[href^="#"]').on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
         var target = $(this.hash);
         if (target.length) {
             // Animate target
@@ -31,7 +34,9 @@ $(function () {
     // *** Cookie notice accept ***
     // ****************************    
     $("#cookie-consent").on("click", function (e) {
+        e.preventDefault();
         e.stopPropagation();
+
         // set cookie with vanilla javascript function
         setCookie('cookie_notice_accepted', '1', 365);
         // Hide div with cookie notice text + button
@@ -181,7 +186,9 @@ $(document).ready(function () {
     }, 200));
 
     $menuMainButton.click(function (e) {
+        e.preventDefault();
         e.stopPropagation();
+
         lockBodyScrolling(true);
 
         $menuOverlay.toggleClass('rh-dp--none rh-dp--show');
@@ -206,11 +213,14 @@ $(document).ready(function () {
     });
 
     $menuCloseButton.click(function (e) {
+        e.preventDefault();
         e.stopPropagation();
+
         closeMenu();
     });
 
     $menuItemButton.click(function (e) {
+        e.preventDefault();
         e.stopPropagation();
 
         var $menuItemButton = $(this),
@@ -308,7 +318,9 @@ $(document).ready(function () {
 
     if ($searchMobileButton.length && $searchBoxMobilePlaceholder.length) {
         $searchMobileButton.click(function (e) {
+            e.preventDefault();
             e.stopPropagation();
+
             $searchBoxMobilePlaceholder.toggleClass('rh-dp--none');
         });
     }
@@ -347,6 +359,7 @@ $(document).ready(function () {
 
     $buttonBackToTop.hide();
     $buttonBackToTop.click(function (e) {
+        e.preventDefault();
         e.stopPropagation();
         $('body,html').animate({ scrollTop: 0 }, 800);
     });
