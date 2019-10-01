@@ -16,7 +16,19 @@
 	<meta name="description" content="Vårdgivare - Region Halland" />
 	<title>Vårdgivare - Region Halland</title>
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/alicdn/font_o5hd5vvqpoqiwwmi_190529.css">
-    
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-110777448-3', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
 	{{-- <link href="{!! env('WP_HOME') !!}/styleguide4.1.0/css/components.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/include/style/development.css" type="text/css" media="all" /> --}}
 	{{-- <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet" />--}}
