@@ -244,7 +244,9 @@ $(document).ready(function () {
 
     // When the user clicks outside of the menu
     $(document).on('mouseup touchstart', function (e) {
+        e.preventDefault();
         e.stopPropagation();
+        
         if ($(e.target).closest($menuBody).length === 0 && $menuOverlay.hasClass('rh-dp--show')) {
             closeMenu();
         }
