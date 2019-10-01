@@ -1,32 +1,4 @@
 $(function () {
-
-    // Simple router function
-    //if ($("body.page-template-default")[0]){
-    //    alert("page");
-    //} else if ($("body.home")[0]){
-    //    alert("index");
-    //}
-
-    // **********************************
-    // *** Scrolla högst upp på sidan ***
-    // **********************************
-    var $buttonBackToTop = $("#back-to-top");
-
-    $(window).scroll(throttle(function () {
-        if ($(this).scrollTop() > 500) {
-            $buttonBackToTop.fadeIn("slow");
-        } else {
-            $buttonBackToTop.fadeOut("slow");
-        }
-    }, 200));
-
-    $buttonBackToTop.hide();
-    $buttonBackToTop.click(function (e) {
-        e.stopPropagation();
-        $('body,html').animate({ scrollTop: 0 }, 800);
-        return false;
-    });
-
     // ***************************************
     // *** Hamburger menu overlay function ***
     // ***************************************
@@ -344,13 +316,38 @@ $(document).ready(function () {
 
 // Front-blurbs
 $(document).ready(function () {
-    $(".rh-block-box").focusin(function(e) {
+    var $blockBoxItems = $(".rh-block-box");
+
+    $blockBoxItems.focusin(function(e) {
         e.stopPropagation();
         $(this).addClass("rh-block--focus");
     });
 
-    $(".rh-block-box").focusout(function(e) {
+    $blockBoxItems.focusout(function(e) {
         e.stopPropagation();
         $(this).removeClass("rh-block--focus");
+    });
+});
+
+// Back to top button
+$(document).ready(function () {
+    var $buttonBackToTop = $("#back-to-top"),
+        btnBackToTopLimitOnHead = 500,
+        btnBackToTopCurrentPos;
+
+    $(window).scroll(throttle(function () {
+        btnBackToTopCurrentPos = $(this).scrollTop(); // Update current position
+
+        if (btnBackToTopCurrentPos > btnBackToTopLimitOnHead) {
+            !$buttonBackToTop.is(':visible') && $buttonBackToTop.fadeIn("slow");
+        } else {
+            $buttonBackToTop.is(':visible') && $buttonBackToTop.fadeOut("slow");
+        }
+    }, 200));
+
+    $buttonBackToTop.hide();
+    $buttonBackToTop.click(function (e) {
+        e.stopPropagation();
+        $('body,html').animate({ scrollTop: 0 }, 800);
     });
 });
