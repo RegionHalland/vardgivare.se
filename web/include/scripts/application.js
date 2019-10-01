@@ -13,7 +13,6 @@ $(function () {
     // *** Find on page scroll function ***
     // ************************************    
     $('a[href^="#"]').on("click", function (e) {
-        e.preventDefault();
         e.stopPropagation();
 
         var target = $(this.hash);
@@ -34,7 +33,6 @@ $(function () {
     // *** Cookie notice accept ***
     // ****************************    
     $("#cookie-consent").on("click", function (e) {
-        e.preventDefault();
         e.stopPropagation();
 
         // set cookie with vanilla javascript function
@@ -186,7 +184,6 @@ $(document).ready(function () {
     }, 200));
 
     $menuMainButton.click(function (e) {
-        e.preventDefault();
         e.stopPropagation();
 
         lockBodyScrolling(true);
@@ -213,14 +210,12 @@ $(document).ready(function () {
     });
 
     $menuCloseButton.click(function (e) {
-        e.preventDefault();
         e.stopPropagation();
 
         closeMenu();
     });
 
     $menuItemButton.click(function (e) {
-        e.preventDefault();
         e.stopPropagation();
 
         var $menuItemButton = $(this),
@@ -244,7 +239,6 @@ $(document).ready(function () {
 
     // When the user clicks outside of the menu
     $(document).on('mouseup touchstart', function (e) {
-        e.preventDefault();
         e.stopPropagation();
         
         if ($(e.target).closest($menuBody).length === 0 && $menuOverlay.hasClass('rh-dp--show')) {
@@ -320,7 +314,6 @@ $(document).ready(function () {
 
     if ($searchMobileButton.length && $searchBoxMobilePlaceholder.length) {
         $searchMobileButton.click(function (e) {
-            e.preventDefault();
             e.stopPropagation();
 
             $searchBoxMobilePlaceholder.toggleClass('rh-dp--none');
@@ -333,13 +326,11 @@ $(document).ready(function () {
     var $blockBoxItems = $(".rh-block-box");
 
     $blockBoxItems.focusin(function(e) {
-        e.preventDefault();
         e.stopPropagation();
         $(this).addClass("rh-block--focus");
     });
 
     $blockBoxItems.focusout(function(e) {
-        e.preventDefault();
         e.stopPropagation();
         $(this).removeClass("rh-block--focus");
     });
@@ -363,7 +354,6 @@ $(document).ready(function () {
 
     $buttonBackToTop.hide();
     $buttonBackToTop.click(function (e) {
-        e.preventDefault();
         e.stopPropagation();
         $('body,html').animate({ scrollTop: 0 }, 800);
     });
