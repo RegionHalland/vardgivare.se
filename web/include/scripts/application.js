@@ -160,8 +160,6 @@ $(document).ready(function () {
         $menuTopBar = $('.rh-menu__top-bar'),
         $menuBodyOffsetTop = $('.rh-menu__offset-top');
 
-    /* var $menuItemButton = $('.rh-menu__item-button'),
-        $menuSubContainers = $('.rh-menu__item-sub-container'); */
     var $menuSubContainers = $('.rh-menu__item-sub-container');
 
     var $menuMainButtonDefaultPaddingRight = isSmallScreen ? "0.84375em" : "0.7em", // View more in CSS
