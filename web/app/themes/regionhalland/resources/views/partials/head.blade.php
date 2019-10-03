@@ -29,30 +29,13 @@
 	</script>
 	<!-- End Google Analytics -->
 
-	{{-- <link href="{!! env('WP_HOME') !!}/styleguide4.1.0/css/components.css" rel="stylesheet"/>
-	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/include/style/development.css" type="text/css" media="all" /> --}}
-	{{-- <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet" />--}}
-		{{-- <style>
-		.rh-article ul {
-			list-style-type: disc;
-			padding-left: 2ex;
-			line-height: 1.37em;
-		}
-
-		.rh-article ol {
-			list-style-type: decimal;
-			padding-left: 2ex;
-			line-height: 1.37em;
-		}
-	</style> --}}
-   
-    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/whh2fjs.css">
-    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare/vardgivare.css">
-    {{-- <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css"> --}}
+	<link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/whh2fjs.css">
+    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare.1.0.0-5.1.0.css">
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development.css">
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/application.css">
     
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/bodyScrollLock-2.6.4.js'></script>
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
+
 </head>

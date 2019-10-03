@@ -44,9 +44,25 @@
         
         <div class="mt2 rh-container--auto rh-container-px rh-vg__styrda-dokument-container">
             
-            <div id="std-results">
-                <h1 class="mb-4">{!! get_the_title() !!} - sida {{ $pageNo }} ({{ $stdName }})</h1>
+                <h1 class="mb-4 pb2">{!! get_the_title() !!} - sida {{ $pageNo }} ({{ $stdName }})</h1>
                 
+                <form name="myForm" method="get" action="./">
+                    <?php
+                    $strSearchText = "";
+                    if(isset($_GET["search"])){
+                        $strSearchText = $_GET["search"];
+                    }
+                    ?>
+                    <div class="rh-search-field">
+                        <input type="text" name="search" class="rh-search-term rh-search-term-larger" placeholder="Skriv din sökning här" value="<?=$strSearchText?>" aria-label="Sökruta">
+                        <button type="submit" class="rh-search-button rh-search-button-larger" style="height:61px">
+                            Sök
+                        </button>
+                    </div>
+                </form>
+
+            <div id="std-results">
+            
                 @while(have_posts()) @php(the_post())
                 <div>
                     @php(the_content())
