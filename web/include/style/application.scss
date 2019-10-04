@@ -11,6 +11,7 @@ $home-main-padding-y: 2.5em; //40px
 $home-blocks-offset: .6em;
 
 // Styleguide
+// Grid system
 $grid-gutter-width: 1.4em;
 $grid-gutter-half-width: $grid-gutter-width/2;
 
@@ -34,8 +35,73 @@ $grid-gutter-half-width: $grid-gutter-width/2;
     }
 }
 
+// Mixin
+@mixin create-article-header__border-bottom($borderBottomColor: #000000) {
+    border-bottom: 0.125em solid $borderBottomColor;//2px
 
+    @content;
+}
+
+@mixin create-article-header-title($textColor: false) {
+    line-height: 1em; //25px
+    margin-bottom: .1em;
+
+    font-size: 1.125em; //18px
+    font-weight: bold;
+
+    @if ($textColor) {
+        color: $textColor
+    }
+
+    @include medium {
+        line-height: 1.375em;
+    }
+
+    @include large {
+        font-size: 1.5em; //24px
+    }
+
+    @content;
+}
+
+@mixin create-article-item-title {
+    line-height: 1.3125em;
+    margin-bottom: .1em;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    @include medium {
+        line-height: 1.375em;
+    }
+
+    @include large {
+        font-size: 1.25em; //20px
+    }
+
+    @content;
+}
+
+@mixin create-article-item-description($textColor: false) {
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    font-size: 0.9375em; //15px
+
+    @if ($textColor) {
+        color: $textColor
+    }
+
+    @include large {
+        font-size: 1em; //16px
+    }
+
+    @content;
+}
+
+// Utilities
 .rh {
+
     // Only using for large and xlarge
     &-section-gutter-lx {
         &__left-side {
@@ -47,6 +113,7 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 padding-right: 1.875em; //30px
             }
         }
+
         &__between-side {
             @include large {
                 padding-left: 0.9375em; //15px
@@ -58,6 +125,7 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 padding-right: 1.875em;
             }
         }
+
         &__right-side {
             @include large {
                 padding-left: 0.9375em; //15px
@@ -71,20 +139,10 @@ $grid-gutter-half-width: $grid-gutter-width/2;
 
     &-news-block {
         &__header {
-            border-bottom-style: solid;
-            border-bottom-width: 0.125em; //2px
-            border-bottom-color: $vg-color-main;
+            @include create-article-header__border-bottom($vg-color-main);
 
             &-title {
-                @extend .rh-vg__title;
-
-                font-size: 1.125em; //18px
-                font-weight: bold;
-                line-height: 1em; //25px
-
-                @include large {
-                    font-size: 1.5em; //24px
-                }
+                @include create-article-header-title;
             }
         }
 
@@ -115,33 +173,42 @@ $grid-gutter-half-width: $grid-gutter-width/2;
             }
 
             &-title {
-                @extend .rh-vg__title;
-
-                font-size: 1em;
-                font-weight: bold;
-
-                @include large {
-                    font-size: 1.25em; //20px
-                }
-
-                &-link {
-                    color: $vg-color-main;
+                @include create-article-item-title {
+                    &-link {
+                        color: $vg-color-main;
+                    }
                 }
             }
 
             &-description {
-                @extend .rh-vg__description;
-
-                font-size: 0.9375em; //15px
-
-                @include large {
-                    font-size: 1em; //16px
-                }
+                @include create-article-item-description;
             }
         }
 
         &__view-more {
             margin-top: 2em;
+        }
+    }
+
+    &-goto-block {
+        &__header {
+            @include create-article-header__border-bottom($vg-color-main);
+
+            &-title {
+                @include create-article-header-title;
+            }
+        }
+
+        &__body {
+            padding: 1em;
+            background-color: #f4f4f4;
+            border-radius: 0.25em;
+
+            &-item-link {
+                line-height: 2em;
+                color: $vg-color-main;
+                word-break: break-word;
+            }
         }
     }
 }
@@ -326,7 +393,8 @@ $grid-gutter-half-width: $grid-gutter-width/2;
             }
 
             &__title {
-                @extend .rh-vg__title;
+                line-height: 1.3125em;
+                margin-bottom: .1em;
 
                 font-size: 1.875em;
                 font-weight: bold;
@@ -335,6 +403,7 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 color: #ffffff;
 
                 @include medium {
+                    line-height: 1.375em;
                     color: #000000;
                 }
             }
@@ -342,20 +411,10 @@ $grid-gutter-half-width: $grid-gutter-width/2;
 
         &-news {
             &__header {
-                border-bottom-style: solid;
-                border-bottom-width: 0.125em; //2px
-                border-bottom-color: $vg-color-main;
+                @include create-article-header__border-bottom($vg-color-main);
 
                 &-title {
-                    @extend .rh-vg__title;
-
-                    font-size: 1.125em; //18px
-                    font-weight: bold;
-                    line-height: 1em; //25px
-
-                    @include large {
-                        font-size: 1.5em; //24px
-                    }
+                    @include create-article-header-title;
                 }
             }
 
@@ -386,28 +445,15 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 }
 
                 &-title {
-                    @extend .rh-vg__title;
-
-                    font-size: 1em;
-                    font-weight: bold;
-
-                    @include large {
-                        font-size: 1.25em; //20px
-                    }
-
-                    &-link {
-                        color: $vg-color-main;
+                    @include create-article-item-title {
+                        &-link {
+                            color: $vg-color-main;
+                        }
                     }
                 }
 
                 &-description {
-                    @extend .rh-vg__description;
-
-                    font-size: 0.9375em; //15px
-
-                    @include large {
-                        font-size: 1em; //16px
-                    }
+                    @include create-article-item-description;
                 }
             }
 
@@ -484,21 +530,6 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 padding-left: $site-section-gutter-xlarge;
             }
         }
-    }
-
-    // Helpers
-    &__title {
-        line-height: 1.3125em;
-        margin-bottom: .1em;
-
-        @include medium {
-            line-height: 1.375em;
-        }
-    }
-
-    &__description {
-        margin-top: .5em;
-        margin-bottom: .5em;
     }
 
     &__styling {

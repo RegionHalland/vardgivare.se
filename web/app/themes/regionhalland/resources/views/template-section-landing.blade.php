@@ -43,9 +43,7 @@
                             </div>
 
                             <div class="col col-12 md-col-6 lg-col-12">
-                                <div class="rh-dp-from-md">
-                                    ..."Gå direkt till " komponent...
-                                </div>
+                                @include('partials.go-direct-to-page')
                             </div>
                         </div>
                     </div>
