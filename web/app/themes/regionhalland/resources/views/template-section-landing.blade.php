@@ -15,6 +15,7 @@
         		@include('partials.parent-page')
             </div>
             
+            {{-- Title --}}
             <div class="rh-container--auto rh-container-px pb-8 relative bg-blue-dark">
 				<div class="container mx-auto px-4 relative">
 					<div class="w-full mx-auto pt1">
@@ -24,51 +25,34 @@
 						</div>
 					</div>
 				</div>
-			</div>
+            </div>
+            
+            <div class="mt1 rh-container--auto rh-container-px">
+                <div class="row">
+                    {{-- Navigation --}}
+                    <div class="col col-12 lg-col-8 rh-section-gutter-lx__left-side">
+                        @include('partials.child-navigation-section-landing')
+                    </div>
 
-			<div class="bg-white pt-12 pb-8">
-				<div class="container mx-auto px-4">
-					<div class="w-full mx-auto">
-						<div class="flex flex-wrap -mx-4">
-							<div class="w-full lg:w-8/12 px-4 rh-container--auto pb2">
-								   @include('partials.child-navigation')
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                    {{-- News and Go direct to page --}}
+                    <div class="col col-12 lg-col-4 rh-section-gutter-lx__right-side">
+                        <div class="row row-gutters">
+                            <div class="mt3 rh-dp-md"></div>
+                            <div class="col col-12 md-col-6 lg-col-12">
+                                @include('partials.news-section-landing')
+                            </div>
 
-			@if(function_exists('get_region_halland_page_news_taxonomi_category'))
-	            @php($newsitems = get_region_halland_page_news_taxonomi_category())
-	            @if($newsitems)
-	                <div class="rh-container--auto rh-container-px">
-	                    <div class="center">
-	                        <div class="left-align">
-	                            <div class="pt3 pb2">
-	                                <h1 class="pb2">Nyheter</h1>
-	                            </div>
-	                            <ul class="flex flex-wrap pb3 pt3 px2" aria-label="Nyheter" style="background-color: white; border-radius: 0.4ex; box-shadow: 1px 2px 6px grey;">
-	                                @foreach($newsitems as $item)
-	                                    <li class="rh-article pb2 col-12 sm-col-6 md-col-6 lg-col-6 px2">
-	                                        <h2 class="h3 rh-article-title"><a class="rh-article-title-link" style="color: #005069;" href="{{ $item['permalink'] }}">{{ $item['title'] }}<a/></h2>
-	                                        <p class="rh-article-published">Publicerad: {{ $item['date'] }}</p>
-	                                        <p class="rh-article-description">
-	                                            {{ wp_trim_words(region_halland_remove_shortcode($item['content']), 20, '...') }}
-	                                        </p>
-	                                    </li>
-	                                @endforeach
-	                            </ul>
-	                            <div class="col-12 mt3 pb4" style="display: flex; justify-content: center;">
-	                                <a href="/nyheter" class="rh-button rh-button--icon" aria-label="Visa fler nyheter" role="button" style="text-decoration: none;">Visa fler nyheter</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	            @endif
-	        @endif
-        	
+                            <div class="col col-12 md-col-6 lg-col-12">
+                                <div class="rh-dp-from-md">
+                                    ..."Gå direkt till " komponent...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         	<div class="pb3">&nbsp;</div>
-		
 		</main>
 
 	@endwhile

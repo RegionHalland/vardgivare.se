@@ -1,6 +1,7 @@
 @php($id = uniqid())
 
 @php($myNews = get_region_halland_news_archive_taxonomi_category_items(3))
+<div class="mt3 rh-dp-from-lg"></div>
 <article class="rh-vg__home-news">
     <div class="rh-vg__home-news__header">
         <h2 id="$id" class="rh-vg__home-news__header-title">Nyheter</h2>

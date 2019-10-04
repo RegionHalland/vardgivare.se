@@ -3,9 +3,150 @@
 @import '../../../../RH-styleguide/components/scss/_mixin.scss';
 
 /* Specific styling for Vardgivare website */
-$home-main-glutter: 1.875em; //30px x 2 = 60px
+$site-section-gutter-xlarge: 1.875em; //30px x 2 = 60px
+$site-section-gutter-large: 0.9375em; //15px x 2 = 30px
+
+$home-main-gutter: $site-section-gutter-xlarge;
 $home-main-padding-y: 2.5em; //40px
 $home-blocks-offset: .6em;
+
+// Styleguide
+$grid-gutter-width: 1.4em;
+$grid-gutter-half-width: $grid-gutter-width/2;
+
+.row.row-gutters {
+    padding: 0;
+    margin: -$grid-gutter-half-width; //Offset for a child element's padding
+
+    >[class*="col-"] {
+        padding: $grid-gutter-half-width;
+    }
+
+    &--around {
+        padding: $grid-gutter-half-width;
+        margin: 0;
+    }
+}
+
+.col.col-item-eq-height {
+    >div {
+        height: 100%;
+    }
+}
+
+
+.rh {
+    // Only using for large and xlarge
+    &-section-gutter-lx {
+        &__left-side {
+            @include large {
+                padding-right: 0.9375em; //15px
+            }
+
+            @include xlarge {
+                padding-right: 1.875em; //30px
+            }
+        }
+        &__between-side {
+            @include large {
+                padding-left: 0.9375em; //15px
+                padding-right: 0.9375em;
+            }
+
+            @include xlarge {
+                padding-left: 1.875em; //30px
+                padding-right: 1.875em;
+            }
+        }
+        &__right-side {
+            @include large {
+                padding-left: 0.9375em; //15px
+            }
+
+            @include xlarge {
+                padding-left: 1.875em; //30px
+            }
+        }
+    }
+
+    &-news-block {
+        &__header {
+            border-bottom-style: solid;
+            border-bottom-width: 0.125em; //2px
+            border-bottom-color: $vg-color-main;
+
+            &-title {
+                @extend .rh-vg__title;
+
+                font-size: 1.125em; //18px
+                font-weight: bold;
+                line-height: 1em; //25px
+
+                @include large {
+                    font-size: 1.5em; //24px
+                }
+            }
+        }
+
+        &__item {
+            margin-top: 1.5625em; //25px
+
+            &-publish {
+                display: flex;
+
+                &-info {
+                    margin: 0;
+                    font-size: 0.8125em; //13px
+
+                    @include large {
+                        font-size: 0.875em; //14px
+                    }
+                }
+
+                &-icon {
+                    font-family: "feather";
+                    font-size: 0.8125em; //13px
+                    margin: .168em .3em 0 0;
+
+                    &:before {
+                        content: "\e84d";
+                    }
+                }
+            }
+
+            &-title {
+                @extend .rh-vg__title;
+
+                font-size: 1em;
+                font-weight: bold;
+
+                @include large {
+                    font-size: 1.25em; //20px
+                }
+
+                &-link {
+                    color: $vg-color-main;
+                }
+            }
+
+            &-description {
+                @extend .rh-vg__description;
+
+                font-size: 0.9375em; //15px
+
+                @include large {
+                    font-size: 1em; //16px
+                }
+            }
+        }
+
+        &__view-more {
+            margin-top: 2em;
+        }
+    }
+}
+
+// End of Styleguide
 
 .rh-vg {
 
@@ -136,7 +277,7 @@ $home-blocks-offset: .6em;
                 padding-top: $home-main-padding-y;
 
                 padding-left: $page__container-large--padding-x;
-                padding-right: $home-main-glutter;
+                padding-right: $home-main-gutter;
             }
 
             @include xlarge {
@@ -171,7 +312,7 @@ $home-blocks-offset: .6em;
                     }
 
                     @include large {
-                        padding-left: $home-main-glutter - $home-blocks-offset;
+                        padding-left: $home-main-gutter - $home-blocks-offset;
                     }
                 }
             }
@@ -200,10 +341,6 @@ $home-blocks-offset: .6em;
         }
 
         &-news {
-            @include large {
-                margin-top: 2em;
-            }
-
             &__header {
                 border-bottom-style: solid;
                 border-bottom-width: 0.125em; //2px
@@ -325,6 +462,28 @@ $home-blocks-offset: .6em;
 
     &__search-box {
         font-family: proxima-nova;
+    }
+
+    &__gutter {
+        &-left-side {
+            @include large {
+                padding-right: $site-section-gutter-large;
+            }
+
+            @include xlarge {
+                padding-right: $site-section-gutter-xlarge;
+            }
+        }
+
+        &-right-side {
+            @include large {
+                padding-left: $site-section-gutter-large;
+            }
+
+            @include xlarge {
+                padding-left: $site-section-gutter-xlarge;
+            }
+        }
     }
 
     // Helpers

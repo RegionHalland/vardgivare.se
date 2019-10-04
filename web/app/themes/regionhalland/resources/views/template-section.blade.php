@@ -21,7 +21,9 @@
 	@endwhile
 
     {{-- Child Navigation --}}
-    @include('partials.child-navigation')
+    <div class="mt1 rh-container--auto rh-container-px">
+        @include('partials.child-navigation')
+    </div>
     
     <div class="pb3">&nbsp;</div>
 @endsection
