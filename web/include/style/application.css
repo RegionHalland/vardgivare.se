@@ -107,13 +107,50 @@
         font-size: 1.5em; } }
 
 .rh-goto-block__body {
-  padding: 1em;
+  padding: 1.625em 1.875em;
   background-color: #f4f4f4;
   border-radius: 0.25em; }
   .rh-goto-block__body-item-link {
-    line-height: 2em;
+    line-height: 2.8em;
     color: #005069;
     word-break: break-word; }
+
+.rh-goto-page-block p {
+  margin-bottom: 0; }
+
+.rh-goto-page-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.75em;
+  padding: 0.9375em 0.9375em 0.9375em 1.875em;
+  background-color: #F4F3F1;
+  border-left: 0.25em solid #005069;
+  border-radius: 0.25em; }
+  .rh-goto-page-block__header--open {
+    border-radius: 0.25em 0.25em 0 0;
+    color: #ffffff;
+    background-color: #005069; }
+  .rh-goto-page-block__header-text {
+    font-size: 1.25em;
+    font-weight: bold;
+    word-break: break-word;
+    line-height: 1.4375em; }
+
+.rh-goto-page-block__body {
+  padding: 1.625em 2.125em;
+  background-color: #f4f4f4;
+  border-radius: 0 0 0.25em 0.25em; }
+  .rh-goto-page-block__body-item-link {
+    line-height: 2.8em;
+    color: #005069;
+    word-break: break-word; }
+
+.rh-goto-page-block__button {
+  cursor: pointer; }
+  .rh-goto-page-block__button--open {
+    background-color: #ffffff;
+    color: #005069; }
 
 .rh-vg__header-logo-group {
   margin-top: 1em;
@@ -420,7 +457,8 @@
     font-size: 1em; }
 
 /* Menu */
-/* body {
+/* It's needed for the menu
+body {
     overflow-x: hidden;
 } */
 .rh-menu__button {

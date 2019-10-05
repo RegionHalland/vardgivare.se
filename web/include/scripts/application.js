@@ -358,6 +358,23 @@ $(document).ready(function () {
     });
 });
 
-function std_showhide(id){
+// Go direct to page
+$(document).ready(function () {
+    var $goDirectToPageBlock = $('.rh-goto-page-block'),
+        $goDirectToPageHeader = $('.rh-goto-page-block__header'),
+        $goDirectToPageButton = $('.rh-goto-page-block__button'),
+        $goDirectToPageBody = $('.rh-goto-page-block__body');
+
+    $goDirectToPageBlock.on("click", ".rh-goto-page-block__button", function () {
+        $goDirectToPageHeader.toggleClass("rh-goto-page-block__header--open");
+        $goDirectToPageButton
+            .toggleClass("rh-goto-page-block__button--open")
+            .find("span")
+            .toggleClass("icon-plus icon-minus");
+        $goDirectToPageBody.toggleClass("rh-dp--none rh-dp--show");
+    });
+});
+
+function std_showhide(id) {
     return null;
 }

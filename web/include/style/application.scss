@@ -10,7 +10,7 @@ $home-main-gutter: $site-section-gutter-xlarge;
 $home-main-padding-y: 2.5em; //40px
 $home-blocks-offset: .6em;
 
-// Styleguide
+// Will moved to Styleguide
 // Grid system
 $grid-gutter-width: 1.4em;
 $grid-gutter-half-width: $grid-gutter-width/2;
@@ -38,7 +38,6 @@ $grid-gutter-half-width: $grid-gutter-width/2;
 // Mixin
 @mixin create-article-header__border-bottom($borderBottomColor: #000000) {
     border-bottom: 0.125em solid $borderBottomColor;//2px
-
     @content;
 }
 
@@ -99,9 +98,8 @@ $grid-gutter-half-width: $grid-gutter-width/2;
     @content;
 }
 
-// Utilities
 .rh {
-
+    // Utilities
     // Only using for large and xlarge
     &-section-gutter-lx {
         &__left-side {
@@ -137,6 +135,7 @@ $grid-gutter-half-width: $grid-gutter-width/2;
         }
     }
 
+    // Components
     &-news-block {
         &__header {
             @include create-article-header__border-bottom($vg-color-main);
@@ -200,21 +199,73 @@ $grid-gutter-half-width: $grid-gutter-width/2;
         }
 
         &__body {
-            padding: 1em;
+            padding: 1.625em 1.875em;
             background-color: #f4f4f4;
             border-radius: 0.25em;
 
             &-item-link {
-                line-height: 2em;
+                line-height: 2.8em;
                 color: $vg-color-main;
                 word-break: break-word;
             }
         }
     }
-}
 
+    &-goto-page-block {
+        p { margin-bottom: 0; } // Reset
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 3.75em; //60px
+            padding: 0.9375em 0.9375em 0.9375em 1.875em;
+            background-color: $vg-color-light-8;
+
+            border-left: 0.25em solid $vg-color-main; //4px
+            border-radius: 0.25em;
+
+            &--open {
+                border-radius: 0.25em 0.25em 0 0;
+                color: #ffffff;
+                background-color: $vg-color-main;
+            }
+
+            &-text {
+                //color: #ffffff;
+                font-size: 1.25em;
+                font-weight: bold;
+                word-break: break-word;
+                line-height: 1.4375em;
+            }
+        }
+
+        &__body {
+            padding: 1.625em 2.125em;
+            background-color: #f4f4f4;
+            border-radius: 0 0 0.25em 0.25em;
+
+            &-item-link {
+                line-height: 2.8em;
+                color: $vg-color-main;
+                word-break: break-word;
+            }
+        }
+
+        &__button {
+            cursor: pointer;
+
+            &--open {
+                background-color: #ffffff;
+                color: $vg-color-main;
+            }
+        }
+    }
+}
 // End of Styleguide
 
+// Specific stylings for the website
 .rh-vg {
 
     &__header {
@@ -633,7 +684,8 @@ $grid-gutter-half-width: $grid-gutter-width/2;
 
 
 /* Menu */
-/* body {
+/* It's needed for the menu
+body {
     overflow-x: hidden;
 } */
 

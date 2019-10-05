@@ -37,6 +37,7 @@
     
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/jquery-3.4.1.min.js'></script>
     <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/bodyScrollLock-2.6.4.js'></script>
-    <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application-1.0.0.js'></script>
+    {{-- <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application-1.0.0.js'></script> --}}
+    <script type='text/javascript' src='{!! env('WP_HOME') !!}/include/scripts/application.js'></script>
 
 </head>
