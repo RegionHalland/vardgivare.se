@@ -15,8 +15,7 @@
         		@include('partials.parent-page')
             </div>
             
-            {{-- Title --}}
-            <div class="rh-container--auto rh-container-px pb-8 relative bg-blue-dark">
+            {{-- <div class="rh-container--auto rh-container-px pb-8 relative bg-blue-dark">
 				<div class="container mx-auto px-4 relative">
 					<div class="w-full mx-auto pt1">
 						<h1 class="mb-4 text-white">{!! get_the_title() !!}</h1>
@@ -25,9 +24,17 @@
 						</div>
 					</div>
 				</div>
+            </div> --}}
+
+            {{-- Title and description--}}
+            <div class="rh-container--auto rh-container-px">
+                <h1 class="mb-4">{!! get_the_title() !!}</h1>
+                <div>
+                    @php(the_content())
+                </div>
             </div>
-            
-            <div class="mt1 rh-container--auto rh-container-px">
+
+            <div class="mt3 rh-container--auto rh-container-px">
                 <div class="row">
                     {{-- Navigation --}}
                     <div class="col col-12 lg-col-8 rh-section-gutter-lx__left-side">
@@ -38,9 +45,9 @@
                     <div class="col col-12 lg-col-4 rh-section-gutter-lx__right-side">
                         <div class="row row-gutters">
                             <div class="mt3 rh-dp-md"></div>
-                            <div class="col col-12 md-col-6 lg-col-12">
-                                @include('partials.news-section-landing')
-                            </div>
+                            
+                            {{-- Grid's definition is in the module' --}}
+                            @include('partials.news-section-landing')
 
                             <div class="col col-12 md-col-6 lg-col-12">
                                 @include('partials.go-direct-to-page')
