@@ -34,36 +34,8 @@
                 </div>
             </div>
 
-            <div class="rh-container--auto rh-container-px rh-goto-page-block rh-dp-sm mt3">
-                <div class="rh-goto-page-block__header">
-                    <p class="rh-goto-page-block__header-text">
-                        Gå direkt till
-                    </p>
-
-                    <div class="rh-circle-button rh-circle-button--small rh-goto-page-block__button">
-                        <span class="icon-plus"></span>
-                    </div>
-                </div>
-            
-                <div class="rh-goto-page-block__body rh-dp--none">
-                    <ul>
-                        <li>
-                            <a href="https://terapirek.regionhalland.se/"
-                                class="rh-link--navigation rh-goto-page-block__body-item-link">Terapirekommendationer</a>
-                        </li>
-                        <li>
-                            <a href="/service-it/siths/" class="rh-link--navigation rh-goto-page-block__body-item-link">SITHS</a>
-                        </li>
-                        <li>
-                            <a href="/behandlingsstod/styrda-dokument/"
-                                class="rh-link--navigation rh-goto-page-block__body-item-link">Styrda dokument</a>
-                        </li>
-                        <li>
-                            <a href="/patientadministration/avgiftshandboken/"
-                                class="rh-link--navigation rh-goto-page-block__body-item-link">Avgiftshandboken</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="rh-container--auto rh-container-px rh-dp-sm mt3">
+                @include('partials.go-direct-to-page-mobile')
             </div>
 
             <div class="mt3 rh-container--auto rh-container-px">
@@ -78,7 +50,7 @@
                         <div class="row row-gutters">
                             <div class="mt3 rh-dp-md"></div>
                             
-                            {{-- Grid's definition is in the module' --}}
+                            {{-- Grid's definition already in the module --}}
                             @include('partials.news-section-landing')
 
                             <div class="col col-12 md-col-6 lg-col-12">
