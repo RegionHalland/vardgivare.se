@@ -136,19 +136,11 @@ $grid-gutter-half-width: $grid-gutter-width/2;
     }
 
     // Components
-    &-news-block {
-        &__header {
-            @include create-article-header__border-bottom($vg-color-main);
-
-            &-title {
-                @include create-article-header-title;
-            }
-        }
-
-        &__item {
+    &-article {
+        &-block {
             margin-top: 1.5625em; //25px
 
-            &-publish {
+            &__publish-date {
                 display: flex;
 
                 &-info {
@@ -171,7 +163,7 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 }
             }
 
-            &-title {
+            &__title {
                 @include create-article-item-title {
                     &-link {
                         color: $vg-color-main;
@@ -179,14 +171,25 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                 }
             }
 
-            &-description {
+            &__description {
                 @include create-article-item-description;
             }
         }
 
-        &__view-more {
-            margin-top: 2em;
+        &-group {
+            &__header {
+                @include create-article-header__border-bottom($vg-color-main);
+
+                &-title {
+                    @include create-article-header-title;
+                }
+            }
+
+            &__view-more {
+                margin-top: 2em;
+            }
         }
+
     }
 
     &-goto-block {
@@ -457,59 +460,6 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                     line-height: 1.375em;
                     color: #000000;
                 }
-            }
-        }
-
-        &-news {
-            &__header {
-                @include create-article-header__border-bottom($vg-color-main);
-
-                &-title {
-                    @include create-article-header-title;
-                }
-            }
-
-            &__item {
-                margin-top: 1.5625em; //25px
-
-                &-publish {
-                    display: flex;
-
-                    &-info {
-                        margin: 0;
-                        font-size: 0.8125em; //13px
-
-                        @include large {
-                            font-size: 0.875em; //14px
-                        }
-                    }
-
-                    &-icon {
-                        font-family: "feather";
-                        font-size: 0.8125em; //13px
-                        margin: .168em .3em 0 0;
-
-                        &:before {
-                            content: "\e84d";
-                        }
-                    }
-                }
-
-                &-title {
-                    @include create-article-item-title {
-                        &-link {
-                            color: $vg-color-main;
-                        }
-                    }
-                }
-
-                &-description {
-                    @include create-article-item-description;
-                }
-            }
-
-            &__view-more {
-                margin-top: 2em;
             }
         }
     }
