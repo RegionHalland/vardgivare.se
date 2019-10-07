@@ -2,7 +2,7 @@
 <nav aria-label="Undersidor">
     <div class="row row-eq-height row-gutters">
         @foreach($myFirstLevelPages as $page)
-        <div class="col col-12 md-col-6 xl-col-4 col-item-eq-height">
+        <div class="col col-12 md-col-6 col-item-eq-height">
             <div class="rh-navigation-block">
                 <div class="rh-navigation-block__header">
                     <div class="rh-round-button rh-navigation-block__header-round-button">

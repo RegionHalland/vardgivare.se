@@ -337,27 +337,49 @@ $(document).ready(function () {
 
 // Back to top button
 $(document).ready(function () {
-    var $buttonBackToTop = $("#back-to-top"),
+    var $btnBackToTop = $("#back-to-top"),
         btnBackToTopLimitOnHead = 500,
-        btnBackToTopCurrentPos;
+        btnBackToTopCurrentPos = $(window).scrollTop(); // Initial state
+
+    btnBackToTopCurrentPos < btnBackToTopLimitOnHead ? $btnBackToTop.hide() : $btnBackToTop.show();
 
     $(window).scroll(throttle(function () {
         btnBackToTopCurrentPos = $(this).scrollTop(); // Update current position
 
         if (btnBackToTopCurrentPos > btnBackToTopLimitOnHead) {
-            !$buttonBackToTop.is(':visible') && $buttonBackToTop.fadeIn("slow");
+            !$btnBackToTop.is(':visible') && $btnBackToTop.fadeIn("slow");
         } else {
-            $buttonBackToTop.is(':visible') && $buttonBackToTop.fadeOut("slow");
+            $btnBackToTop.is(':visible') && $btnBackToTop.fadeOut("slow");
         }
     }, 200));
 
-    $buttonBackToTop.hide();
-    $buttonBackToTop.click(function (e) {
+    $btnBackToTop.click(function (e) {
         e.stopPropagation();
         $('body,html').animate({ scrollTop: 0 }, 800);
     });
 });
 
-function std_showhide(id){
+// Go direct to page
+$(document).ready(function () {
+    var $goDirectToPageBlock = $('.rh-goto-page-block'),
+        $goDirectToPageHeader = $('.rh-goto-page-block__header'),
+        $goDirectToPageButton = $('.rh-goto-page-block__button'),
+        $goDirectToPageBody = $('.rh-goto-page-block__body');
+
+    $goDirectToPageBody.addClass("rh-dp--none"); // Initial state
+    
+    $goDirectToPageBlock.on("click", $goDirectToPageButton, function () {
+        $goDirectToPageHeader.toggleClass("rh-goto-page-block__header--open");
+
+        $goDirectToPageButton
+            .toggleClass("rh-goto-page-block__button--open")
+            .find("span")
+            .toggleClass("icon-plus icon-minus");
+
+        $goDirectToPageBody.toggleClass("rh-dp--none rh-dp--show");
+    });
+});
+
+function std_showhide(id) {
     return null;
 }

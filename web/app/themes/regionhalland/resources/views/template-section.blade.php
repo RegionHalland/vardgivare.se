@@ -10,7 +10,7 @@
         @include('partials.parent-page')
     </div>
 
-    <div class="mt1 rh-container--auto rh-container-px">
+    <div class="rh-container--auto rh-container-px">
         <h1>{!! get_the_title() !!}</h1>
     </div>
 	
@@ -21,7 +21,9 @@
 	@endwhile
 
     {{-- Child Navigation --}}
-    @include('partials.child-navigation')
+    <div class="mt3 rh-container--auto rh-container-px">
+        @include('partials.child-navigation')
+    </div>
     
     <div class="pb3">&nbsp;</div>
 @endsection

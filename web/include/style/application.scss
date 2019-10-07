@@ -3,10 +3,288 @@
 @import '../../../../RH-styleguide/components/scss/_mixin.scss';
 
 /* Specific styling for Vardgivare website */
-$home-main-glutter: 1.875em; //30px x 2 = 60px
+$site-section-gutter-xlarge: 1.875em; //30px x 2 = 60px
+$site-section-gutter-large: 0.9375em; //15px x 2 = 30px
+
+$home-main-gutter: $site-section-gutter-xlarge;
 $home-main-padding-y: 2.5em; //40px
 $home-blocks-offset: .6em;
 
+// Will moved to Styleguide
+// Grid system
+$grid-gutter-width: 1.4em;
+$grid-gutter-half-width: $grid-gutter-width/2;
+
+.row.row-gutters {
+    padding: 0;
+    margin: -$grid-gutter-half-width; //Offset for a child element's padding
+
+    >[class*="col-"] {
+        padding: $grid-gutter-half-width;
+    }
+
+    &--around {
+        padding: $grid-gutter-half-width;
+        margin: 0;
+    }
+}
+
+.col.col-item-eq-height {
+    >div {
+        height: 100%;
+    }
+}
+
+// Mixin
+@mixin create-article-header__border-bottom($borderBottomColor: #000000) {
+    border-bottom: 0.125em solid $borderBottomColor;//2px
+    @content;
+}
+
+@mixin create-article-header-title($textColor: false) {
+    line-height: 1em; //25px
+    margin-bottom: .1em;
+
+    font-size: 1.125em; //18px
+    font-weight: bold;
+
+    @if ($textColor) {
+        color: $textColor
+    }
+
+    @include medium {
+        line-height: 1.375em;
+    }
+
+    @include large {
+        font-size: 1.5em; //24px
+    }
+
+    @content;
+}
+
+@mixin create-article-item-title {
+    line-height: 1.3125em;
+    margin-bottom: .1em;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    @include medium {
+        line-height: 1.375em;
+    }
+
+    @include large {
+        font-size: 1.25em; //20px
+    }
+
+    @content;
+}
+
+@mixin create-article-item-description($textColor: false) {
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    font-size: 0.9375em; //15px
+
+    @if ($textColor) {
+        color: $textColor
+    }
+
+    @include large {
+        font-size: 1em; //16px
+    }
+
+    @content;
+}
+
+.rh {
+    // Utilities
+    &-overflow {
+        // Default property
+        &--visible {
+            overflow: visible;
+        }
+        
+        &--auto {
+            overflow: auto;
+        }
+
+        &--scroll {
+            overflow: scroll;
+        }
+
+        &--hidden {
+            overflow: hidden;
+        }
+    }
+
+    // Only using for large and xlarge
+    &-section-gutter-lx {
+        &__left-side {
+            @include large {
+                padding-right: 0.9375em; //15px
+            }
+
+            @include xlarge {
+                padding-right: 1.875em; //30px
+            }
+        }
+
+        &__between-side {
+            @include large {
+                padding-left: 0.9375em; //15px
+                padding-right: 0.9375em;
+            }
+
+            @include xlarge {
+                padding-left: 1.875em; //30px
+                padding-right: 1.875em;
+            }
+        }
+
+        &__right-side {
+            @include large {
+                padding-left: 0.9375em; //15px
+            }
+
+            @include xlarge {
+                padding-left: 1.875em; //30px
+            }
+        }
+    }
+
+    // Components
+    &-article {
+        &-block {
+            margin-top: 1.5625em; //25px
+
+            &__publish-date {
+                display: flex;
+
+                &-info {
+                    margin: 0;
+                    font-size: 0.8125em; //13px
+
+                    @include large {
+                        font-size: 0.875em; //14px
+                    }
+                }
+
+                &-icon {
+                    font-family: "feather";
+                    font-size: 0.8125em; //13px
+                    margin: .168em .3em 0 0;
+                }
+            }
+
+            &__title {
+                @include create-article-item-title {
+                    &-link {
+                        color: $vg-color-main;
+                    }
+                }
+            }
+
+            &__description {
+                @include create-article-item-description;
+            }
+        }
+
+        &-group {
+            &__header {
+                @include create-article-header__border-bottom($vg-color-main);
+
+                &-title {
+                    @include create-article-header-title;
+                }
+            }
+
+            &__view-more {
+                margin-top: 2em;
+            }
+        }
+
+    }
+
+    &-goto-block {
+        &__header {
+            @include create-article-header__border-bottom($vg-color-main);
+
+            &-title {
+                @include create-article-header-title;
+            }
+        }
+
+        &__body {
+            padding: 1.625em 1.875em;
+            background-color: #f4f4f4;
+            border-radius: 0.25em;
+
+            &-item-link {
+                line-height: 2.8em;
+                color: $vg-color-main;
+                word-break: break-word;
+            }
+        }
+    }
+
+    &-goto-page-block {
+        p { margin-bottom: 0; } // Reset
+
+        &__header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            min-height: 3.75em; //60px
+            padding: 0.9375em 0.9375em 0.9375em 1.875em;
+            background-color: $vg-color-light-8;
+
+            border-left: 0.25em solid $vg-color-main; //4px
+            border-radius: 0.25em;
+
+            &--open {
+                border-radius: 0.25em 0.25em 0 0;
+                color: #ffffff;
+                background-color: $vg-color-main;
+            }
+
+            &-text {
+                font-size: 1.25em;
+                font-weight: bold;
+                word-break: break-word;
+                line-height: 1.4375em;
+            }
+        }
+
+        &__body {
+            padding: 1.625em 2.125em;
+            background-color: #f4f4f4;
+            border-radius: 0 0 0.25em 0.25em;
+
+            &-item-link {
+                line-height: 2.8em;
+                color: $vg-color-main;
+                word-break: break-word;
+            }
+        }
+
+        &__button {
+            cursor: pointer;
+
+            &--open {
+                background-color: #ffffff;
+                color: $vg-color-main;
+            }
+        }
+    }
+}
+// End of Styleguide
+
+// Specific stylings for the website
 .rh-vg {
 
     &__header {
@@ -136,7 +414,7 @@ $home-blocks-offset: .6em;
                 padding-top: $home-main-padding-y;
 
                 padding-left: $page__container-large--padding-x;
-                padding-right: $home-main-glutter;
+                padding-right: $home-main-gutter;
             }
 
             @include xlarge {
@@ -171,7 +449,7 @@ $home-blocks-offset: .6em;
                     }
 
                     @include large {
-                        padding-left: $home-main-glutter - $home-blocks-offset;
+                        padding-left: $home-main-gutter - $home-blocks-offset;
                     }
                 }
             }
@@ -185,7 +463,8 @@ $home-blocks-offset: .6em;
             }
 
             &__title {
-                @extend .rh-vg__title;
+                line-height: 1.3125em;
+                margin-bottom: .1em;
 
                 font-size: 1.875em;
                 font-weight: bold;
@@ -194,89 +473,15 @@ $home-blocks-offset: .6em;
                 color: #ffffff;
 
                 @include medium {
+                    line-height: 1.375em;
                     color: #000000;
                 }
             }
         }
 
-        &-news {
-            @include large {
-                margin-top: 2em;
-            }
-
-            &__header {
-                border-bottom-style: solid;
-                border-bottom-width: 0.125em; //2px
-                border-bottom-color: $vg-color-main;
-
-                &-title {
-                    @extend .rh-vg__title;
-
-                    font-size: 1.125em; //18px
-                    font-weight: bold;
-                    line-height: 1em; //25px
-
-                    @include large {
-                        font-size: 1.5em; //24px
-                    }
-                }
-            }
-
-            &__item {
-                margin-top: 1.5625em; //25px
-
-                &-publish {
-                    display: flex;
-
-                    &-info {
-                        margin: 0;
-                        font-size: 0.8125em; //13px
-
-                        @include large {
-                            font-size: 0.875em; //14px
-                        }
-                    }
-
-                    &-icon {
-                        font-family: "feather";
-                        font-size: 0.8125em; //13px
-                        margin: .168em .3em 0 0;
-
-                        &:before {
-                            content: "\e84d";
-                        }
-                    }
-                }
-
-                &-title {
-                    @extend .rh-vg__title;
-
-                    font-size: 1em;
-                    font-weight: bold;
-
-                    @include large {
-                        font-size: 1.25em; //20px
-                    }
-
-                    &-link {
-                        color: $vg-color-main;
-                    }
-                }
-
-                &-description {
-                    @extend .rh-vg__description;
-
-                    font-size: 0.9375em; //15px
-
-                    @include large {
-                        font-size: 1em; //16px
-                    }
-                }
-            }
-
-            &__view-more {
-                margin-top: 2em;
-            }
+        &-navigation-block-group {
+            padding-top: 1.4em;
+            padding-bottom: 1.4em;
         }
     }
 
@@ -327,19 +532,26 @@ $home-blocks-offset: .6em;
         font-family: proxima-nova;
     }
 
-    // Helpers
-    &__title {
-        line-height: 1.3125em;
-        margin-bottom: .1em;
+    &__gutter {
+        &-left-side {
+            @include large {
+                padding-right: $site-section-gutter-large;
+            }
 
-        @include medium {
-            line-height: 1.375em;
+            @include xlarge {
+                padding-right: $site-section-gutter-xlarge;
+            }
         }
-    }
 
-    &__description {
-        margin-top: .5em;
-        margin-bottom: .5em;
+        &-right-side {
+            @include large {
+                padding-left: $site-section-gutter-large;
+            }
+
+            @include xlarge {
+                padding-left: $site-section-gutter-xlarge;
+            }
+        }
     }
 
     &__styling {
@@ -443,7 +655,8 @@ $home-blocks-offset: .6em;
 
 
 /* Menu */
-/* body {
+/* It's needed for the menu
+body {
     overflow-x: hidden;
 } */
 
