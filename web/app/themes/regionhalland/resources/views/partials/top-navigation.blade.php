@@ -4,10 +4,10 @@
         <div class="rh-dp-sm rh-container--auto rh-container-px rh-vg__styling-dark">
             @include('partials.front-page-info')
         </div>
-        <div class="clearfix rh-container--auto rh-navigation-block-group__container-p">
-            <div class="row row-eq-height">
+        <div class="rh-container--auto rh-container-px rh-overflow--hidden rh-vg__home-navigation-block-group">
+            <div class="row row-eq-height row-gutters">
                 @foreach($myFirstLevelPages as $page)
-                <div class="col col-12 md-col-6 xl-col-4 rh-navigation-block-group__item-container">
+                <div class="col col-12 md-col-6 xl-col-4 col-item-eq-height">
                     <div class="rh-navigation-block">
                         <div class="rh-navigation-block__header">
                             <div class="rh-round-button rh-navigation-block__header-round-button">

@@ -100,6 +100,25 @@ $grid-gutter-half-width: $grid-gutter-width/2;
 
 .rh {
     // Utilities
+    &-overflow {
+        // Default property
+        &--visible {
+            overflow: visible;
+        }
+        
+        &--auto {
+            overflow: auto;
+        }
+
+        &--scroll {
+            overflow: scroll;
+        }
+
+        &--hidden {
+            overflow: hidden;
+        }
+    }
+
     // Only using for large and xlarge
     &-section-gutter-lx {
         &__left-side {
@@ -156,10 +175,6 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                     font-family: "feather";
                     font-size: 0.8125em; //13px
                     margin: .168em .3em 0 0;
-
-                    &:before {
-                        content: "\e84d";
-                    }
                 }
             }
 
@@ -219,10 +234,12 @@ $grid-gutter-half-width: $grid-gutter-width/2;
 
         &__header {
             display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
 
-            height: 3.75em; //60px
+            min-height: 3.75em; //60px
             padding: 0.9375em 0.9375em 0.9375em 1.875em;
             background-color: $vg-color-light-8;
 
@@ -236,7 +253,6 @@ $grid-gutter-half-width: $grid-gutter-width/2;
             }
 
             &-text {
-                //color: #ffffff;
                 font-size: 1.25em;
                 font-weight: bold;
                 word-break: break-word;
@@ -461,6 +477,11 @@ $grid-gutter-half-width: $grid-gutter-width/2;
                     color: #000000;
                 }
             }
+        }
+
+        &-navigation-block-group {
+            padding-top: 1.4em;
+            padding-bottom: 1.4em;
         }
     }
 

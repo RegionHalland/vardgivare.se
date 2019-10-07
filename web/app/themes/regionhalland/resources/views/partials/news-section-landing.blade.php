@@ -11,7 +11,7 @@
         @foreach($newsitems as $item)
         <li class="rh-article-block">
             <div class="rh-article-block__publish-date">
-                <span class="rh-article-block__publish-date-icon"></span>
+                <span class="icon-clock rh-article-block__publish-date-icon"></span>
                 <p class="rh-article-block__publish-date-info">Publicerad: <time
                     datetime="{{ $item['date'] }}">{{ $item['date'] }}</time></p>
             </div>
