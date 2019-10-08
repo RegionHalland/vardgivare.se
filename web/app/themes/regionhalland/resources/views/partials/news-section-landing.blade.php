@@ -15,7 +15,6 @@
                 <p class="rh-article-block__publish-date-info">Publicerad: <time
                     datetime="{{ $item['date'] }}">{{ $item['date'] }}</time></p>
             </div>
-
             <div>
                 <h3 class="rh-article-block__title">
                     <a class="rh-link--navigation rh-article-block__title-link" href="{{ $item['permalink'] }}" title="">{{ $item['title'] }}</a>
@@ -24,16 +23,18 @@
                     {{ wp_trim_words(region_halland_remove_shortcode($item['content']), 20, '...') }}
                 </p>
             </div>
+            @foreach($item['page_terms'] as $term)
+                <div class="rh-article-group__view-more">
+                    <a class="rh-button rh-button--icon" style="text-decoration: none;" aria-label="Visa alla nyheter" role="button"
+                        href="{{ $term['link'] }}">
+                        Se alla nyheter inom {{ $term['name'] }}
+                    </a>
+                </div>
+            @endforeach    
         </li>
         @endforeach
         </ul>
     </article>
 
-    <div class="rh-article-group__view-more">
-        <a class="rh-button rh-button--icon" style="text-decoration: none;" aria-label="Visa alla nyheter" role="button"
-            href="{!! env('WP_HOME') !!}/nyheter/">
-            Se alla nyheter inom {!! get_the_title() !!}
-        </a>
-    </div>
 </div>
 @endif

@@ -54,8 +54,9 @@
                             @include('partials.news-section-landing')
 
                             <div class="col col-12 md-col-6 lg-col-12">
-                                @include('partials.go-direct-to-page')
+                                @include('partials.link-lists-section')
                             </div>
+
                         </div>
                     </div>
                 </div>
