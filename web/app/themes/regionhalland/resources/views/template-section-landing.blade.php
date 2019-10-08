@@ -35,7 +35,7 @@
             </div>
 
             <div class="rh-container--auto rh-container-px rh-dp-sm mt3">
-                @include('partials.go-direct-to-page-mobile')
+                @include('partials.link-lists-section-mobile')
             </div>
 
             <div class="mt3 rh-container--auto rh-container-px">
