@@ -4,17 +4,19 @@
     <div class="rh-goto-block__header">
         <h2 id="$id" class="rh-goto-block__header-title">Gå direkt till</h2>
     </div>
-        @foreach ($myLinks as $link)
-        <div class="mt2 rh-goto-block__body">
-            <ul>        
-                @foreach ($link['link_list'] as $list)
-                    <li>
-                        <a href="{{$list['link_url']}}"
-                            class="rh-link--navigation rh-goto-block__body-item-link">{{$list['link_title']}}</a>
-                    </li>
-                @endforeach
-            </ul>
-        @endforeach
+        
+    @foreach ($myLinks as $link)
+    <div class="mt2 rh-goto-block__body">
+        <ul>        
+            @foreach ($link['link_list'] as $list)
+            <li>
+                <a href="{{$list['link_url']}}"
+                    class="rh-link--navigation rh-goto-block__body-item-link">{{$list['link_title']}}</a>
+            </li>
+            @endforeach
+        </ul>
     </div>
+    @endforeach
+
 </article>
 @endif
