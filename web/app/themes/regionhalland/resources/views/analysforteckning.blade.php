@@ -141,8 +141,8 @@
             </main>
             {{-- Main Content END --}}
 
-            <aside class="pt4 pl1 pr2 col col-12 sm-col-12 md-col-12 lg-col-3">
-                @include('partials.analys-links')
+            <aside class="pt4 pl1 pr2 pb3 col col-12 sm-col-12 md-col-12 lg-col-3">
+                @include('partials.analys-link-lists')
             </aside>
 
             </div>
