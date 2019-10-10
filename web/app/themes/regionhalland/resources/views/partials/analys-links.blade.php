@@ -47,7 +47,7 @@
             </a>
         </li>
         <li class="content-nav__item" >
-            <a class="content-nav__item-link" href="https://vardgivare.regionhalland.se/app/uploads/2019/04/Prislista-Klinisk-kemi-20195318-14.pdf" target="_blank">
+            <a class="content-nav__item-link" href="https://vardgivare.regionhalland.se/app/uploads/2019/04/Prislista-Klinisk-kemi-5318-16.pdf" target="_blank">
                 Prislista Klinisk kemi 2019
             </a>
         </li>
