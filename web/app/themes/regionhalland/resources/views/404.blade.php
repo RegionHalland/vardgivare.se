@@ -9,7 +9,7 @@
 
 			<h2>Det här kan du göra</h2>
 			<ul>
-				<li>Gå till startsidan <a href="/">www.vardgivare.regionhalland.se</a> och försök klicka dig fram till informationen du söker.</li>
+				<li>Gå till startsidan <a href="/">https://vardgivare.regionhalland.se/</a> och försök klicka dig fram till informationen du söker.</li>
 				<li>Använd den här webbplatsens sökfunktion.</li>
 				<li>Sök via en extern sökmotor som till exempel Google eller Bing.</li>
 				<li>Ladda om sidan för att se om det var ett tillfälligt fel.</li>
