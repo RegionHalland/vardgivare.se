@@ -49,7 +49,7 @@
                     <div class="rh-footer-group__item-body">
                         <ul class="rh-footer-group__item-body" aria-labelledby="$id2">
                             <li>
-                                <a href="https://www.regionhalland.se/om-region-halland/om-webbplatsen/" class="rh-link--navigation rh-footer-group__item-body-link">Information om cookies</a>
+                                <a href="https://vardgivare.regionhalland.se/service-it/om-webbplatsen/" class="rh-link--navigation rh-footer-group__item-body-link">Information om cookies</a>
                             </li>
                             <li>
                                 <a href="https://www.regionhalland.se/om-region-halland/dataskydd/"
