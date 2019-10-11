@@ -5,7 +5,7 @@
 	<div class="left-align col col-12 lg-col-9 pr4">
 		<main class="rh-article">
 			@while(have_posts()) @php(the_post())
-				<h1 class="">{{ get_the_title() }}</h1>
+				<h1 class="">{!! get_the_title() !!}</h1>
 				<div class="">
 					@php($myIngress = get_region_halland_page_news_taxonomi_category_ingress())
 					@if($myIngress)
