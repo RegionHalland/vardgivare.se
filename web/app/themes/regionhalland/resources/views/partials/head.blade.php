@@ -31,7 +31,8 @@
 
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/whh2fjs-1.0.0.css">
     {{-- <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare.1.0.0-5.1.0.css"> --}}
-    <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare.css">
+    {{-- <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/styleguide_cdn/vardgivare.css"> --}}
+    <link rel="stylesheet" type="text/css" href="http://styleguide.local/vardgivare/vardgivare.css">
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/development-1.0.0.css">
     {{-- <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/application-1.0.0.css"> --}}
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/style/application.css">
