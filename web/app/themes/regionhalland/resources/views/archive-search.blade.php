@@ -45,8 +45,11 @@
 				<p class="pt3">Din sökning på <strong>'{{$strSearchText}}'</strong> gav {{ $numberOfHits }} träffar</p>
 			</div>
 
-			<div class="left-align clearfix">
-				<div class="pt3 pb3 col col-12 sm-col-12 md-col-8 lg-col-8">
+            <div class="pt3"></div>
+			{{-- <div class="left-align clearfix"> --}}
+            <div class="row row-section-gutters rh-overflow--hidden">
+                {{-- <div class="pt3 pb3 col col-12 sm-col-12 md-col-8 lg-col-8"> --}}
+				<div class="col col-12 sm-col-12 md-col-8 lg-col-8">
 
 					@if(isset($myData))
 
@@ -84,17 +87,20 @@
 
 				</div>
 
-				<div class="pt3 pb3 pl4 col col-12 sm-col-12 md-col-4 lg-col-4">
+                {{-- <div class="pt3 pb3 pl4 col col-12 sm-col-12 md-col-4 lg-col-4"> --}}
+				<div class="col col-12 sm-col-12 md-col-4 lg-col-4">
 					<h2 style="border-bottom: 4px solid #005069">Söktips</h2>
-					<div class="mt2 pt2 pl2 pb2" style="border-left: 4px solid #005069; background-color: #D9E4EA; border-bottom-left-radius: 5px; border-top-left-radius: 5px;">
+					<div class="mt2 mb2 pt2 pl2 pb2" style="border-left: 4px solid #005069; background-color: #D9E4EA; border-bottom-left-radius: 5px; border-top-left-radius: 5px;">
 					<ul>
 						<li>Se till att alla ord är rättstavade</li>
 						<li class="pt1 pb1">Försök att använda synonymer</li>
 						<li>Försök med fler generella ord eller ta bort ett sökord</li>
 					</ul>
 					</div>
-				</div>
-				<div class="col col-12 pl4 pt3 pb3">
+                </div>
+                
+				{{-- <div class="col col-12 pl4 pt3 pb3"> --}}
+				<div class="col col-12">
 					@if($arrFirst)
 						<a class="rh-pagination-link rh-pagination-link-previous" style="line-height: 3;" href="{!! env('FINDWISE_SEARCH_URL') !!}/?<?=$myData['documentList']['pagination']['firstPage']['query']?>">Första&nbsp;sidan</a>
 					@else
@@ -128,8 +134,9 @@
 					@endif
 
 				</div>
+            </div>
+            <div class="pb3"></div>
 
-			</div>
 		</div>
 	</main>
 
