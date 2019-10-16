@@ -1,11 +1,11 @@
 ## Versionhistorik
 
-### 1.2.0 (2019-10-15)
+### 1.2.0
 - Användning av Stilguiden 5.2.0
 - Buggar för pagination fixats
 - "Gå direkt till" komponent skapas
-
-_(Se mer på DevOps - Sprint 2019.10)_
+- Länklistor på analysförteckningen
+- Ny version av "Hitta på sidan"
 
 ### 1.1.0
 - Versionshantering av css och js
